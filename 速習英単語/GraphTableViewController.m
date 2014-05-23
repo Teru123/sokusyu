@@ -48,7 +48,7 @@ NSString *const kData   = @"Data Source Plot";
     //曜日取得 Sun = 1 Mon = 2
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
-    int weekday = [comps weekday];
+    int weekday = (int)[comps weekday];
     //NSLog(@"%d", weekday);
     
     // グラフに表示するデータを生成
