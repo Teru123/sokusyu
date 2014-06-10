@@ -73,7 +73,7 @@
         reibun = @"We shall arrive soon after.     You must arrive at the airport two hours early.";
     }
     if ([wordNameForString isEqualToString:@"attack"]) {
-        ewTextView.text =  @"名詞 複 ～s/-s/\n攻撃, 襲撃, 暴力\n\n批判, 酷評\n\n発病, 発作; 突然襲われること\n\n動詞 ～s/-s/; ～ed/-t/; ～ing\n~を襲う ; ~を攻撃する\nOnce you show any sign of fear, he will attack you.\n恐怖を感じているのを察せられると襲われるぞ。\n\n~を痛烈に批判する\nThere is a newspaper article attacking the Prime Minister.\n新聞に首相を批判する記事がある。\n\n問題に取り組む, 着手する\n\n病気が人、体の部位を冒す, ~に害を与える";
+        ewTextView.text =  @"名詞 複 ～s/-s/\n攻撃, 襲撃, 暴力\n\n批判, 酷評\n\n発病, 発作; 突然襲われること\n\n動詞 ～s/-s/; ～ed/-t/; ～ing\n~を襲う ; ~を攻撃する\nOnce you show any sign of fear, he will attack you.\n恐怖を感じているのを察せられると襲われるぞ。\n\n~を痛烈に批判する\nThere is a newspaper article attacking the Prime Minister.\n新聞に首相を批判する記事がある。\n\n問題に取り組む, 着手する\n\n~を冒す, ~に害を与える";
         [hatuonLabel setText:[NSString stringWithFormat:@"ətǽk"]];
         reibun = @"Once you show any sign of fear, he will attack you.     There is a newspaper article attacking the Prime Minister.";
     }
@@ -3066,7 +3066,7 @@
     ewTextView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     
     ewTextView.editable = NO;
-    ewTextView.selectable = NO;
+    //ewTextView.selectable = NO;
     bannerForAD.delegate = self;
     speechSynthesizer = [[AVSpeechSynthesizer alloc] init];
     self.speechSynthesizer.delegate = self;
@@ -3080,6 +3080,8 @@
         stopButton.hidden = YES;
     }
     
+    
+    /*
     NSString *MY_BANNER_UNIT_ID = @"ca-app-pub-9302632653080358/4207271822";
     
     // 画面上部に標準サイズのビューを作成する
@@ -3103,8 +3105,10 @@
     //GADRequest *req = [GADRequest request];
     //req.testDevices = @[ GAD_SIMULATOR_ID ];
     //[bannerView_ loadRequest:req];
+     */
 }
 
+/*
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
     [UIView beginAnimations:@"ToggleViews" context:nil];
     [UIView setAnimationDuration:0.8];
@@ -3203,6 +3207,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     //[bannerView_ release];
     //[super dealloc];
 }
+ */
 
 /*
 //iAd取得成功

@@ -82,7 +82,7 @@
         
         TestWord *word5 = [TestWord new];
         word5.name = @"attack";
-        word5.detail = @"名詞 複 ～s/-s/\n攻撃, 襲撃, 暴力\n\n批判, 酷評\n\n発病, 発作; 突然襲われること\n\n動詞 ～s/-s/; ～ed/-t/; ～ing\n~を襲う ; ~を攻撃する\nOnce you show any sign of fear, he will ___ you.\n恐怖を感じているのを察せられると襲われるぞ。\n\n~を痛烈に批判する\nThere is a newspaper article ___ing the Prime Minister.\n新聞に首相を批判する記事がある。\n\n問題に取り組む, 着手する\n\n病気が人、体の部位を冒す, ~に害を与える";
+        word5.detail = @"名詞 複 ～s/-s/\n攻撃, 襲撃, 暴力\n\n批判, 酷評\n\n発病, 発作; 突然襲われること\n\n動詞 ～s/-s/; ～ed/-t/; ～ing\n~を襲う ; ~を攻撃する\nOnce you show any sign of fear, he will ___ you.\n恐怖を感じているのを察せられると襲われるぞ。\n\n~を痛烈に批判する\nThere is a newspaper article ___ing the Prime Minister.\n新聞に首相を批判する記事がある。\n\n問題に取り組む, 着手する\n\n~を冒す, ~に害を与える";
         word5.hatuon = @"ətǽk";
         word5.reibun = @"Once you show any sign of fear, he will attack you.     There is a newspaper article attacking the Prime Minister.";
         
@@ -3871,17 +3871,19 @@
     [checkTextField setEnabled:NO];
     [checkTextField setPlaceholder:[NSString stringWithFormat:@"Startタップ"]];
     
-    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\n予習: 各単元20単語収録\nテスト: 問題数20問 ランダム出題\n復習: 保存した単語を表示\n単語一覧: 単語検索\nメニュー右上のボタンタップで\nグラフ, 正答率を表示\n\n文字サイズの変更方法\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: 設定 > 一般 > 文字サイズを変更 > スライダをドラッグ\n\nスペルのテスト方法\n単語入力時,自動修正をオフにしていると予測変換がされないので,スペルテストが可能となります。\n設定方法: 設定 > 一般 > キーボード > 自動修正オフ\n\n広告読込み中は画面上部のボタンタップ,単語入力が出来ません。通信速度が遅い場合,広告の読込みに10秒以上かかります。      "];
+    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\n手書き入力\niPhoneの設定から手書き入力が\n可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-簡体字(繁体字) 手書き を追加\n\nスペルのテスト\n単語入力時,自動修正をオフにしていると予測変換がされないので,スペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 一般 > 文字サイズを変更 > スライダをドラッグ\n\n広告読込み中は画面上部のボタンタップ,単語入力が出来ません。通信速度が遅い場合,広告の読込みに5秒以上かかります。      "];
     
     [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(0, 3)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x0889e6) range:NSMakeRange(3, 87)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(87, 165)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(252, 60)];
+    //[attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x0889e6) range:NSMakeRange(3, 87)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(3, 6)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(109, 9)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(204, 9)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(283, 59)];
     [ewTextView setAttributedText:attFont];
     
     ewTextView.textAlignment = NSTextAlignmentCenter;
     [ewTextView setEditable:NO];
-    [ewTextView setSelectable:NO];
+    //[ewTextView setSelectable:NO];
     
     for (NSUInteger i = 0; i < words.count; ++i) {
         // Select a random element between i and end of array to swap with.
@@ -3958,6 +3960,7 @@
     
     [self.view addGestureRecognizer:swipeRightGesture];
 
+    /*
     NSString *MY_BANNER_UNIT_ID = @"ca-app-pub-9302632653080358/4207271822";
     
     // 画面上部に標準サイズのビューを作成する
@@ -3981,12 +3984,14 @@
     //GADRequest *req = [GADRequest request];
     //req.testDevices = @[ GAD_SIMULATOR_ID ];
     //[bannerView_ loadRequest:req];
+     */
 }
+
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
-
+/*
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
     [UIView beginAnimations:@"ToggleViews" context:nil];
     [UIView setAnimationDuration:0.8];
@@ -4077,7 +4082,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     //[bannerView_ release];
     //[super dealloc];
 }
-
+*/
 
 /*
 //iAd取得成功
@@ -4179,6 +4184,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     
     [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
     
+    [ewTextView setSelectable:YES];
+    [ewTextView setTextColor:[UIColor blackColor]];
     // Make the animatable changes.
     ewTextView.alpha = 0.0;
     ewTextView.alpha = 1.0;
@@ -4412,6 +4419,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     [UIView setAnimationDuration:0.5];
     
     [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+    
+    [ewTextView setSelectable:YES];
     
     // Make the animatable changes.
     ewTextView.alpha = 0.0;
@@ -4741,6 +4750,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         [UIView setAnimationDuration:0.5];
         
         [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+        
+        [ewTextView setSelectable:YES];
         
         // Make the animatable changes.
         ewTextView.alpha = 0.0;

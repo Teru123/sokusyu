@@ -193,7 +193,7 @@ CAShapeLayer *openMenuShape;
     switch (index) {
         case 0:
         {
-#define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)
+            #define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)
             if (IS_IPHONE5) {
                 NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:cell];
                 Word *info = [failedWordInfos objectAtIndex:cellIndexPath.row];

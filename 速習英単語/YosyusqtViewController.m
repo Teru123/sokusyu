@@ -64,7 +64,7 @@
                    @"動詞 ～s/-z/; ～d/-d/; ～ing\n自動詞\n意見が同じである, 賛意を示す; ~かということに同感する\nWe agreed to leave at once.\nすぐに離れる事に賛成しました。\n\n行為、方策を正しいと認める\n\n提案、要求に同意する, ~を承諾[承知]する ~することに同意する\nI, for my part, totally agree with you.\n私はあなたの考えに全面的に賛成します。\n\nを決定する, ~で合意に達する ~することに取り決める\n\n他動詞\n~という点で意見が同じである, 賛意を示す\n\n~を取り決める",
                    @"形容詞 angrier; angriest/more ～; most ～\n~に怒って, 腹を立てて; ~に腹を立てて\nHis imperious look makes us angry.\n彼の横暴な様子に腹が立つ。\nDon't be angry over such trivial matters.\nそんな些細な事で怒らないで。\n\n怒った口調、表情; 怒った様子の人",
                    @"動詞 ～s/-z/; ～d/-d/; arriving\n自動詞\n到着する, 着く ; 来る, 足を踏み入れる\nWe shall arrive soon after.\nすぐに着きます。\nYou must arrive at the airport two hours early.\n2時間前には空港に到着してください。\n\n物が届く, 配達される ; 料理が運ばれる",
-                   @"名詞 複 ～s/-s/\n攻撃, 襲撃, 暴力\n\n批判, 酷評\n\n発病, 発作; 突然襲われること\n\n動詞 ～s/-s/; ～ed/-t/; ～ing\n~を襲う ; ~を攻撃する\nOnce you show any sign of fear, he will attack you.\n恐怖を感じているのを察せられると襲われるぞ。\n\n~を痛烈に批判する\nThere is a newspaper article attacking the Prime Minister.\n新聞に首相を批判する記事がある。\n\n問題に取り組む, 着手する\n\n病気が人、体の部位を冒す, ~に害を与える",
+                   @"名詞 複 ～s/-s/\n攻撃, 襲撃, 暴力\n\n批判, 酷評\n\n発病, 発作; 突然襲われること\n\n動詞 ～s/-s/; ～ed/-t/; ～ing\n~を襲う ; ~を攻撃する\nOnce you show any sign of fear, he will attack you.\n恐怖を感じているのを察せられると襲われるぞ。\n\n~を痛烈に批判する\nThere is a newspaper article attacking the Prime Minister.\n新聞に首相を批判する記事がある。\n\n問題に取り組む, 着手する\n\n~を冒す, ~に害を与える",
                    @"名詞 複 ～s/-z/\n一番下, 最下部; ふもと; 降りたところ, 下\n\n底\nThere are tea leaves in the bottom of my cup.\nコップの底に茶葉があります。\n\n末席, 下っ端; びり, 最下位 \nHe was always bottom of the class in maths.\n彼の数学の成績はいつもクラスで最下位だった。\n\n奥; 行き止まり; 端\n\n原因, 根本; 真相\n\n形容詞\n底の; 底にいる\nPut your books on the bottom shelf.\n本を棚の一番下に置いてください。",
                    @"形容詞 ～er; ～est/more ～; most ～\n利口な, 賢い, 覚え[理解]が早い\nHe's so clever, he makes me feel inferior.\n彼はとても賢いので劣等感を感じる。\n\n抜け目ない, ずる賢い\n\n上手な, 器用な\nHe is clever at arithmetic.\n彼は算数が得意だ。\n\n巧みな, うまくできた; 気がきいた",
                    @"形容詞 ～er; ～est\n残酷な, 冷酷な, 無慈悲な\nHe is a cruel assassin.\n彼は冷酷な殺し屋だ。\n\n~するのは残酷だ, ひどい, 忍びない\n\nつらい, 痛ましい, 悲惨な, ひどい\nThe death of their daughter was a cruel blow.\n娘の死は彼らにとって辛い出来事であった。",
@@ -1854,18 +1854,20 @@
 
     }
     
-    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\n予習: 各単元20単語収録\nテスト: 問題数20問 ランダム出題\n復習: 保存した単語を表示\n単語一覧: 単語検索\nメニュー右上のボタンタップで\nグラフ, 正答率を表示\n\n文字サイズの変更方法\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: 設定 > 一般 > 文字サイズを変更 > スライダをドラッグ\n\nスペルのテスト方法\n単語入力時,自動修正をオフにしていると予測変換がされないので,スペルテストが可能となります。\n設定方法: 設定 > 一般 > キーボード > 自動修正オフ\n\n広告読込み中は画面上部のボタンタップ,単語入力が出来ません。通信速度が遅い場合,広告の読込みに10秒以上かかります。      "];
+    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\n手書き入力\niPhoneの設定から手書き入力が\n可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-簡体字(繁体字) 手書き を追加\n\nスペルのテスト\n単語入力時,自動修正をオフにしていると予測変換がされないので,スペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 一般 > 文字サイズを変更 > スライダをドラッグ\n\n広告読込み中は画面上部のボタンタップ,単語入力が出来ません。通信速度が遅い場合,広告の読込みに5秒以上かかります。      "];
     
     [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(0, 3)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x0889e6) range:NSMakeRange(3, 87)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(87, 165)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(252, 60)];
+    //[attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x0889e6) range:NSMakeRange(3, 87)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(3, 6)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(109, 9)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(204, 9)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(283, 59)];
     [ewTextView setAttributedText:attFont];
     
     ewTextView.textAlignment = NSTextAlignmentCenter;
     
     [ewTextView setEditable:NO];
-    [ewTextView setSelectable:NO];
+    //[ewTextView setSelectable:NO];
     [backButton setEnabled:NO];
     [nextButton setEnabled:NO];
     bannerForAD.delegate = self;
@@ -1939,6 +1941,7 @@
     
     [self.view addGestureRecognizer:swipeRightGesture];
 
+    /*
     NSString *MY_BANNER_UNIT_ID = @"ca-app-pub-9302632653080358/4207271822";
     
     // 画面上部に標準サイズのビューを作成する
@@ -1962,6 +1965,7 @@
     //GADRequest *req = [GADRequest request];
     //req.testDevices = @[ GAD_SIMULATOR_ID ];
     //[bannerView_ loadRequest:req];
+     */
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -1989,6 +1993,7 @@
     }
 }
 
+/*
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
     [UIView beginAnimations:@"ToggleViews" context:nil];
      [UIView setAnimationDuration:0.8];
@@ -2085,6 +2090,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     //[bannerView_ release];
     //[super dealloc];
 }
+ */
 
 /*
 //iAd取得成功
@@ -2225,6 +2231,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     
     [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
     
+    [ewTextView setSelectable:YES];
+    
     // Make the animatable changes.
     ewTextView.alpha = 0.0;
     ewTextView.alpha = 1.0;
@@ -2329,6 +2337,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     
     [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
     
+    [ewTextView setSelectable:YES];
+    
     // Make the animatable changes.
     ewTextView.alpha = 0.0;
     ewTextView.alpha = 1.0;
@@ -2408,6 +2418,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     
     [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
     
+    [ewTextView setSelectable:YES];
+    [ewTextView setTextColor:[UIColor blackColor]];
     // Make the animatable changes.
     ewTextView.alpha = 0.0;
     ewTextView.alpha = 1.0;
@@ -2602,6 +2614,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         
         [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
         
+        [ewTextView setSelectable:YES];
+        
         // Make the animatable changes.
         ewTextView.alpha = 0.0;
         ewTextView.alpha = 1.0;
@@ -2673,6 +2687,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         [UIView setAnimationDuration:0.5];
         
         [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+        
+        [ewTextView setSelectable:YES];
         
         // Make the animatable changes.
         ewTextView.alpha = 0.0;

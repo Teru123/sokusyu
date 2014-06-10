@@ -32,6 +32,7 @@
 CAShapeLayer *openMenuShape;
 #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
 
+/*
 // Checks if we have an internet connection or not
 - (void)testInternetConnection
 {
@@ -72,6 +73,7 @@ CAShapeLayer *openMenuShape;
     
     [internetReachableFoo startNotifier];
 }
+ 
 
 // Method implementations
 - (void)hideTabBar:(UITabBarController *) tabbarcontroller
@@ -93,12 +95,13 @@ CAShapeLayer *openMenuShape;
     
     [UIView commitAnimations];
 }
+ */
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    [self testInternetConnection];
+    //[self testInternetConnection];
     
     NSNumber *toCount = [[NSNumber alloc] initWithInt:0];
 
