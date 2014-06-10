@@ -1854,14 +1854,14 @@
 
     }
     
-    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\n手書き入力\niPhoneの設定から手書き入力が\n可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-簡体字(繁体字) 手書き を追加\n\nスペルのテスト\n単語入力時,自動修正をオフにしていると予測変換がされないので,スペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 一般 > 文字サイズを変更 > スライダをドラッグ\n\n広告読込み中は画面上部のボタンタップ,単語入力が出来ません。通信速度が遅い場合,広告の読込みに5秒以上かかります。      "];
+    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\nロングタップで辞書検索\n左右スワイプで単語切替\nテストはランダム表示\nグラフはテスト終了後に更新\n\n手書き入力\nアプリ使用またはiPhoneの設定から手書き入力が可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-簡体字(繁体字) 手書き を追加\n\nスペルのテスト\n自動修正オフで予測変換がされないので,スペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 一般 > 文字サイズを変更 > スライダをドラッグ     "];
     
     [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(0, 3)];
     //[attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x0889e6) range:NSMakeRange(3, 87)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(3, 6)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(109, 9)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(204, 9)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(283, 59)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(52, 6)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(168, 8)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(249, 9)];
+    
     [ewTextView setAttributedText:attFont];
     
     ewTextView.textAlignment = NSTextAlignmentCenter;

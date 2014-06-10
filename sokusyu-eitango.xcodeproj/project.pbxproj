@@ -41,7 +41,7 @@
 		DD5DC6541831CAF200E4FE50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5DC6531831CAF200E4FE50 /* UIKit.framework */; };
 		DD5DC65A1831CAF200E4FE50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD5DC6581831CAF200E4FE50 /* InfoPlist.strings */; };
 		DD5DC65C1831CAF200E4FE50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5DC65B1831CAF200E4FE50 /* main.m */; };
-		DD5DC6631831CAF200E4FE50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5DC6611831CAF200E4FE50 /* Main.storyboard */; };
+		DD5DC6631831CAF200E4FE50 /* iPhone4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5DC6611831CAF200E4FE50 /* iPhone4.storyboard */; };
 		DD5DC66B1831CAF200E4FE50 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD5DC66A1831CAF200E4FE50 /* Images.xcassets */; };
 		DD5DC6721831CAF200E4FE50 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5DC6711831CAF200E4FE50 /* XCTest.framework */; };
 		DD5DC6731831CAF200E4FE50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5DC64F1831CAF200E4FE50 /* Foundation.framework */; };
@@ -90,6 +90,7 @@
 		DD8D7D661920AB3A007B9D9C /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD8D7D641920AB3A007B9D9C /* README.txt */; };
 		DD993C3C192F1A55001E9E36 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D7D631920AB3A007B9D9C /* libGoogleAdMobAds.a */; };
 		DD993C3D192F1BCC001E9E36 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDC3D9C18E6AABF0042BE4C /* libNendAd.a */; };
+		DDA4D0141947133B002B9C88 /* iPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA4D0131947133B002B9C88 /* iPhone5.storyboard */; };
 		DDAA8A4C18C6231F0053477D /* Twitter_logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAA8A4B18C6231F0053477D /* Twitter_logo_white.png */; };
 		DDAD0DE218FE9C5A00B431DE /* linebutton_88x20.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD0DE118FE9C5A00B431DE /* linebutton_88x20.png */; };
 		DDB5B70A18FE813C001CF8C5 /* libAdapterNend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB5B70918FE813C001CF8C5 /* libAdapterNend.a */; };
@@ -162,7 +163,7 @@
 		DD5DC6591831CAF200E4FE50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD5DC65B1831CAF200E4FE50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DD5DC65D1831CAF200E4FE50 /* sokusyu-eitango-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sokusyu-eitango-Prefix.pch"; sourceTree = "<group>"; };
-		DD5DC6621831CAF200E4FE50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD5DC6621831CAF200E4FE50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPhone4.storyboard; sourceTree = "<group>"; };
 		DD5DC66A1831CAF200E4FE50 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DD5DC6701831CAF200E4FE50 /* sokusyu-eitangoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sokusyu-eitangoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD5DC6711831CAF200E4FE50 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -247,6 +248,7 @@
 		DD8D7D621920AB3A007B9D9C /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADRequestError.h; path = ../GADRequestError.h; sourceTree = "<group>"; };
 		DD8D7D631920AB3A007B9D9C /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = ../libGoogleAdMobAds.a; sourceTree = "<group>"; };
 		DD8D7D641920AB3A007B9D9C /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = ../README.txt; sourceTree = "<group>"; };
+		DDA4D0131947133B002B9C88 /* iPhone5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone5.storyboard; sourceTree = "<group>"; };
 		DDAA8A4B18C6231F0053477D /* Twitter_logo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter_logo_white.png; sourceTree = "<group>"; };
 		DDAD0DE118FE9C5A00B431DE /* linebutton_88x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linebutton_88x20.png; sourceTree = "<group>"; };
 		DDB5B70918FE813C001CF8C5 /* libAdapterNend.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterNend.a; sourceTree = "<group>"; };
@@ -382,7 +384,8 @@
 				DDF65E7D19161BD000D7AFF8 /* Reachability.m */,
 				DD27965F1926449F0075CCAF /* UITableView+Wave.h */,
 				DD2796601926449F0075CCAF /* UITableView+Wave.m */,
-				DD5DC6611831CAF200E4FE50 /* Main.storyboard */,
+				DDA4D0131947133B002B9C88 /* iPhone5.storyboard */,
+				DD5DC6611831CAF200E4FE50 /* iPhone4.storyboard */,
 				DD7D53E91929F623002AD985 /* SWTableViewCell */,
 				DD5D20EE18DDB2420048E17C /* AdMob */,
 				DDC8EFE018D808760064C1FA /* NendAd */,
@@ -664,12 +667,13 @@
 				DD502669191F72170030B55A /* tick.png in Resources */,
 				DD502677191F82BD0030B55A /* recycle-bin.png in Resources */,
 				DD5DC65A1831CAF200E4FE50 /* InfoPlist.strings in Resources */,
-				DD5DC6631831CAF200E4FE50 /* Main.storyboard in Resources */,
+				DD5DC6631831CAF200E4FE50 /* iPhone4.storyboard in Resources */,
 				DD636DCC18BF1B75009471B0 /* textView_White.png in Resources */,
 				DD502671191F75EE0030B55A /* pie-chart.png in Resources */,
 				DDAA8A4C18C6231F0053477D /* Twitter_logo_white.png in Resources */,
 				DD50266F191F75930030B55A /* pen.png in Resources */,
 				DD8701FA18BF413B0071C346 /* stop-white.png in Resources */,
+				DDA4D0141947133B002B9C88 /* iPhone5.storyboard in Resources */,
 				DDC8EFE818D808760064C1FA /* NADView_readme.txt in Resources */,
 				DD8D7D661920AB3A007B9D9C /* README.txt in Resources */,
 				DD50267E191FAF390030B55A /* arrow-big-12.png in Resources */,
@@ -809,12 +813,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		DD5DC6611831CAF200E4FE50 /* Main.storyboard */ = {
+		DD5DC6611831CAF200E4FE50 /* iPhone4.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DD5DC6621831CAF200E4FE50 /* Base */,
 			);
-			name = Main.storyboard;
+			name = iPhone4.storyboard;
 			sourceTree = "<group>";
 		};
 		DD5DC67A1831CAF200E4FE50 /* InfoPlist.strings */ = {

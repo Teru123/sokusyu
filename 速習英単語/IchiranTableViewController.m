@@ -182,11 +182,11 @@
     ichiran.uniqueId = info.uniqueId;
     [self presentViewController:self.ichiran animated:YES completion:nil];
      */
-   
     
-        if (tableView == self.searchDisplayController.searchResultsTableView) {
-            [self performSegueWithIdentifier: @"showIchiranViewController" sender: self];
-        }
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        [self performSegueWithIdentifier: @"showIchiranViewController" sender: self];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
