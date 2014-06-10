@@ -34,7 +34,6 @@
 		DD5C98B618DDC40D003BC4ED /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5C98B518DDC40D003BC4ED /* CoreTelephony.framework */; };
 		DD5D20FD18DDB3E10048E17C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5D20FC18DDB3E10048E17C /* AudioToolbox.framework */; };
 		DD5D20FF18DDB4000048E17C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5D20FE18DDB4000048E17C /* MessageUI.framework */; };
-		DD5D210118DDB4260048E17C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5D210018DDB4260048E17C /* StoreKit.framework */; };
 		DD5D210318DDB4370048E17C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5D210218DDB4370048E17C /* SystemConfiguration.framework */; };
 		DD5DC6501831CAF200E4FE50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5DC64F1831CAF200E4FE50 /* Foundation.framework */; };
 		DD5DC6521831CAF200E4FE50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5DC6511831CAF200E4FE50 /* CoreGraphics.framework */; };
@@ -87,14 +86,9 @@
 		DD8701F818BF406B0071C346 /* ios7-pause-white.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8701F718BF406B0071C346 /* ios7-pause-white.png */; };
 		DD8701FA18BF413B0071C346 /* stop-white.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8701F918BF413B0071C346 /* stop-white.png */; };
 		DD8D7D5619207D12007B9D9C /* tic-tac-toe.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8D7D5519207D12007B9D9C /* tic-tac-toe.png */; };
-		DD8D7D661920AB3A007B9D9C /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD8D7D641920AB3A007B9D9C /* README.txt */; };
-		DD993C3C192F1A55001E9E36 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D7D631920AB3A007B9D9C /* libGoogleAdMobAds.a */; };
-		DD993C3D192F1BCC001E9E36 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDC3D9C18E6AABF0042BE4C /* libNendAd.a */; };
-		DDA4D0141947133B002B9C88 /* iPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA4D0131947133B002B9C88 /* iPhone5.storyboard */; };
+		DDA4D0141947133B002B9C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA4D0131947133B002B9C88 /* Main.storyboard */; };
 		DDAA8A4C18C6231F0053477D /* Twitter_logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAA8A4B18C6231F0053477D /* Twitter_logo_white.png */; };
 		DDAD0DE218FE9C5A00B431DE /* linebutton_88x20.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD0DE118FE9C5A00B431DE /* linebutton_88x20.png */; };
-		DDB5B70A18FE813C001CF8C5 /* libAdapterNend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB5B70918FE813C001CF8C5 /* libAdapterNend.a */; };
-		DDC8EFE818D808760064C1FA /* NADView_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = DDC8EFE618D808760064C1FA /* NADView_readme.txt */; };
 		DDC8EFEA18D808A90064C1FA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC8EFE918D808A90064C1FA /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DDC8EFEC18D808B70064C1FA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC8EFEB18D808B70064C1FA /* Security.framework */; };
 		DDEE4CA2191B363C001EF2BF /* TestWords.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEE4CA1191B363C001EF2BF /* TestWords.m */; };
@@ -153,7 +147,6 @@
 		DD5C98B518DDC40D003BC4ED /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		DD5D20FC18DDB3E10048E17C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DD5D20FE18DDB4000048E17C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		DD5D210018DDB4260048E17C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DD5D210218DDB4370048E17C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DD5DC64C1831CAF200E4FE50 /* sokusyu-eitango.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sokusyu-eitango.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD5DC64F1831CAF200E4FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -234,32 +227,11 @@
 		DD8701F718BF406B0071C346 /* ios7-pause-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7-pause-white.png"; sourceTree = "<group>"; };
 		DD8701F918BF413B0071C346 /* stop-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop-white.png"; sourceTree = "<group>"; };
 		DD8D7D5519207D12007B9D9C /* tic-tac-toe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tic-tac-toe.png"; sourceTree = "<group>"; };
-		DD8D7D571920AB3A007B9D9C /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdMobExtras.h; path = ../GADAdMobExtras.h; sourceTree = "<group>"; };
-		DD8D7D581920AB3A007B9D9C /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdNetworkExtras.h; path = ../GADAdNetworkExtras.h; sourceTree = "<group>"; };
-		DD8D7D591920AB3A007B9D9C /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdSize.h; path = ../GADAdSize.h; sourceTree = "<group>"; };
-		DD8D7D5A1920AB3A007B9D9C /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADBannerView.h; path = ../GADBannerView.h; sourceTree = "<group>"; };
-		DD8D7D5B1920AB3A007B9D9C /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADBannerViewDelegate.h; path = ../GADBannerViewDelegate.h; sourceTree = "<group>"; };
-		DD8D7D5C1920AB3A007B9D9C /* GADInAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInAppPurchase.h; path = ../GADInAppPurchase.h; sourceTree = "<group>"; };
-		DD8D7D5D1920AB3A007B9D9C /* GADInAppPurchaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInAppPurchaseDelegate.h; path = ../GADInAppPurchaseDelegate.h; sourceTree = "<group>"; };
-		DD8D7D5E1920AB3A007B9D9C /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInterstitial.h; path = ../GADInterstitial.h; sourceTree = "<group>"; };
-		DD8D7D5F1920AB3A007B9D9C /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInterstitialDelegate.h; path = ../GADInterstitialDelegate.h; sourceTree = "<group>"; };
-		DD8D7D601920AB3A007B9D9C /* GADModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADModules.h; path = ../GADModules.h; sourceTree = "<group>"; };
-		DD8D7D611920AB3A007B9D9C /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADRequest.h; path = ../GADRequest.h; sourceTree = "<group>"; };
-		DD8D7D621920AB3A007B9D9C /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADRequestError.h; path = ../GADRequestError.h; sourceTree = "<group>"; };
-		DD8D7D631920AB3A007B9D9C /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = ../libGoogleAdMobAds.a; sourceTree = "<group>"; };
-		DD8D7D641920AB3A007B9D9C /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = ../README.txt; sourceTree = "<group>"; };
-		DDA4D0131947133B002B9C88 /* iPhone5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone5.storyboard; sourceTree = "<group>"; };
+		DDA4D0131947133B002B9C88 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DDAA8A4B18C6231F0053477D /* Twitter_logo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter_logo_white.png; sourceTree = "<group>"; };
 		DDAD0DE118FE9C5A00B431DE /* linebutton_88x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linebutton_88x20.png; sourceTree = "<group>"; };
-		DDB5B70918FE813C001CF8C5 /* libAdapterNend.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterNend.a; sourceTree = "<group>"; };
-		DDC8EFE218D808760064C1FA /* NADIconArrayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconArrayView.h; sourceTree = "<group>"; };
-		DDC8EFE318D808760064C1FA /* NADIconLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconLoader.h; sourceTree = "<group>"; };
-		DDC8EFE418D808760064C1FA /* NADIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconView.h; sourceTree = "<group>"; };
-		DDC8EFE518D808760064C1FA /* NADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADView.h; sourceTree = "<group>"; };
-		DDC8EFE618D808760064C1FA /* NADView_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NADView_readme.txt; sourceTree = "<group>"; };
 		DDC8EFE918D808A90064C1FA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		DDC8EFEB18D808B70064C1FA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		DDDC3D9C18E6AABF0042BE4C /* libNendAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNendAd.a; sourceTree = "<group>"; };
 		DDEE4CA0191B363C001EF2BF /* TestWords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWords.h; sourceTree = "<group>"; };
 		DDEE4CA1191B363C001EF2BF /* TestWords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestWords.m; sourceTree = "<group>"; };
 		DDEE4CA3191B386A001EF2BF /* TestWordsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWordsData.h; sourceTree = "<group>"; };
@@ -278,17 +250,13 @@
 				DD4055F118F26D7900883B32 /* Accelerate.framework in Frameworks */,
 				DD5C98B618DDC40D003BC4ED /* CoreTelephony.framework in Frameworks */,
 				DD5D210318DDB4370048E17C /* SystemConfiguration.framework in Frameworks */,
-				DD5D210118DDB4260048E17C /* StoreKit.framework in Frameworks */,
 				DD5D20FF18DDB4000048E17C /* MessageUI.framework in Frameworks */,
 				DD5D20FD18DDB3E10048E17C /* AudioToolbox.framework in Frameworks */,
 				DDC8EFEC18D808B70064C1FA /* Security.framework in Frameworks */,
 				DDC8EFEA18D808A90064C1FA /* AdSupport.framework in Frameworks */,
 				DD7AE34818AE329D00C21AAE /* AVFoundation.framework in Frameworks */,
-				DD993C3C192F1A55001E9E36 /* libGoogleAdMobAds.a in Frameworks */,
-				DDB5B70A18FE813C001CF8C5 /* libAdapterNend.a in Frameworks */,
 				DD2840B418ACD781008329D9 /* iAd.framework in Frameworks */,
 				DD5DC6B91831CF6200E4FE50 /* libsqlite3.dylib in Frameworks */,
-				DD993C3D192F1BCC001E9E36 /* libNendAd.a in Frameworks */,
 				DD5DC6521831CAF200E4FE50 /* CoreGraphics.framework in Frameworks */,
 				DD5DC6541831CAF200E4FE50 /* UIKit.framework in Frameworks */,
 				DD5DC6501831CAF200E4FE50 /* Foundation.framework in Frameworks */,
@@ -309,27 +277,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DD5D20EE18DDB2420048E17C /* AdMob */ = {
-			isa = PBXGroup;
-			children = (
-				DD8D7D571920AB3A007B9D9C /* GADAdMobExtras.h */,
-				DD8D7D581920AB3A007B9D9C /* GADAdNetworkExtras.h */,
-				DD8D7D591920AB3A007B9D9C /* GADAdSize.h */,
-				DD8D7D5A1920AB3A007B9D9C /* GADBannerView.h */,
-				DD8D7D5B1920AB3A007B9D9C /* GADBannerViewDelegate.h */,
-				DD8D7D5C1920AB3A007B9D9C /* GADInAppPurchase.h */,
-				DD8D7D5D1920AB3A007B9D9C /* GADInAppPurchaseDelegate.h */,
-				DD8D7D5E1920AB3A007B9D9C /* GADInterstitial.h */,
-				DD8D7D5F1920AB3A007B9D9C /* GADInterstitialDelegate.h */,
-				DD8D7D601920AB3A007B9D9C /* GADModules.h */,
-				DD8D7D611920AB3A007B9D9C /* GADRequest.h */,
-				DD8D7D621920AB3A007B9D9C /* GADRequestError.h */,
-				DD8D7D631920AB3A007B9D9C /* libGoogleAdMobAds.a */,
-				DD8D7D641920AB3A007B9D9C /* README.txt */,
-			);
-			name = AdMob;
-			sourceTree = "<group>";
-		};
 		DD5DC6431831CAF200E4FE50 = {
 			isa = PBXGroup;
 			children = (
@@ -358,7 +305,6 @@
 				DD4055F018F26D7900883B32 /* Accelerate.framework */,
 				DD5C98B518DDC40D003BC4ED /* CoreTelephony.framework */,
 				DD5D210218DDB4370048E17C /* SystemConfiguration.framework */,
-				DD5D210018DDB4260048E17C /* StoreKit.framework */,
 				DD5D20FE18DDB4000048E17C /* MessageUI.framework */,
 				DD5D20FC18DDB3E10048E17C /* AudioToolbox.framework */,
 				DDC8EFEB18D808B70064C1FA /* Security.framework */,
@@ -384,11 +330,9 @@
 				DDF65E7D19161BD000D7AFF8 /* Reachability.m */,
 				DD27965F1926449F0075CCAF /* UITableView+Wave.h */,
 				DD2796601926449F0075CCAF /* UITableView+Wave.m */,
-				DDA4D0131947133B002B9C88 /* iPhone5.storyboard */,
+				DDA4D0131947133B002B9C88 /* Main.storyboard */,
 				DD5DC6611831CAF200E4FE50 /* iPhone4.storyboard */,
 				DD7D53E91929F623002AD985 /* SWTableViewCell */,
-				DD5D20EE18DDB2420048E17C /* AdMob */,
-				DDC8EFE018D808760064C1FA /* NendAd */,
 				DD5DC6871831CC7200E4FE50 /* Data */,
 				DD5DC69B1831CCF700E4FE50 /* Yosyu */,
 				DD5DC6A41831CD3D00E4FE50 /* Test */,
@@ -566,20 +510,6 @@
 			name = SWTableViewCell;
 			sourceTree = "<group>";
 		};
-		DDC8EFE018D808760064C1FA /* NendAd */ = {
-			isa = PBXGroup;
-			children = (
-				DDDC3D9C18E6AABF0042BE4C /* libNendAd.a */,
-				DDB5B70918FE813C001CF8C5 /* libAdapterNend.a */,
-				DDC8EFE218D808760064C1FA /* NADIconArrayView.h */,
-				DDC8EFE318D808760064C1FA /* NADIconLoader.h */,
-				DDC8EFE418D808760064C1FA /* NADIconView.h */,
-				DDC8EFE518D808760064C1FA /* NADView.h */,
-				DDC8EFE618D808760064C1FA /* NADView_readme.txt */,
-			);
-			path = NendAd;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -632,6 +562,11 @@
 				TargetAttributes = {
 					DD5DC64B1831CAF200E4FE50 = {
 						DevelopmentTeam = 93JB3QS9N8;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					DD5DC66F1831CAF200E4FE50 = {
 						TestTargetID = DD5DC64B1831CAF200E4FE50;
@@ -673,9 +608,7 @@
 				DDAA8A4C18C6231F0053477D /* Twitter_logo_white.png in Resources */,
 				DD50266F191F75930030B55A /* pen.png in Resources */,
 				DD8701FA18BF413B0071C346 /* stop-white.png in Resources */,
-				DDA4D0141947133B002B9C88 /* iPhone5.storyboard in Resources */,
-				DDC8EFE818D808760064C1FA /* NADView_readme.txt in Resources */,
-				DD8D7D661920AB3A007B9D9C /* README.txt in Resources */,
+				DDA4D0141947133B002B9C88 /* Main.storyboard in Resources */,
 				DD50267E191FAF390030B55A /* arrow-big-12.png in Resources */,
 				DD7D5403192A249A002AD985 /* HukusyuDetailViewController.xib in Resources */,
 				DD070DC718BEEE0C00E843AF /* ios7-play-white.png in Resources */,
@@ -909,7 +842,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -934,8 +867,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Terutaka Hayashi (93JB3QS9N8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Terutaka Hayashi (93JB3QS9N8)";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "速習英単語/sokusyu-eitango-Prefix.pch";

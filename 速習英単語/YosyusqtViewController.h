@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 #import <AVFoundation/AVFoundation.h>
-#import "NADView.h"
-#import "GADBannerView.h"
+//#import "NADView.h"
+//#import "GADBannerView.h"
 
-@interface YosyusqtViewController : UIViewController<UIAlertViewDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate, NADViewDelegate, GADBannerViewDelegate>
+@interface YosyusqtViewController : UIViewController<UIAlertViewDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate>
 {
     int currentIndex;
     NSArray *changeLabel;
@@ -29,7 +29,7 @@
     NSString *itsDetail;
     NSString *itsHatuon;
     NSString *itsReibun;
-    GADBannerView *bannerView_;
+    //GADBannerView *bannerView_;
     __weak IBOutlet UITextView *ewTextView;
     __weak IBOutlet UIBarButtonItem *nextButton;
     __weak IBOutlet UINavigationBar *navigationBarForTitle;
@@ -70,6 +70,6 @@
 
 @property (nonatomic, strong) NSString *wordNo;
 @property (strong, nonatomic) AVSpeechSynthesizer *speechSynthesizer;
-@property (nonatomic, retain) NADView * nadView;
+//@property (nonatomic, retain) NADView * nadView;
 
 @end

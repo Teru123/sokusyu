@@ -9,11 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 #import <AVFoundation/AVFoundation.h>
-#import "NADView.h"
-#import "GADBannerView.h"
+
 
 @interface IchiranViewController : UIViewController
-<UITextFieldDelegate, UIGestureRecognizerDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate, NADViewDelegate, GADBannerViewDelegate>
+<UITextFieldDelegate, UIGestureRecognizerDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate>
 {
     __weak IBOutlet UITextView *ewTextView;
     __weak IBOutlet UILabel *hatuonLabel;
@@ -31,7 +30,7 @@
     __weak IBOutlet UIButton *reibunPause;
     int _uniqueId;
     NSString *reibun;
-    GADBannerView *bannerView_;
+    //GADBannerView *bannerView_;
 }
 @property(nonatomic, copy) void (^dismissblock)(void);
 @property(nonatomic, getter=isHidden) BOOL hidden;
@@ -44,6 +43,6 @@
 - (IBAction)reibunPauseAction:(id)sender;
 
 @property (strong, nonatomic) AVSpeechSynthesizer *speechSynthesizer;
-@property (nonatomic, retain) NADView * nadView;
+//@property (nonatomic, retain) NADView * nadView;
 
 @end

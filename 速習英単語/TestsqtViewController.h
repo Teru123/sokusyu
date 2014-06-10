@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 #import <AVFoundation/AVFoundation.h>
-#import "NADView.h"
-#import "GADBannerView.h"
+//#import "NADView.h"
+//#import "GADBannerView.h"
 #import "CorrectAnswerData.h"
 
 @interface TestsqtViewController : UIViewController
-<NSCoding, UITextFieldDelegate, UIGestureRecognizerDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate, NADViewDelegate, GADBannerViewDelegate>
+<NSCoding, UITextFieldDelegate, UIGestureRecognizerDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate>
 {
     int currentIndex;
     int yourScore;
@@ -30,7 +30,7 @@
     NSMutableArray *words;
     NSString *reibunString;
     NSString *tangoString;
-    GADBannerView *bannerView_;
+    //GADBannerView *bannerView_;
     GetAndSetCorrectAnswerData *infoCorrectIncorrect;
     NSString *wordName;
     NSString *detailData;
@@ -79,6 +79,6 @@
 @property (nonatomic, strong) NSString *wordNo;
 @property (nonatomic, strong) NSString *correctName;
 @property (strong, nonatomic) AVSpeechSynthesizer *speechSynthesizer;
-@property (nonatomic, retain) NADView * nadView;
+//@property (nonatomic, retain) NADView * nadView;
 
 @end

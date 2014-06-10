@@ -96,7 +96,7 @@
     if (iOSDeviceScreenSize.height == 568)
     {   // iPhone 5 and iPod Touch 5th generation: 4 inch screen
         // Instantiate a new storyboard object using the storyboard file named Storyboard_iPhone4
-        UIStoryboard *iPhone4Storyboard = [UIStoryboard storyboardWithName:@"iPhone5" bundle:nil];
+        UIStoryboard *iPhone4Storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
         UIViewController *initialViewController = [iPhone4Storyboard instantiateInitialViewController];
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
