@@ -91,7 +91,7 @@
         <scene sceneID="b64-5N-4Ud">
             <objects>
                 <navigationController definesPresentationContext="YES" id="GX4-5J-ciL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="復習" image="tick.png" id="nIm-Fh-Msy"/>
+                    <tabBarItem key="tabBarItem" title="復習" image="bookmark.png" id="nIm-Fh-Msy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="BF2-4l-eKi">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1148,7 +1148,7 @@
                                 <action selector="refreshScore:" destination="rcK-jQ-G2x" id="P4R-co-nA8"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="pie-chart.png" id="C0I-5c-12K">
+                        <barButtonItem key="rightBarButtonItem" image="presentation.png" id="C0I-5c-12K">
                             <connections>
                                 <action selector="shareAction:" destination="rcK-jQ-G2x" id="wNm-7z-Dcr"/>
                                 <segue destination="BCU-03-9PS" kind="push" id="iAR-Fn-taG"/>
@@ -2240,7 +2240,7 @@
         <scene sceneID="ABD-C6-px2">
             <objects>
                 <navigationController definesPresentationContext="YES" id="P6O-xG-cEj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="予習" image="pen.png" id="jvh-ZQ-O8h"/>
+                    <tabBarItem key="tabBarItem" title="予習" image="dumbbell.png" id="jvh-ZQ-O8h"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="dKS-3e-cO3">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2432,7 +2432,7 @@
         <scene sceneID="wgi-De-Y6x">
             <objects>
                 <navigationController definesPresentationContext="YES" id="vYo-19-AAZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="単語一覧" image="search.png" id="efd-QW-o4T"/>
+                    <tabBarItem key="tabBarItem" title="単語一覧" image="document.png" id="efd-QW-o4T"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="3Ey-mT-kyY">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2448,7 +2448,7 @@
         <scene sceneID="BmY-cy-nLk">
             <objects>
                 <navigationController definesPresentationContext="YES" id="c1B-21-3sc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="テスト" image="tic-tac-toe.png" id="gB5-fF-gpC"/>
+                    <tabBarItem key="tabBarItem" title="テスト" image="rank.png" id="gB5-fF-gpC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="KQM-pP-m9h">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2462,16 +2462,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bookmark.png" width="30" height="30"/>
+        <image name="document.png" width="30" height="30"/>
+        <image name="dumbbell.png" width="30" height="30"/>
         <image name="ios7-pause-white.png" width="512" height="512"/>
         <image name="ios7-play-white.png" width="512" height="512"/>
-        <image name="pen.png" width="30" height="30"/>
-        <image name="pie-chart.png" width="30" height="30"/>
+        <image name="presentation.png" width="30" height="30"/>
+        <image name="rank.png" width="30" height="30"/>
         <image name="recycle-bin.png" width="30" height="30"/>
-        <image name="search.png" width="30" height="30"/>
         <image name="stop-white.png" width="512" height="512"/>
         <image name="textView_White.png" width="640" height="640"/>
-        <image name="tic-tac-toe.png" width="30" height="30"/>
-        <image name="tick.png" width="30" height="30"/>
         <image name="uptrend.png" width="30" height="30"/>
         <image name="yellowstar.png" width="30" height="30"/>
     </resources>

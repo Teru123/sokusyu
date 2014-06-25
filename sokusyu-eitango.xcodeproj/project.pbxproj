@@ -91,6 +91,13 @@
 		DDAD0DE218FE9C5A00B431DE /* linebutton_88x20.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD0DE118FE9C5A00B431DE /* linebutton_88x20.png */; };
 		DDC8EFEA18D808A90064C1FA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC8EFE918D808A90064C1FA /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DDC8EFEC18D808B70064C1FA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC8EFEB18D808B70064C1FA /* Security.framework */; };
+		DDCAD903195ACAFF009777B1 /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCAD902195ACAFF009777B1 /* bookmark.png */; };
+		DDCAD905195ACB30009777B1 /* desk-lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCAD904195ACB30009777B1 /* desk-lamp.png */; };
+		DDCAD907195ACB3C009777B1 /* document.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCAD906195ACB3C009777B1 /* document.png */; };
+		DDCAD909195ACB9D009777B1 /* presentation.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCAD908195ACB9D009777B1 /* presentation.png */; };
+		DDCAD90B195ACBAC009777B1 /* rank.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCAD90A195ACBAC009777B1 /* rank.png */; };
+		DDCAD90D195ACDB3009777B1 /* multiple.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCAD90C195ACDB3009777B1 /* multiple.png */; };
+		DDCAD90F195ADBF2009777B1 /* dumbbell.png in Resources */ = {isa = PBXBuildFile; fileRef = DDCAD90E195ADBF2009777B1 /* dumbbell.png */; };
 		DDEE4CA2191B363C001EF2BF /* TestWords.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEE4CA1191B363C001EF2BF /* TestWords.m */; };
 		DDEE4CA5191B386A001EF2BF /* TestWordsData.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEE4CA4191B386A001EF2BF /* TestWordsData.m */; };
 		DDF3BFDA18BF8B90003CD278 /* button-Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF3BFD918BF8B90003CD278 /* button-Blue.png */; };
@@ -232,6 +239,13 @@
 		DDAD0DE118FE9C5A00B431DE /* linebutton_88x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linebutton_88x20.png; sourceTree = "<group>"; };
 		DDC8EFE918D808A90064C1FA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		DDC8EFEB18D808B70064C1FA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DDCAD902195ACAFF009777B1 /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark.png; sourceTree = "<group>"; };
+		DDCAD904195ACB30009777B1 /* desk-lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "desk-lamp.png"; sourceTree = "<group>"; };
+		DDCAD906195ACB3C009777B1 /* document.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = document.png; sourceTree = "<group>"; };
+		DDCAD908195ACB9D009777B1 /* presentation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = presentation.png; sourceTree = "<group>"; };
+		DDCAD90A195ACBAC009777B1 /* rank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rank.png; sourceTree = "<group>"; };
+		DDCAD90C195ACDB3009777B1 /* multiple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = multiple.png; sourceTree = "<group>"; };
+		DDCAD90E195ADBF2009777B1 /* dumbbell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dumbbell.png; sourceTree = "<group>"; };
 		DDEE4CA0191B363C001EF2BF /* TestWords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWords.h; sourceTree = "<group>"; };
 		DDEE4CA1191B363C001EF2BF /* TestWords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestWords.m; sourceTree = "<group>"; };
 		DDEE4CA3191B386A001EF2BF /* TestWordsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWordsData.h; sourceTree = "<group>"; };
@@ -348,7 +362,14 @@
 			isa = PBXGroup;
 			children = (
 				DD8701F718BF406B0071C346 /* ios7-pause-white.png */,
+				DDCAD90C195ACDB3009777B1 /* multiple.png */,
+				DDCAD904195ACB30009777B1 /* desk-lamp.png */,
+				DDCAD908195ACB9D009777B1 /* presentation.png */,
+				DDCAD90A195ACBAC009777B1 /* rank.png */,
+				DDCAD906195ACB3C009777B1 /* document.png */,
 				DDAD0DE118FE9C5A00B431DE /* linebutton_88x20.png */,
+				DDCAD90E195ADBF2009777B1 /* dumbbell.png */,
+				DDCAD902195ACAFF009777B1 /* bookmark.png */,
 				DD690ECF18C6C741006F2DF8 /* FB-Logo-white.png */,
 				DDAA8A4B18C6231F0053477D /* Twitter_logo_white.png */,
 				DD50267D191FAF390030B55A /* arrow-big-12.png */,
@@ -597,19 +618,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDCAD90F195ADBF2009777B1 /* dumbbell.png in Resources */,
 				DD5DC66B1831CAF200E4FE50 /* Images.xcassets in Resources */,
 				DD831F43185956A600017293 /* YosyuFourViewController.xib in Resources */,
 				DD502669191F72170030B55A /* tick.png in Resources */,
 				DD502677191F82BD0030B55A /* recycle-bin.png in Resources */,
 				DD5DC65A1831CAF200E4FE50 /* InfoPlist.strings in Resources */,
 				DD5DC6631831CAF200E4FE50 /* iPhone4.storyboard in Resources */,
+				DDCAD90B195ACBAC009777B1 /* rank.png in Resources */,
 				DD636DCC18BF1B75009471B0 /* textView_White.png in Resources */,
 				DD502671191F75EE0030B55A /* pie-chart.png in Resources */,
 				DDAA8A4C18C6231F0053477D /* Twitter_logo_white.png in Resources */,
+				DDCAD909195ACB9D009777B1 /* presentation.png in Resources */,
 				DD50266F191F75930030B55A /* pen.png in Resources */,
 				DD8701FA18BF413B0071C346 /* stop-white.png in Resources */,
 				DDA4D0141947133B002B9C88 /* Main.storyboard in Resources */,
 				DD50267E191FAF390030B55A /* arrow-big-12.png in Resources */,
+				DDCAD90D195ACDB3009777B1 /* multiple.png in Resources */,
 				DD7D5403192A249A002AD985 /* HukusyuDetailViewController.xib in Resources */,
 				DD070DC718BEEE0C00E843AF /* ios7-play-white.png in Resources */,
 				DDAD0DE218FE9C5A00B431DE /* linebutton_88x20.png in Resources */,
@@ -625,7 +650,10 @@
 				DD502655191F381B0030B55A /* PercentageTableViewCell.xib in Resources */,
 				DD5DC6D41831D10D00E4FE50 /* yellowtrophy.png in Resources */,
 				DD5409A1192B188B001268FC /* HukusyuFourDetailViewController.xib in Resources */,
+				DDCAD903195ACAFF009777B1 /* bookmark.png in Resources */,
 				DD5DC6D31831D10D00E4FE50 /* yellowstar.png in Resources */,
+				DDCAD907195ACB3C009777B1 /* document.png in Resources */,
+				DDCAD905195ACB30009777B1 /* desk-lamp.png in Resources */,
 				DD8D7D5619207D12007B9D9C /* tic-tac-toe.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

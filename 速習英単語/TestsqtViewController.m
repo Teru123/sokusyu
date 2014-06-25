@@ -58,25 +58,25 @@
         
         TestWord *word1 = [TestWord new];
         word1.name = @"afraid";
-        word1.detail = @"形容詞 more ～; most ～\n~を恐れている, がこわい, いやだ\nDon't be ___.\n怖がらないで。\nAre you ___ of snakes?\n蛇が恐いの？\n\nこわくて~できない, 遠慮して~できない\n\n~するのではないかと心配する, 恐れる\nI didn't mention it because I was ___ of upsetting him.\n彼の気を悪くすると思って、その事に触れなかった。\n\nを気にかける, 心配する";
+        word1.detail = @"形容詞 more ～; most ～\n~を恐れている, ~がこわい, いやだ\n\nこわくて~できない, 遠慮して~できない\n\n~するのではないかと心配する, 恐れる\nI didn't mention it because I was ___ of upsetting him.\n彼の気を悪くすると思って、その事に触れなかった。\n\n~を気にかける, 心配する";
         word1.hatuon = @"əfréɪd";
-        word1.reibun = @"Don't be afraid.     Are you afraid of snakes?     I didn't mention it because I was afraid of upsetting him.";
+        word1.reibun = @"I didn't mention it because I was afraid of upsetting him.";
         
         TestWord *word2 = [TestWord new];
         word2.name = @"agree";
-        word2.detail = @"動詞 ～s/-z/; ～d/-d/; ～ing\n自動詞\n意見が同じである, 賛意を示す; ~かということに同感する\nWe ___d to leave at once.\nすぐに離れる事に賛成しました。\n\n行為、方策を正しいと認める\n\n提案、要求に同意する, ~を承諾[承知]する ~することに同意する\nI, for my part, totally ___ with you.\n私はあなたの考えに全面的に賛成します。\n\nを決定する, ~で合意に達する ~することに取り決める\n\n他動詞\n~という点で意見が同じである, 賛意を示す\n\n~を取り決める";
+        word2.detail = @"動詞 ～s/-z/; ～d/-d/; ～ing\n自動詞\n意見が同じである, 賛意を示す; ~かということに同感する\nWe ___d to leave at once.\nすぐに離れる事に賛成しました。\n\n~を正しいと認める\n\n~に同意する, ~を承諾[承知]する\n\n~を決定する, ~で合意に達する ~することに取り決める\n\n他動詞\n意見が同じである, 賛意を示す\n\n~を取り決める";
         word2.hatuon = @"əɡríː";
-        word2.reibun = @"We agreed to leave at once.     I, for my part, totally agree with you.";
+        word2.reibun = @"We agreed to leave at once.";
         
         TestWord *word3 = [TestWord new];
         word3.name = @"angry";
-        word3.detail = @"形容詞 __ier; __iest/more ～; most ～\n~に怒って, 腹を立てて; ~に腹を立てて\nHis imperious look makes us ___.\n彼の横暴な様子に腹が立つ。\nDon't be ___ over such trivial matters.\nそんな些細な事で怒らないで。\n\n怒った口調、表情; 怒った様子の人";
+        word3.detail = @"形容詞 __ier; __iest/more ～; most ～\n~に怒って, 腹を立てて\nHis imperious look makes us ___.\n彼の横暴な様子に腹が立つ。\nDon't be ___ over such trivial matters.\nそんな些細な事で怒らないで。\n\n怒った口調、表情; 怒った様子の人";
         word3.hatuon = @"ǽŋɡri";
         word3.reibun = @"His imperious look makes us angry.     Don't be angry over such trivial matters.";
         
         TestWord *word4 = [TestWord new];
         word4.name = @"arrive";
-        word4.detail = @"動詞 ～s/-z/; ～d/-d/; ___ing\n自動詞\n到着する, 着く ; 来る, 足を踏み入れる\nWe shall ___ soon after.\nすぐに着きます。\nYou must ___ at the airport two hours early.\n2時間前には空港に到着してください。\n\n物が届く, 配達される ; 料理が運ばれる";
+        word4.detail = @"動詞 ～s/-z/; ～d/-d/; ___ing\n自動詞\n到着する, 着く ; 来る, 足を踏み入れる\nWe shall ___ soon after.\nすぐに着きます。\nYou must ___ at the airport two hours early.\n2時間前には空港に到着してください。\n\n~が届く, 配達される ; 料理が運ばれる";
         word4.hatuon = @"əráɪv";
         word4.reibun = @"We shall arrive soon after.     You must arrive at the airport two hours early.";
         
@@ -88,9 +88,9 @@
         
         TestWord *word6 = [TestWord new];
         word6.name = @"bottom";
-        word6.detail =  @"名詞 複 ～s/-z/\n一番下, 最下部; ふもと; 降りたところ, 下\n\n底\nThere are tea leaves in the ___ of my cup.\nコップの底に茶葉があります。\n\n末席, 下っ端; びり, 最下位 \nHe was always ___ of the class in maths.\n彼の数学の成績はいつもクラスで最下位だった。\n\n奥; 行き止まり; 端\n\n原因, 根本; 真相\n\n形容詞\n底の; 底にいる\nPut your books on the ___ shelf.\n本を棚の一番下に置いてください。";
+        word6.detail =  @"名詞 複 ～s/-z/\n一番下, 最下部; ふもと; 降りたところ, 下\n\n底\nThere are tea leaves in the ___ of my cup.\nコップの底に茶葉があります。\n\n末席, 下っ端; びり, 最下位 \nHe was always ___ of the class in maths.\n彼の数学の成績はいつもクラスで最下位だった。\n\n奥; 行き止まり; 端\n\n原因, 根本; 真相\n\n形容詞\n底の; 底にいる";
         word6.hatuon = @"bɑ́təm|bɔ́t-";
-        word6.reibun = @"There are tea leaves in the bottom of my cup.     He was always bottom of the class in maths.     Put your books on the bottom shelf.";
+        word6.reibun = @"There are tea leaves in the bottom of my cup.     He was always bottom of the class in maths.";
         
         TestWord *word7 = [TestWord new];
         word7.name = @"clever";
@@ -136,9 +136,9 @@
         
         TestWord *word14 = [TestWord new];
         word14.name = @"moment";
-        word14.detail =  @"名詞 複～s/-ts/\n瞬間, 短時間; ちょっと, しばらく \nI'll be back in a ___.\nすぐに戻ります。\nWould you take a seat for a ___?\n少しの間座って頂けますか？\n\n時期, 機会; 場合\nThe big ___ has come at last!\nついにこの時が来た！";
+        word14.detail =  @"名詞 複～s/-ts/\n瞬間, 短時間; ちょっと, しばらく \nI'll be back in a ___.\nすぐに戻ります。\n\n時期, 機会; 場合\nThe big ___ has come at last!\nついにこの時が来た！";
         word14.hatuon = @"móʊmənt";
-        word14.reibun = @"I'll be back in a moment.     Would you take a seat for a moment?     The big moment has come at last!";
+        word14.reibun = @"I'll be back in a moment.     The big moment has come at last!";
         
         TestWord *word15 = [TestWord new];
         word15.name = @"pleased";
@@ -148,9 +148,9 @@
         
         TestWord *word16 = [TestWord new];
         word16.name = @"promise";
-        word16.detail =  @"動詞～s/-ɪz/; ～d/-t/; -ising\n他動詞\n~すると約束する[請け合う]; ~ということを約束する; ~ということを楽しみにする\nI ___ never to reveal his secret.\n秘密は漏らさないと約束する。\n\n~を与えると約束する\n~を心待ちにする\n\n~すると約束する\n\n事が起こりそうなことを示す; ~しそうである\n\n見込みがある\n\n名詞 複～es/-ɪz/\n約束 ; 約束\nOnce he made a ___, he would stick to it.\n彼は約束した事を守る。\nI have committed myself and must keep my ___.\n承諾した以上、約束は守らなければならない。\n\n見込み, 有望; 気配, 兆し";
+        word16.detail =  @"動詞～s/-ɪz/; ～d/-t/; -ising\n他動詞\n~すると約束する[請け合う]; ~ということを約束する; ~ということを楽しみにする\nI ___ never to reveal his secret.\n秘密は漏らさないと約束する。\n\n~を与えると約束する\n\n~を心待ちにする\n\n~すると約束する\n\n事が起こりそうなことを示す; ~しそうである\n\n見込みがある\n\n名詞 複～es/-ɪz/\n約束\n\n見込み, 有望; 気配, 兆し";
         word16.hatuon = @"prɑ́məs|prɔ́m-";
-        word16.reibun = @"I promise never to reveal his secret.     Once he made a promise, he would stick to it.     I have committed myself and must keep my promise.";
+        word16.reibun = @"I promise never to reveal his secret.";
         
         TestWord *word17 = [TestWord new];
         word17.name = @"reply";
@@ -336,7 +336,7 @@
         
         TestWord *word45 = [TestWord new];
         word45.name = @"comprehend";
-        word45.detail =  @"動詞～s/-dz/; ～ed/-ɪd/; ～ing\n他動詞\n<否定文で>~を理解する; ~ということを理解する\nThe child couldn't ___ the text.\nその子はテキストの意味が理解出来なかった。";
+        word45.detail =  @"動詞～s/-dz/; ～ed/-ɪd/; ～ing\n他動詞\n~を理解する; ~ということを理解する\nThe child couldn't ___ the text.\nその子はテキストの意味が理解出来なかった。";
         word45.hatuon = @"kɑ̀mprɪhénd|kɔ̀m-";
         word45.reibun = @"The child couldn't comprehend the text.";
         
@@ -349,7 +349,7 @@
         
         TestWord *word47 = [TestWord new];
         word47.name = @"ever";
-        word47.detail =  @"副詞\n<疑問文で>いつか; これまでに, かつて\nHave you ___ been to Tokyo?\n東京に行ったことはありますか？\n\n<if節>もし一度でも, とにかく\n\nかつて, 今まで; まさに\nI don't think I ___ met you.\nあなたに会ったことはないと思う。\n\nいっそう, ますます\n\n絶えず";
+        word47.detail =  @"副詞\nいつか; これまでに, かつて\nHave you ___ been to Tokyo?\n東京に行ったことはありますか？\n\nもし一度でも, とにかく\n\nかつて, 今まで; まさに\nI don't think I ___ met you.\nあなたに会ったことはないと思う。\n\nいっそう, ますます\n\n絶えず";
         word47.hatuon = @"évər";
         word47.reibun = @"Have you ever been to Tokyo?     I don't think I ever met you.";
         
@@ -543,7 +543,7 @@
         word78.name = @"spread";
         word78.detail =  @"動詞～s/-dz/; ～; ～ing\n他動詞\n~を広げる, 並べる\nHe ___ the map flat out on the floor.\n彼は地図を床に平らに広げた。\n\n~を大きく広げる, 鳥、虫が翼、羽を広げる\n\n蔓延[伝染]させる; 問題、影響を広める, 拡大させる; 炎、ガス、液体を広げる, 拡散させる\n\nうわさ、知識を広める, 吹聴する; ~を普及させる\nWho ___ these rumours?\n誰がデマを飛ばしたんだ？\n\n~を塗る, つける; ~につける\n\n支払い、授業を行う, 引き延ばす\n\n~を分担する, 分散させる; ~を分配する\n\n自動詞\n蔓延する, 広がる, 問題、影響が及ぶ, 拡大する ; うわさが広まる, 知識が普及する, 伝わる ; ~が分布する\n\n~が塗れる, 広がる, 伸びる; 塗る\n\n雲、野原が覆う\n\n名詞 複～s/-dz/\n人の増加, 増大; 普及\n\n土地の広がり\n\nさまざまな~; 範囲, 幅";
         word78.hatuon = @"spred";
-        word78.reibun = @"He spread the map flat out on the floor.     Who spread these rumours?.";
+        word78.reibun = @"He spread the map flat out on the floor.     Who spread these rumours.";
         
         TestWord *word79 = [TestWord new];
         word79.name = @"stroll";
@@ -580,7 +580,7 @@
         word83.name = @"belong";
         word83.detail =  @"動詞～s/-z/; ～ed/-d/; ～ing\n自動詞\n~に属している; ~の所有物である, ~のものである; ~の保護下にある\n\n組織の一員である\nWhat party do you ___ to?\nどの党派に所属していますか？\n\nある時代のものである; ~の特徴を持つ\n\n属する, 部類である";
         word83.hatuon = @"bɪlɔ́ːŋ|-lɔ́ŋ";
-        word83.reibun = @"What party do you belong to?";
+        word83.reibun = @"What party do you belong to.";
         
         TestWord *word84 = [TestWord new];
         word84.name = @"continue";
@@ -620,7 +620,7 @@
         
         TestWord *word90 = [TestWord new];
         word90.name = @"likely";
-        word90.detail =  @"形容詞more ～; most ～\nありそうな, 起こりそうな; 起こる可能性の高い; ~しそうである; ~する可能性が高い\n\nもっともらしい説明; ありそうな原因、結果; 見込みのある;  適した場所、人\n\nおそらく, たぶん\nI'm ___ to be very busy tomorrow.\n多分、明日私はとても忙しい。";
+        word90.detail =  @"形容詞more ～; most ～\nありそうな, 起こりそうな; 起こる可能性の高い; ~しそうである; ~する可能性が高い\n\nもっともらしい説明; ありそうな原因、結果; 見込みのある;  適した場所、人\n\nおそらく, たぶん\nI'm ___ to be very busy tomorrow.\n多分、明日とても忙しい。";
         word90.hatuon = @"láɪkli";
         word90.reibun = @"I'm likely to be very busy tomorrow.";
         
@@ -780,7 +780,7 @@
         word15.name = @"return";
         word15.detail =  @"動詞～s/-z/; ～ed/-d/; ～ing\n自動詞\n戻る, 帰る \nWhat time does your husband ___ from work?\n旦那さんは何時に仕事から帰りますか？\n\n~がもとの状態に戻る, 回復する\n\nもとの行為にまた戻る, 再開する\n\n他動詞\n借りた物、移動させた物を返す, 戻す\n\n受けたものを返す; 相手の行為に報いる\n\n名詞 複～s/-z/\n帰ってくること, 帰宅, 帰国, 帰還\n\n返すこと, 戻すこと, 返却, 返送\n\nまた始めること, 再開\n\n~がもとに戻ること, 復帰, 回復\n\n利益, 収益\n\n投票結果\n\n形容詞\n帰りの, 戻りの";
         word15.hatuon = @"rɪtə́ːrn";
-        word15.reibun = @"What time does your husband return from work?";
+        word15.reibun = @"What time does your husband return from work.";
         
         TestWord *word16 = [TestWord new];
         word16.name = @"survive";
@@ -804,7 +804,7 @@
         word19.name = @"weather";
         word19.detail =  @"名詞\n天気, 天候, 気象; 天候の, 気象の\nWhat is the ___ like today?\n今日はどんな天気ですか？\n\n天気予報, 気象情報.\n\n暴風雨; 悪天候\n\n動詞\n他動詞\n変色する, 風化する, 傷む; 日焼けする\n\n無事に乗り切る, うまく切り抜ける";
         word19.hatuon = @"wéðər";
-        word19.reibun = @"What is the weather like today?";
+        word19.reibun = @"What is the weather like today.";
         
         TestWord *word20 = [TestWord new];
         word20.name = @"wise";
@@ -984,7 +984,7 @@
         
         TestWord *word47 = [TestWord new];
         word47.name = @"familiar";
-        word47.detail =  @"形容詞more ～; most ～\nよく知られている, なじみの, 見[聞き]おぼえのある\n\n熟知している, 精通している\nI am not really ___ with the local laws.\n私は地方の法律に詳しくない。";
+        word47.detail =  @"形容詞more ～; most ～\nよく知られている, なじみの, 見[聞き]おぼえのある\n\n熟知している, 精通している\nI am not really ___ with the local laws.\n地方の法律に詳しくない。";
         word47.hatuon = @"fəmɪ́ljər|-iə";
         word47.reibun = @"I am not really familiar with the local laws.";
         
@@ -1028,7 +1028,7 @@
         word54.name = @"purpose";
         word54.detail =  @"名詞 複～s/-ɪz/\n 目的, 意図, ねらい ; 理由, 趣旨\nWhat is the ___ of your visit?\nあなたの来訪の目的は何ですか？\n\n生きがい";
         word54.hatuon = @"pə́ːrpəs";
-        word54.reibun = @"What is the purpose of your visit?";
+        word54.reibun = @"What is the purpose of your visit.";
         
         TestWord *word55 = [TestWord new];
         word55.name = @"release";
@@ -1116,7 +1116,7 @@
         
         TestWord *word68 = [TestWord new];
         word68.name = @"identify";
-        word68.detail =  @"動詞-fies/-z/; -fied/-d/; ～ing\n他動詞\n同一人物であると確認する, ~の身元を確認する, ~を同定する; ~であるとわかる\nI found it hard to ___ with any of the characters in the film.\n私はこの映画のどの役にもはっきりと見分けがつかなかった。\n\n~を特定する, 明確にする; ~か特定する\n\n~を同一視する, 関連づけて考える\n\n関係する, 共鳴する\n\n自動詞\n共感する, 一体感を持つ";
+        word68.detail =  @"動詞-fies/-z/; -fied/-d/; ～ing\n他動詞\n同一人物であると確認する, ~の身元を確認する, ~を同定する; ~であるとわかる\nI found it hard to ___ with any of the characters in the film.\nこの映画のどの役にもはっきりと見分けがつかなかった。\n\n~を特定する, 明確にする; ~か特定する\n\n~を同一視する, 関連づけて考える\n\n関係する, 共鳴する\n\n自動詞\n共感する, 一体感を持つ";
         word68.hatuon = @"aɪdéntəfàɪ";
         word68.reibun = @"I found it hard to identify with any of the characters in the film.";
         
@@ -1176,7 +1176,7 @@
         
         TestWord *word78 = [TestWord new];
         word78.name = @"taste";
-        word78.detail =  @"名詞 複～s/-ts/\n味, 風味\nThe medicine has a bitter ___.\nその薬は苦みがある。\n\nセンス, 鑑賞[判断]力\n\n好み, 嗜好\n\n少量, 一口; 味見\n\n経験; 一端\n\n動詞～s/-ts/; ～d/-ɪd/; ___ing\n自動詞\n~な味がする\n\n~の味がする\n\n他動詞\n~を味わう; 味見する; 少し食べる[飲む]\n\n~の味がわかる, 味を感じる\n\n<否定文で>食物を口にする";
+        word78.detail =  @"名詞 複～s/-ts/\n味, 風味\nThe medicine has a bitter ___.\nその薬は苦みがある。\n\nセンス, 鑑賞[判断]力\n\n好み, 嗜好\n\n少量, 一口; 味見\n\n経験; 一端\n\n動詞～s/-ts/; ～d/-ɪd/; ___ing\n自動詞\n~な味がする\n\n~の味がする\n\n他動詞\n~を味わう; 味見する; 少し食べる[飲む]\n\n~の味がわかる, 味を感じる\n\n食物を口にする";
         word78.hatuon = @"teɪst";
         word78.reibun = @"The medicine has a bitter taste.";
         
@@ -1233,7 +1233,7 @@
         word86.name = @"far";
         word86.detail =  @"副詞\n遠く, ずっと, 遠くへ, はるかに\nHow ___ do you make it to the station?\n駅までどのくらいありますか？\n\n(時間)遠く, はるかに\n\nはるかに, 大いに, ずっと\n\nある場所、程度まで\n\n形容詞___ther; ___thest/further; furthest\n遠い方の, 向こうの; 最も遠い地点の; 奥の";
         word86.hatuon = @"fɑːr";
-        word86.reibun = @"How far do you make it to the station?.";
+        word86.reibun = @"How far do you make it to the station.";
         
         TestWord *word87 = [TestWord new];
         word87.name = @"focus";
@@ -1443,7 +1443,7 @@
         
         TestWord *word20 = [TestWord new];
         word20.name = @"wake";
-        word20.detail =  @"動詞～s/-s/; woke/woʊk/; woken/woʊk(ə)n/; ___ing\n自動詞\n目を覚ます, 起きる ; 目覚めて~する\nI usually ___ up early.\n私はいつも早起きする。\n\n目覚める, 気づく\n\n他動詞\n~を目覚めさせる, 起こす\n\n~を目覚めさせる, 活気づける;人に気づかせる";
+        word20.detail =  @"動詞～s/-s/; woke/woʊk/; woken/woʊk(ə)n/; ___ing\n自動詞\n目を覚ます, 起きる ; 目覚めて~する\nI usually ___ up early.\nいつも早起きする。\n\n目覚める, 気づく\n\n他動詞\n~を目覚めさせる, 起こす\n\n~を目覚めさせる, 活気づける;人に気づかせる";
         word20.hatuon = @"weɪk";
         word20.reibun = @"I usually wake up early.";
         
@@ -1486,7 +1486,7 @@
         
         TestWord *word26 = [TestWord new];
         word26.name = @"compare";
-        word26.detail =  @"動詞～s/-z/; ～d/-d/; -paring\n他動詞\n~を比べる; ~を比較する\nI ___d the copy with the original, but there was not much difference.\n私はコピーと原物を比べたが、大きな違いはなかった。\n\n~にたとえる, なぞらえる; ~が同じであると考える, 同等とみなす\n\n自動詞\n~と比べられる, 比較される\n\n<否定文>~とは比べものにならない, 比べられない";
+        word26.detail =  @"動詞～s/-z/; ～d/-d/; -paring\n他動詞\n~を比べる; ~を比較する\nI ___d the copy with the original, but there was not much difference.\nコピーと原物を比べたが、大きな違いはなかった。\n\n~にたとえる, なぞらえる; ~が同じであると考える, 同等とみなす\n\n自動詞\n~と比べられる, 比較される\n\n~とは比べものにならない, 比べられない";
         word26.hatuon = @"kəmpéər";
         word26.reibun = @"I compared the copy with the original, but there was not much difference.";
         
@@ -1727,7 +1727,7 @@
         
         TestWord *word64 = [TestWord new];
         word64.name = @"direct";
-        word64.detail =  @"形容詞more ～; most ～/\n直接の結果、関係, じかの, じゃまするものがない; すぐさまの\nI' m in ___ contact with the hijackers.\n私はハイジャック犯と直接接触している。\n\n直行の, まっすぐな\n\nまったくの; 正確な, そのものずばりの\n\n率直な, 単刀直入の, 端的な, ざっくばらんな\n\n直系の\n\n直射の\n\n動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n感情、言葉、物を向ける; 努力、関心を向ける, 注ぐ\n\nを管理する; を指導する\n\n道を教える \n\n~するよう指図する\n\n~を監督する\n\n副詞\nまっすぐに\n\n直接に";
+        word64.detail =  @"形容詞more ～; most ～/\n直接の結果、関係, じかの, じゃまするものがない; すぐさまの\nI' m in ___ contact with the hijackers.\nハイジャック犯と直接接触している。\n\n直行の, まっすぐな\n\nまったくの; 正確な, そのものずばりの\n\n率直な, 単刀直入の, 端的な, ざっくばらんな\n\n直系の\n\n直射の\n\n動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n感情、言葉、物を向ける; 努力、関心を向ける, 注ぐ\n\nを管理する; を指導する\n\n道を教える \n\n~するよう指図する\n\n~を監督する\n\n副詞\nまっすぐに\n\n直接に";
         word64.hatuon = @"dərékt|daɪ-";
         word64.reibun = @"I' m in direct contact with the hijackers.";
         
@@ -1751,7 +1751,7 @@
         
         TestWord *word68 = [TestWord new];
         word68.name = @"local";
-        word68.detail =  @"形容詞\n地元の; その地方の; 当地の; 地域の\nI suggest that he put an advertisement in the ___ paper.\n私は彼に地元紙に広告を載せるよう提案した。\n\n各駅停車の\n\n局地的な; 考え方が狭い, 偏狭な\n\n地元の住民";
+        word68.detail =  @"形容詞\n地元の; その地方の; 当地の; 地域の\nI suggest that he put an advertisement in the ___ paper.\n彼に地元紙に広告を載せるよう提案した。\n\n各駅停車の\n\n局地的な; 考え方が狭い, 偏狭な\n\n地元の住民";
         word68.hatuon = @"lóʊk(ə)l";
         word68.reibun = @"I suggest that he put an advertisement in the local paper.";
         
@@ -1793,7 +1793,7 @@
         
         TestWord *word75 = [TestWord new];
         word75.name = @"scene";
-        word75.detail =  @"名詞 複～s/-z/\n演劇、オペラの場\n\n場面, シーン; 舞台, 背景\n\n景色, 光景, 眺め\nThe terrible ___ was engraved on his memory.\nその恐ろしい光景は彼の記憶に刻まれた。\n\n現場, 現地\n\n業界, 分野\n\n口論, 口げんか; 大騒ぎ\n\n状況; 出来事\n\n<否定文>好み, 関心";
+        word75.detail =  @"名詞 複～s/-z/\n演劇、オペラの場\n\n場面, シーン; 舞台, 背景\n\n景色, 光景, 眺め\nThe terrible ___ was engraved on his memory.\nその恐ろしい光景は彼の記憶に刻まれた。\n\n現場, 現地\n\n業界, 分野\n\n口論, 口げんか; 大騒ぎ\n\n状況; 出来事\n\n好み, 関心";
         word75.hatuon = @"siːn";
         word75.reibun = @"The terrible scene was engraved on his memory.";
         
@@ -1932,7 +1932,7 @@
         
         TestWord *word97 = [TestWord new];
         word97.name = @"respond";
-        word97.detail =  @"動詞～s/-dz/; ～ed/-ɪd/; ～ing\n反応する, 応じる, 報いる\nHe tried to be amusing, but I didn't ___.\n彼は笑わせようとしたが、私はそれに応えなかった。\n\n答える, 応答する\n\nよい反応を示す";
+        word97.detail =  @"動詞～s/-dz/; ～ed/-ɪd/; ～ing\n反応する, 応じる, 報いる\nHe tried to be amusing, but I didn't ___.\n彼は笑わせようとしたが、それに応えなかった。\n\n答える, 応答する\n\nよい反応を示す";
         word97.hatuon = @"rɪspɑ́nd|-spɔ́nd";
         word97.reibun = @"He tried to be amusing, but I didn't respond.";
         
@@ -1944,13 +1944,13 @@
         
         TestWord *word99 = [TestWord new];
         word99.name = @"wonder";
-        word99.detail =  @"動詞～s/-z/; ～ed/-d/; ～ing/-d(ə)rɪŋ/\n他動詞\n~かしらと思う\n\n~していただけないものかと思う、~されないかと思う、~ではないかと思う\n\n~とは不思議だ[おかしい]と思う, ~ということに驚く\nDo you seriously ___ that she didn't help him?\n彼女が彼を助けなかった事を不思議に思いましたか？\n\n自動詞\n~について不思議に思う, 驚く\n\n~についておかしいと思う, 怪しむ, ~について安否が気になる\n\n~してはどうかと考える\n\n名詞 複～s/-z/\n驚き, 驚嘆, 驚異\n\n驚くべき[不思議な]人[物, 事]\n\n天才, 達人\n\n形容詞\n驚異的な, すばらしい; 効果のある";
+        word99.detail =  @"動詞～s/-z/; ～ed/-d/; ～ing/-d(ə)rɪŋ/\n他動詞\n~かしらと思う\n\n~していただけないものかと思う、~されないかと思う、~ではないかと思う\n\n~とは不思議だ[おかしい]と思う, ~ということに驚く\nDo you seriously ___ that she didn't help him?\n彼女が彼を助けなかった事を不思議に思いましたか？\n\n自動詞\n~について不思議に思う, 驚く\n\n~についておかしいと思う, 怪しむ, ~について安否が気になる\n\n~してはどうかと考える\n\n名詞 複～s/-z/\n驚き, 驚嘆, 驚異\n\n驚くべき[不思議な]~\n\n天才, 達人\n\n形容詞\n驚異的な, すばらしい; 効果のある";
         word99.hatuon = @"wʌ́ndər";
         word99.reibun = @"Do you seriously wonder that she didn't help him?";
         
         TestWord *word100 = [TestWord new];
         word100.name = @"yet";
-        word100.detail =  @"副詞\n<否定文>まだ, 今は[その時には]まだ\nHe hasn't done much ___.\n彼が終わらせたのはまだ多くない。\n\n<否定文>今すぐには; まだしばらくは; あと~の間は\n\n<肯定文>まだ, 今でも, 引き続き今も; まだこれから\n\nまだ~していない\n\nさらに, その上\n\nなおいっそう, さらに \n\nこれまでで, 今までのところ \n\n今に, そのうちに, いつか\n\n接続詞\nけれども, それにもかかわらず, でもやはり";
+        word100.detail =  @"副詞\nまだ, 今は[その時には]まだ\nHe hasn't done much ___.\n彼が終わらせたのはまだ多くない。\n\n今すぐには; まだしばらくは; あと~の間は\n\nまだ, 今でも, 引き続き今も; まだこれから\n\nまだ~していない\n\nさらに, その上\n\nなおいっそう, さらに \n\nこれまでで, 今までのところ \n\n今に, そのうちに, いつか\n\n接続詞\nけれども, それにもかかわらず, でもやはり";
         word100.hatuon = @"jet";
         word100.reibun = @"He hasn't done much yet.";
         
@@ -2048,7 +2048,7 @@
         
         TestWord *word15 = [TestWord new];
         word15.name = @"original";
-        word15.detail =  @"形容詞\n最初の, 本来の, 原始の\nI prefer your ___ plan to these.\n私はこれらの計画よりあなたの最初の計画が良いと思う。\n\nもとの, 原文の, 原語の, 原型の, 実物の\n\n新作の, 初公開の, 初演の\n\n名詞 複～s/-z/\n原物, 本物, 実物, オリジナル, 原文, 原画\n\n原語";
+        word15.detail =  @"形容詞\n最初の, 本来の, 原始の\nI prefer your ___ plan to these.\nこれらの計画よりあなたの最初の計画が良いと思う。\n\nもとの, 原文の, 原語の, 原型の, 実物の\n\n新作の, 初公開の, 初演の\n\n名詞 複～s/-z/\n原物, 本物, 実物, オリジナル, 原文, 原画\n\n原語";
         word15.hatuon = @"ərɪ́dʒ(ə)n(ə)l";
         word15.reibun = @"I prefer your original plan to these.";
         
@@ -2121,7 +2121,7 @@
         
         TestWord *word26 = [TestWord new];
         word26.name = @"determine";
-        word26.detail =  @"動詞～s/-z/; ～d/-d/; -mining\n他動詞\n~を特定する, 確定する; ~を測定する\n\n~ということを突き止める, 確認する\n\n~を決定する; ~を解決する\n\n~ということを決定する\nI must now ___ whether to meet him or not.\n私は彼と会うかどうか今決めなければならない。\n\n~を左右する, 決定する\n\n~かどうかに影響を与える\n\n~しようと決心する; ~ということを決意する\n\n自動詞\n決心する ; 決定[特定]する";
+        word26.detail =  @"動詞～s/-z/; ～d/-d/; -mining\n他動詞\n~を特定する, 確定する; ~を測定する\n\n~ということを突き止める, 確認する\n\n~を決定する; ~を解決する\n\n~ということを決定する\nI must now ___ whether to meet him or not.\n彼と会うかどうか今決めなければならない。\n\n~を左右する, 決定する\n\n~かどうかに影響を与える\n\n~しようと決心する; ~ということを決意する\n\n自動詞\n決心する ; 決定[特定]する";
         word26.hatuon = @"dɪtə́ːrmɪn";
         word26.reibun = @"I must now determine whether to meet him or not.";
         
@@ -2224,7 +2224,7 @@
         
         TestWord *word42 = [TestWord new];
         word42.name = @"communicate";
-        word42.detail =  @"動詞～s/-ts/; ～d/-ɪd/; -cating\n自動詞\n~で~と情報[意見]を交換する, 通信する, 連絡をとる\n\n自分の意図を伝達する\n\n~と意思の疎通をする, 気持ちを通い合わせる\nI like to ___ with my family.\n私は家族と接する事が好きだ。\n\n~がつながっている, 通じている\n\n~が伝わる, 伝達される\n\n他動詞\n~を伝える, 伝達する; ~が~に伝わる; ~だと伝える";
+        word42.detail =  @"動詞～s/-ts/; ～d/-ɪd/; -cating\n自動詞\n~で~と情報[意見]を交換する, 通信する, 連絡をとる\n\n自分の意図を伝達する\n\n~と意思の疎通をする, 気持ちを通い合わせる\nI like to ___ with my family.\n家族と接する事が好きだ。\n\n~がつながっている, 通じている\n\n~が伝わる, 伝達される\n\n他動詞\n~を伝える, 伝達する; ~が~に伝わる; ~だと伝える";
         word42.hatuon = @"kəmjúːnɪkèɪt";
         word42.reibun = @"I like to communicate with my family.";
         
@@ -2256,7 +2256,7 @@
         word47.name = @"exact";
         word47.detail =  @"形容詞more ～; most ～\n正確な, 的確な, ぴったりの; まさにその\nWhat is the ___ size of the room?\nその部屋の正確な面積はいくつですか？\n\n~が厳密な, 精密な; 慎重な, きちょうめんな\n\n~が厳しい, 厳格な";
         word47.hatuon = @"ɪɡzǽkt";
-        word47.reibun = @"What is the exact size of the room?";
+        word47.reibun = @"What is the exact size of the room.";
         
         TestWord *word48 = [TestWord new];
         word48.name = @"fresh";
@@ -2356,7 +2356,7 @@
         
         TestWord *word63 = [TestWord new];
         word63.name = @"bother";
-        word63.detail =  @"動詞～s/-z/; ～ed/-d/; ～ing/-ð(ə)rɪŋ/\n他動詞\n~を悩ませる, 困らせる;~ということで困る;~することを苦にする\nI've no time to ___ with such things.\nそのような事で悩む暇無い。\n\n~をじゃまする ; ~にうるさくせがむ, 面倒をかける\n\n痛みを与える\n\n自動詞\n<否定文で>わざわざする ; 手をわずらわす\n\nくよくよ悩む, 心配する, 苦にする\n\n名詞複～s/-z/\n面倒, 骨折り ; 騒ぎ\n\nやっかいな~, 悩みの種";
+        word63.detail =  @"動詞～s/-z/; ～ed/-d/; ～ing/-ð(ə)rɪŋ/\n他動詞\n~を悩ませる, 困らせる;~ということで困る;~することを苦にする\nI've no time to ___ with such things.\nそのような事で悩む暇無い。\n\n~をじゃまする ; ~にうるさくせがむ, 面倒をかける\n\n痛みを与える\n\n自動詞\nわざわざする ; 手をわずらわす\n\nくよくよ悩む, 心配する, 苦にする\n\n名詞複～s/-z/\n面倒, 骨折り ; 騒ぎ\n\nやっかいな~, 悩みの種";
         word63.hatuon = @"bɑ́ðər|bɔ́ðə";
         word63.reibun = @"I've no time to bother with such things.";
         
@@ -2452,7 +2452,7 @@
         
         TestWord *word79 = [TestWord new];
         word79.name = @"toward";
-        word79.detail =  @"前置詞\n<方向、方角>~の方へ, ~に向かって; ~の方に向いて, ~に面して\n\n~の方へ, ~に向かって\nThe bus follows the road ___ Tokyo.\nバスは東京へ向かう道路に沿って運行する。\n\n~のために\n\n~に対して\n\n<時間>~の直前に, ~の近くに, ~のころに\n\n<場所>~の近くに";
+        word79.detail =  @"前置詞\n~の方へ, ~に向かって; ~の方に向いて, ~に面して\nThe bus follows the road ___ Tokyo.\nバスは東京へ向かう道路に沿って運行する。\n\n~のために\n\n~に対して\n\n(時間)~の直前に, ~の近くに, ~のころに\n\n~の近くに";
         word79.hatuon = @"tɔːrd|təwɔ́ːd";
         word79.reibun = @"The bus follows the road toward Tokyo.";
         
@@ -2652,7 +2652,7 @@
         
         TestWord *word10 = [TestWord new];
         word10.name = @"hurry";
-        word10.detail = @"動詞-ries/-z/; -ried/-d/; ～ing\n自動詞\n急ぐ; あわてる\n\n急いで[至急, あわてて]~する\nDon't let anyone ___ you into making a decision.\n誰からの催促であろうと急いで決定してはならない。\n\n急いで行く[移動する]\n\n他動詞\n~を急がせる; ~を急いで行かせる; ~を急がせて~する\n\n~を急いで行かせる; ~を急いで連れて[持って]行く[来る], 運ぶ; ~を急いで処理する\n\n~を急いでやる, ~をあわてて作る\n\n名詞\n<否定文、疑問文>急ぐ必要, 急ぐ理由\n\n急ぎ; あわてる[あせる]こと";
+        word10.detail = @"動詞-ries/-z/; -ried/-d/; ～ing\n自動詞\n急ぐ; あわてる\n\n急いで[至急, あわてて]~する\nDon't let anyone ___ you into making a decision.\n誰からの催促であろうと急いで決定してはならない。\n\n急いで行く[移動する]\n\n他動詞\n~を急がせる; ~を急いで行かせる; ~を急がせて~する\n\n~を急いで行かせる; ~を急いで連れて[持って]行く[来る], 運ぶ; ~を急いで処理する\n\n~を急いでやる, ~をあわてて作る\n\n名詞\n急ぐ必要, 急ぐ理由\n\n急ぎ; あわてる[あせる]こと";
         word10.hatuon = @"hə́ːri|hʌ́ri";
         word10.reibun = @"Don't let anyone hurry you into making a decision.";
         
@@ -2739,7 +2739,7 @@
         word23.name = @"charge";
         word23.detail =  @"動詞～s/-ɪz/; ～d/-d/; ___ing\n他動詞\n~を請求する\n\n~の代金を求める; ~を~の代価として請求する\n\n~を勘定に付けておく\n\nをカードのつけで買う; ~をクレジットカードで買う\n\n税を課す\n\n~を告発する\n\n~を責める, とがめる ; ~であると~を非難する\n\n~を充電する\n\n~に物を積む; ~を詰める; 水、空気を~で満たす, 飽和させる; 感情でみなぎらせる\n\n~に~するように命じる\n\n自動詞\n料金を請求する\nHow much do you ___ per unit?\n一つおいくらですか？\n\n突進する; 駆け回る\n\n名詞 複～s/-ɪz/\n料金, 使用料; 請求金額; 出費 ; クレジット, つけ; 負担, 課税金\nThe ___s for electricity and gas will be increased next year.\n電気代とガス代は来年値上がりする。\n\n責任, 義務; 世話, 看護; 監督, 管理\n\n告発, 告訴; 嫌疑\n\n非難\n\n攻撃, 進撃\n\n充電, 荷電; 電荷\n\n装薬; 弾薬筒; 砲弾; 力の蓄積, 迫力";
         word23.hatuon = @"tʃɑːrdʒ";
-        word23.reibun = @"How much do you charge per unit?     The charges for electricity and gas will be increased next year.";
+        word23.reibun = @"How much do you charge per unit.     The charges for electricity and gas will be increased next year.";
         
         TestWord *word24 = [TestWord new];
         word24.name = @"comfort";
@@ -2829,7 +2829,7 @@
         word38.name = @"set";
         word38.detail =  @"動詞～s/-ts/; ～; ～ting\n他動詞\n置く, 並べる, 立てかける\n\n埋め込まれている\n\n位置している\n\n~を配置する; ~を配属する\n\n~に~させる; ~し始める, ~しようと努める\n\n食卓の用意をする\n\n~を作る, ~を打ち立てる, 確立する; ~を示す\n\n~を合わせる; ~を設定する\n\n~が設定される\n\n日時、価格、目標を決める; 規則、基準、条件、制限を定める\nHow do we ___ the enrollment criteria?\n入学基準はどう設定しますか？\n\n~を考える\n\n~を集中させる; ~を向ける\n\n骨を接ぐ, 整骨する, 固定する\n\n髪を整える, セットする\n\n~を課す, 制限を設ける; ~するよう自分に目標を課す\n\n課題を出す; 問題を書く; ~を指定する\n\n価値を置く; ~を見積もる, 評価する\n\n火をつける\n\n自動詞\n~が固まる; ~が固着する, 染みつく\n\n太陽、月が沈む\n\n名詞 複～s/-ts/\nひとそろいの~, ~のセット, ~一式\nThese ___s of machines are out of date.\nこの機械一式は時代遅れだ。\n\nひとそろい, ひと組\n\nヘッドホン装置\n\n撮影現場\n\n大道具, 舞台装置, セット\n\n髪のセット\n\n形容詞\nあらかじめ決められた, 定められた; 規定どおりの\n\n~に反対しようと; ~を心に決めている\n\n不変の, 固定した; 決意の固い; 頑固な, 変える意志を持たない\n\n用意ができている\n\n~しそうである\n\n~が固まって";
         word38.hatuon = @"set";
-        word38.reibun = @"How do we set the enrollment criteria?     These sets of machines are out of date.";
+        word38.reibun = @"How do we set the enrollment criteria.     These sets of machines are out of date.";
         
         TestWord *word39 = [TestWord new];
         word39.name = @"steal";
@@ -3147,7 +3147,7 @@
         
         TestWord *word88 = [TestWord new];
         word88.name = @"mix";
-        word88.detail =  @"動詞～es/-ɪz/; ～ed/-t/; ～ing\n他動詞\n~を混ぜる, 混合する, 混ぜ合わせる, かき混ぜる; 材料を混ぜ入れる\nYou can't ___ oil with water.\nオイルと水は混ぜられない。\n\n結び付ける, 組み合わせる; ~を仲間にする, 一緒にする\n\n混ぜて作る, 調合する\n\n混ぜて作ってやる, 調合してやる\n\n自動詞\n混ざる; 混合する\n\nつきあう; 出会って話す; 交際する, 仲良くやる; 参加する\n\n<否定文>交じり合わない, 両立しない; 打ち解けない\n\n異種交配される\n\n名詞\n混合物, 混成, 組み合わせ; 混合比; 混乱\n\n混ぜること";
+        word88.detail =  @"動詞～es/-ɪz/; ～ed/-t/; ～ing\n他動詞\n~を混ぜる, 混合する, 混ぜ合わせる, かき混ぜる; 材料を混ぜ入れる\nYou can't ___ oil with water.\nオイルと水は混ぜられない。\n\n結び付ける, 組み合わせる; ~を仲間にする, 一緒にする\n\n混ぜて作る, 調合する\n\n混ぜて作ってやる, 調合してやる\n\n自動詞\n混ざる; 混合する\n\nつきあう; 出会って話す; 交際する, 仲良くやる; 参加する\n\n交じり合わない, 両立しない; 打ち解けない\n\n異種交配される\n\n名詞\n混合物, 混成, 組み合わせ; 混合比; 混乱\n\n混ぜること";
         word88.hatuon = @"mɪks";
         word88.reibun = @"You can't mix oil with water.";
         
@@ -3283,7 +3283,7 @@
         word98.name = @"imply";
         word98.detail =  @"動詞___ies/-z/; ___ied/-d/; ～ing\n他動詞\n~をそれとなく示す, 暗に意味する, ほのめかす; ~だとそれとなく示す\nWhat do you want to ___?\n何を暗示したいのですか？\n\n~を意味する; ~という結論になる\n\n当然必要とする, 必ず伴う[含む]";
         word98.hatuon = @"ɪmpláɪ";
-        word98.reibun = @"What do you want to imply?";
+        word98.reibun = @"What do you want to imply.";
         
         TestWord *word9 = [TestWord new];
         word9.name = @"maintain";
@@ -3319,7 +3319,7 @@
         word14.name = @"react";
         word14.detail =  @"動詞～s/-ts/; ～ed/-ɪd/; ～ing\n自動詞\n反応する, 対応する\nHow did they ___ to your suggestion?\nあなたの提案に対して彼らはどう反応しましたか？\n\n化学反応を起こす\n\n容態が悪くなる\n\n反抗する, 反発する\n\nはね返ってくる, 影響する";
         word14.hatuon = @"riǽkt";
-        word14.reibun = @"How did they react to your suggestion?";
+        word14.reibun = @"How did they react to your suggestion.";
         
         TestWord *word15 = [TestWord new];
         word15.name = @"ride";
@@ -3420,7 +3420,7 @@
         
         TestWord *word30 = [TestWord new];
         word30.name = @"hunger";
-        word30.detail =  @"名詞 複～s/-z/\n飢え, 飢餓, ひもじさ\nI had experienced the pangs of ___.\n私はかつて空腹痛を経験した。\n\n空腹感\n\n熱望, あこがれ, 渇望";
+        word30.detail =  @"名詞 複～s/-z/\n飢え, 飢餓, ひもじさ\nI had experienced the pangs of ___.\nかつて空腹痛を経験した。\n\n空腹感\n\n熱望, あこがれ, 渇望";
         word30.hatuon = @"hʌ́ŋɡər";
         word30.reibun = @"I had experienced the pangs of hunger.";
         
@@ -3444,7 +3444,7 @@
         
         TestWord *word34 = [TestWord new];
         word34.name = @"quite";
-        word34.detail =  @"副詞\n割に, 比較的, まあまあ, ~のほう;割に~な\n\n非常に, かなり, 思いのほか, 相当\nHe was ___ young.\n彼はかなり若かった。\n\nまったく, すっかり, 完全に, 本当に; まったく~な~\n\n<否定文>まったく~というわけではない, 必ずしも~ではない\n\n~というわけではない\n\nかなりの~; そこそこの~\n\n並はずれて; 大変な~, 本当に\n\n相当多くの~";
+        word34.detail =  @"副詞\n割に, 比較的, まあまあ, ~のほう;割に~な\n\n非常に, かなり, 思いのほか, 相当\nHe was ___ young.\n彼はかなり若かった。\n\nまったく, すっかり, 完全に, 本当に; まったく~な~\n\nまったく~というわけではない, 必ずしも~ではない\n\n~というわけではない\n\nかなりの~; そこそこの~\n\n並はずれて; 大変な~, 本当に\n\n相当多くの~";
         word34.hatuon = @"kwaɪt";
         word34.reibun = @"He was quite young.";
         
@@ -3595,7 +3595,7 @@
         
         TestWord *word58 = [TestWord new];
         word58.name = @"storm";
-        word58.detail =  @"名詞 複～s/-z/\nあらし, 暴風雨; 暴風\nIn the ___ I took shelter under the tree.\nあらしの時、私は木の下に避難した。\n\n非難、怒りの激発;あらしのような~\n\n騒ぎ, 動揺\n\n動詞～s/-z/; ～ed/-d/; ～ing\n他動詞\n~を急襲する, ~に攻め込む, 押し入る\n\n自動詞\n激怒して~; 突進する\n\n急速に良くなる, 急に好成績をとる";
+        word58.detail =  @"名詞 複～s/-z/\nあらし, 暴風雨; 暴風\nIn the ___ I took shelter under the tree.\nあらしの時、木の下に避難した。\n\n非難、怒りの激発;あらしのような~\n\n騒ぎ, 動揺\n\n動詞～s/-z/; ～ed/-d/; ～ing\n他動詞\n~を急襲する, ~に攻め込む, 押し入る\n\n自動詞\n激怒して~; 突進する\n\n急速に良くなる, 急に好成績をとる";
         word58.hatuon = @"stɔːrm";
         word58.reibun = @"In the storm I took shelter under the tree.";
         
@@ -3675,7 +3675,7 @@
         word70.name = @"mean";
         word70.detail =  @"動詞～s/-z/; ___t/ment/; ～ing\n他動詞\n~を意味する, 表す\nWhat does this word ___?\nこの単語はどういう意味ですか？\n\n~によって~を言うつもりである; ~を~のつもりで言う; ~のことを言う\n\n~をさして言う\n\n~するつもりである, ~しようと思う; に~させるつもりである; ~というつもりである\n\n~に当てられる, 向けられる; 職業に向いている; ~することになっている, ~だとされている\n\n~ということになる, ~の前兆である; ~する結果になる, ~するということに等しい\n\n~にとって~の意味[重要性]をもつ\n\n~を起こす気である;~を抱く[加える]意図がある\n\n形容詞～er; ～est\n意地の悪い, 卑劣な ; ~するとは~は意地が悪い";
         word70.hatuon = @"miːn";
-        word70.reibun = @"What does this word mean?";
+        word70.reibun = @"What does this word mean.";
         
         TestWord *word71 = [TestWord new];
         word71.name = @"prefer";
@@ -3697,7 +3697,7 @@
         
         TestWord *word74 = [TestWord new];
         word74.name = @"respect";
-        word74.detail =  @"名詞 複～s/-ts/\n尊敬, 敬意\n\n尊重, 重視; 配慮, 考慮\n\n注意\n\n点, 箇所, 事項\n\n動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n敬う, 尊敬する\nI ___ him as a writer and as a man.\n私は彼を作家として、また一個人としても尊敬する。\n\n尊重する, 重んじる; 遵守する";
+        word74.detail =  @"名詞 複～s/-ts/\n尊敬, 敬意\n\n尊重, 重視; 配慮, 考慮\n\n注意\n\n点, 箇所, 事項\n\n動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n敬う, 尊敬する\nI ___ him as a writer and as a man.\n彼を作家として、また一個人としても尊敬する。\n\n尊重する, 重んじる; 遵守する";
         word74.hatuon = @"rɪspékt";
         word74.reibun = @"I respect him as a writer and as a man.";
         
