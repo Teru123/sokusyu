@@ -312,13 +312,13 @@
     if ([wordNo isEqualToString:@"3"]){
         TestWord *word41 = [TestWord new];
         word41.name = @"alien";
-        word41.detail =  @"形容詞more ～; most ～\n外国の; 異人種の\n\n慣れない, 経験のない物、事\n\n相容れない, 異質である\nWhen I first went to New York, it all felt very ___ to me.\n私が初めてニューヨークに来た時は、見たことのないものばかりだった。\n\n地球外生命体の\n\n名詞\n地球外生命体, 宇宙人, エイリアン";
+        word41.detail =  @"形容詞more ～; most ～\n外国の; 異人種の\n\n慣れない, 経験のない~\n\n相容れない, 異質である\nWhen I first went to New York, it all felt very ___ to me.\n私が初めてニューヨークに来た時は、見たことのないものばかりだった。\n\n地球外生命体の\n\n名詞\n地球外生命体, 宇宙人, エイリアン";
         word41.hatuon = @"éɪliən, -jən";
         word41.reibun = @"When I first went to New York, it all felt very alien to me.";
         
         TestWord *word42 = [TestWord new];
         word42.name = @"among";
-        word42.detail =  @"前置詞\n3人[3つ]以上の間に; ~の中に ; ~の間を\n\n人々の間で\n\n同種の物、人のうちの1つ[1人]で; ~の中に含まれる\nNew York is ___ the largest cities in the world.\nニューヨークは世界最大都市の一つである。\n\nある集合の中で\n\n3人以上の間で; ~のそれぞれに";
+        word42.detail =  @"前置詞\n3人[3つ]以上の間に; ~の中に ; ~の間を\n\n人々の間で\n\n同種の~のうちの1つ[1人]で; ~の中に含まれる\nNew York is ___ the largest cities in the world.\nニューヨークは世界最大都市の一つである。\n\nある集合の中で\n\n3人以上の間で; ~のそれぞれに";
         word42.hatuon = @"əmʌ́ŋ";
         word42.reibun = @"New York is among the largest cities in the world.";
         
@@ -529,7 +529,7 @@
         
         TestWord *word76 = [TestWord new];
         word76.name = @"represent";
-        word76.detail =  @"動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n~を代表する; 代理をする ; 選出議員である; ~の考えを代弁する\n\n出席[参加]している; 見受けられる\n\n~の一例である, 好例[典型]である\n\n物、記号が~を表す, 象徴する, ~の印である\n\n~を描く, 表現する; ~しているのを描く\nThese pictures ___ Japanese landscapes at all seasons of the year.\nこれらの絵は日本の四季の風景を描いている。";
+        word76.detail =  @"動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n~を代表する; 代理をする ; 選出議員である; ~の考えを代弁する\n\n出席[参加]している; 見受けられる\n\n~の一例である, 好例[典型]である\n\n~を表す, 象徴する, ~の印である\n\n~を描く, 表現する; ~しているのを描く\nThese pictures ___ Japanese landscapes at all seasons of the year.\nこれらの絵は日本の四季の風景を描いている。";
         word76.hatuon = @"rèprɪzént";
         word76.reibun = @"These pictures represent Japanese landscapes at all seasons of the year.";
         
@@ -778,7 +778,7 @@
         
         TestWord *word15 = [TestWord new];
         word15.name = @"return";
-        word15.detail =  @"動詞～s/-z/; ～ed/-d/; ～ing\n自動詞\n戻る, 帰る \nWhat time does your husband ___ from work?\n旦那さんは何時に仕事から帰りますか？\n\n~がもとの状態に戻る, 回復する\n\nもとの行為にまた戻る, 再開する\n\n他動詞\n借りた物、移動させた物を返す, 戻す\n\n受けたものを返す; 相手の行為に報いる\n\n名詞 複～s/-z/\n帰ってくること, 帰宅, 帰国, 帰還\n\n返すこと, 戻すこと, 返却, 返送\n\nまた始めること, 再開\n\n~がもとに戻ること, 復帰, 回復\n\n利益, 収益\n\n投票結果\n\n形容詞\n帰りの, 戻りの";
+        word15.detail =  @"動詞～s/-z/; ～ed/-d/; ～ing\n自動詞\n戻る, 帰る \nWhat time does your husband ___ from work?\n旦那さんは何時に仕事から帰りますか？\n\n~がもとの状態に戻る, 回復する\n\nもとの行為にまた戻る, 再開する\n\n他動詞\n借りた~を返す, 戻す\n\n受けたものを返す; 相手の行為に報いる\n\n名詞 複～s/-z/\n帰ってくること, 帰宅, 帰国, 帰還\n\n返すこと, 戻すこと, 返却, 返送\n\nまた始めること, 再開\n\n~がもとに戻ること, 復帰, 回復\n\n利益, 収益\n\n投票結果\n\n形容詞\n帰りの, 戻りの";
         word15.hatuon = @"rɪtə́ːrn";
         word15.reibun = @"What time does your husband return from work.";
         
@@ -845,7 +845,7 @@
         
         TestWord *word25 = [TestWord new];
         word25.name = @"claim";
-        word25.detail =  @"動詞～s/-z/; ～ed/-d/; ～ing\n他動詞\n~を主張する; ~だと主張する, 断言する; ~と主張する\n\n要求する, ~の所有権[権利]を主張する; 賠償を請求する \nThe government would not even consider his ___ for money.\n政府は彼の賠償金の要求を考慮しなかった。\n\n物、事が関心を呼ぶ\n\n自動詞\n支払い請求をする\n\n名詞～s/-z/\n主張, 断言\n\n権利の主張, 資格; 請求権\n\n要求, 請求 ;請求(金)";
+        word25.detail =  @"動詞～s/-z/; ～ed/-d/; ～ing\n他動詞\n~を主張する; ~だと主張する, 断言する; ~と主張する\n\n要求する, ~の所有権[権利]を主張する; 賠償を請求する \nThe government would not even consider his ___ for money.\n政府は彼の賠償金の要求を考慮しなかった。\n\n~が関心を呼ぶ\n\n自動詞\n支払い請求をする\n\n名詞～s/-z/\n主張, 断言\n\n権利の主張, 資格; 請求権\n\n要求, 請求 ;請求(金)";
         word25.hatuon = @"kleɪm";
         word25.reibun = @"The government would not even consider his claim for money.";
         
@@ -966,7 +966,7 @@
         
         TestWord *word44 = [TestWord new];
         word44.name = @"balance";
-        word44.detail =  @"名詞 複～s/-ɪz/\n均衡, バランス, 釣り合い; 均衡のとれた状態;平衡感覚; 平静, 落ち着き \nThe girl lost her ___ and fell off the ___ beam.\n彼女はバランスを失い、平均台から落下した。\n\n大勢, 大半\n\n預金残高;残金, 差額\n\n残り, 余り\n\n均衡をとるもの, 相殺するもの\n\n動詞～s/-ɪz/; ～d/-t/; -ancing\n他動詞\n~のバランスをとる[保つ]\n\n~の両立を図る, 釣り合いをとる\n\n~の収支を合わせる; ~を収入内におさめる\n\n自動詞\n人、物がバランスをとる[保つ]";
+        word44.detail =  @"名詞 複～s/-ɪz/\n均衡, バランス, 釣り合い; 均衡のとれた状態;平衡感覚; 平静, 落ち着き \nThe girl lost her ___ and fell off the ___ beam.\n彼女はバランスを失い、平均台から落下した。\n\n大勢, 大半\n\n預金残高;残金, 差額\n\n残り, 余り\n\n均衡をとるもの, 相殺するもの\n\n動詞～s/-ɪz/; ～d/-t/; -ancing\n他動詞\n~のバランスをとる[保つ]\n\n~の両立を図る, 釣り合いをとる\n\n~の収支を合わせる; ~を収入内におさめる\n\n自動詞\nバランスをとる[保つ]";
         word44.hatuon = @"bǽləns";
         word44.reibun = @"The girl lost her balance and fell off the balance beam.";
         
@@ -990,7 +990,7 @@
         
         TestWord *word48 = [TestWord new];
         word48.name = @"grab";
-        word48.detail =  @"動詞～s/-z/; ～bed/-d/; ～bing\n他動詞\n~をつかむ, ひっつかむ; 逮捕する\nWhen I gave him the chance, he ___bed it at once.\n彼にそのチャンスを与えたら、彼はすぐにそれを摑み取った。\n\n~をつかみとる, ひったくる, 奪い取る; 横取りする ; タクシーをつかまえる\n\n~の注意を引き付ける\n\n飲食物、睡眠をすばやく[簡単に]取る, がっつく\n\n~に印象を与える, 人の心、関心、注目をとらえる, 引き付ける\n\n名詞\nつかむ[つかもうとする]こと ; つかんだ物, 横領[強奪]物";
+        word48.detail =  @"動詞～s/-z/; ～bed/-d/; ～bing\n他動詞\n~をつかむ, ひっつかむ; 逮捕する\nWhen I gave him the chance, he ___bed it at once.\n彼にそのチャンスを与えたら、彼はすぐにそれを摑み取った。\n\n~をつかみとる, ひったくる, 奪い取る; 横取りする ; タクシーをつかまえる\n\n~の注意を引き付ける\n\n~をすばやく[簡単に]取る, がっつく\n\n~に印象を与える, 人の心、関心、注目をとらえる, 引き付ける\n\n名詞\nつかむ[つかもうとする]こと ; つかんだ物, 横領[強奪]物";
         word48.hatuon = @"ɡræb";
         word48.reibun = @"When I gave him the chance, he grabbed it at once.";
         
@@ -1431,7 +1431,7 @@
         
         TestWord *word18 = [TestWord new];
         word18.name = @"strange";
-        word18.detail =  @"形容詞～r; ～st\n奇妙な, 普通でない, 変な, 不思議な\nHe had a ___ expression on his face.\n彼は妙な顔つきを露にした。\n\n人、場所が見知らぬ, 初めての\n\n不慣れな, 経験がない; 勝手が違ってしっくりしない, 違和感がある\n\n副詞\n通常と違って, 不自然に";
+        word18.detail =  @"形容詞～r; ～st\n奇妙な, 普通でない, 変な, 不思議な\nHe had a ___ expression on his face.\n彼は妙な顔つきを露にした。\n\n見知らぬ, 初めての\n\n不慣れな, 経験がない; 勝手が違ってしっくりしない, 違和感がある\n\n副詞\n通常と違って, 不自然に";
         word18.hatuon = @"streɪn(d)ʒ";
         word18.reibun = @"He had a strange expression on his face.";
         
@@ -2163,7 +2163,7 @@
         
         TestWord *word33 = [TestWord new];
         word33.name = @"level";
-        word33.detail =  @"名詞 複～s/-z/\n~の程度, 度合い, レベル\n___s of unemployment vary from region to region.\n失業率は地域によって様々だ。\n\n~の水準, レベル\n\n~をとらえる段階, 面; 観点, 見地\n\n~の階層, 地位, レベル; 特定の地位を占める人々\n\n地面、海面からの高さ; ある基準からの高さ, 水位; ある高さの水平面; 水平\n\n建物の階\n\n形容詞～er; ～est\n平らな, 水平な; 傾いていない; 起伏のない\nA football field should be ___.\nサッカー場は平らであるべきだ。\n\n同じ高さ[水準]の; 対等の, 同程度の; チームが同点の\n\n動詞～s/-z/; ～ed/-d/, ; ～ing\n\n他動詞\n~を平らにする; ~の表面をならす\n\n建物、地域を完全に破壊する; 打ち倒す\n\n~を平等にする;  ~を同じにする\n\n~を向ける; 非難、批判を向ける";
+        word33.detail =  @"名詞 複～s/-z/\n~の程度, 度合い, レベル\n___s of unemployment vary from region to region.\n失業率は地域によって様々だ。\n\n~の水準, レベル\n\n~をとらえる段階, 面; 観点, 見地\n\n~の階層, 地位, レベル; 特定の地位を占める人々\n\n地面、海面からの高さ; ある基準からの高さ, 水位; ある高さの水平面; 水平\n\n建物の階\n\n形容詞～er; ～est\n平らな, 水平な; 傾いていない; 起伏のない\nA football field should be ___.\nサッカー場は平らであるべきだ。\n\n同じ高さ[水準]の; 対等の, 同程度の; チームが同点の\n\n動詞～s/-z/; ～ed/-d/, ; ～ing\n\n他動詞\n~を平らにする; ~の表面をならす\n\n~を完全に破壊する; 打ち倒す\n\n~を平等にする;  ~を同じにする\n\n~を向ける; 非難、批判を向ける";
         word33.hatuon = @"lév(ə)l";
         word33.reibun = @"Levels of unemployment vary from region to region.     A football field should be level.";
         
@@ -2248,7 +2248,7 @@
         
         TestWord *word46 = [TestWord new];
         word46.name = @"empty";
-        word46.detail =  @"形容詞-tier; -tiest\nからの, からっぽの; 人のいない, がらんとした; 空いている, 使っていない\nHis room is ___.\n彼の部屋は空っぽだ。\n\n物、性質がない, 欠けている\n\n空虚な, 意味[内容, 誠意]のない; 口先だけの, 当てにならない\n\nむなしい, 無為な\n\n動詞-ties/-z/; -tied/-d/; ～ing\n他動詞\n~をからにする; 中の物をあける ; ~の中の物をあける\n\n中身を取り出して出す[あける]\n\n部屋、建物から人を立ち退かせる, 避難させる\n\n自動詞\nからになる; 場所から人がいなくなる\n\n川、群衆が流れる";
+        word46.detail =  @"形容詞-tier; -tiest\nからの, からっぽの; 人のいない, がらんとした; 空いている, 使っていない\nHis room is ___.\n彼の部屋は空っぽだ。\n\n~がない, 欠けている\n\n空虚な, 意味[内容, 誠意]のない; 口先だけの, 当てにならない\n\nむなしい, 無為な\n\n動詞-ties/-z/; -tied/-d/; ～ing\n他動詞\n~をからにする; 中の物をあける ; ~の中の物をあける\n\n中身を取り出して出す[あける]\n\n部屋、建物から人を立ち退かせる, 避難させる\n\n自動詞\nからになる; 場所から人がいなくなる\n\n川、群衆が流れる";
         word46.hatuon = @"ém(p)ti";
         word46.reibun = @"His room is empty.";
         
@@ -2320,7 +2320,7 @@
         
         TestWord *word58 = [TestWord new];
         word58.name = @"select";
-        word58.detail =  @"動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n~を選ぶ, 選び出す\n\n~するように~を選ぶ\n\n~に~を選ぶ, 選出する\nThey ___ed him to their leader.\n彼らはリーダーに彼を選んだ。\n\n形容詞more ～; most ～\n特別に選ばれた, より抜きの, 極上の人、物\n\n上流階級限定の社交場、会, 高級な";
+        word58.detail =  @"動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n~を選ぶ, 選び出す\n\n~するように~を選ぶ\n\n~に~を選ぶ, 選出する\nThey ___ed him to their leader.\n彼らはリーダーに彼を選んだ。\n\n形容詞more ～; most ～\n特別に選ばれた, より抜きの, 極上の~\n\n上流階級限定の社交場、会, 高級な";
         word58.hatuon = @"səlékt";
         word58.reibun = @"They selected him to their leader.";
         
