@@ -458,7 +458,7 @@
         
         TestWord *word64 = [TestWord new];
         word64.name = @"calm";
-        word64.detail =  @"形容詞～er; ～est\n~が落ち着いた, 冷静な; ~が平穏な\nYou should keep ___ even in face of danger.\n危険にあっても冷静でなければならない。\n\n風のない, 平穏な\n\n名詞～s/-z/\n平穏, 静けさ; 無風状態, なぎ\n\n平静, 平穏, 冷静\n\n動詞\n他動詞\n~を静める, 穏やかにする, なだめる";
+        word64.detail =  @"形容詞～er; ～est\n~が落ち着いた, 冷静な; ~が平穏な\nYou should keep ___ even in face of danger.\n危険な目にあっても冷静でなければならない。\n\n風のない, 平穏な\n\n名詞～s/-z/\n平穏, 静けさ; 無風状態, なぎ\n\n平静, 平穏, 冷静\n\n動詞\n他動詞\n~を静める, 穏やかにする, なだめる";
         word64.hatuon = @"kɑːm";
         word64.reibun = @"You should keep calm even in face of danger.";
         
@@ -512,7 +512,7 @@
         
         TestWord *word73 = [TestWord new];
         word73.name = @"patient";
-        word73.detail =  @"名詞 複～s/-ts/\n患者, 病人\nThe ___ is seriously ill and is being kept under continuous observation.\nその病人の病状は深刻で観察を続けている。\n\n形容詞more ～; most ～\n人が忍耐強い, 我慢[根気]強い ; 態度が辛抱強い";
+        word73.detail =  @"名詞 複～s/-ts/\n患者, 病人\nThe ___ is seriously ill and is being kept under continuous observation.\nその病人の病状は深刻で観察を続けている。\n\n形容詞more ～; most ～\n忍耐強い, 我慢[根気]強い ; 態度が辛抱強い";
         word73.hatuon = @"péɪʃ(ə)nt";
         word73.reibun = @"The patient is seriously ill and is being kept under continuous observation.";
         
@@ -567,7 +567,7 @@
     if ([wordNo isEqualToString:@"5"]){
         TestWord *word81 = [TestWord new];
         word81.name = @"aware";
-        word81.detail =  @"形容詞more ～; most ～\n~に気づいている, ~を知っている, 認識[意識, 自覚]している \nThen he became ___ that they were regarding him with interest.\nその時、彼らが興味深げに彼を見つめているのに気付いた。\n\n人が意識の高い, 知識[認識]のある";
+        word81.detail =  @"形容詞more ～; most ～\n~に気づいている, ~を知っている, 認識[意識, 自覚]している \nThen he became ___ that they were regarding him with interest.\nその時、彼らが興味深げに彼を見つめているのに気付いた。\n\n意識の高い, 知識[認識]のある";
         word81.hatuon = @"əwéər";
         word81.reibun = @"Then he became aware that they were regarding him with interest.";
         
@@ -639,7 +639,7 @@
         
         TestWord *word93 = [TestWord new];
         word93.name = @"relax";
-        word93.detail =  @"動詞～es/-ɪz/; ～ed/-t/; ～ing\n他動詞\nくつろがせる, リラックスさせる\nI just want to sit down and ___.\n座って休みたいだけです。\n\n人が体をほぐす\n\n体がほぐれる";
+        word93.detail =  @"動詞～es/-ɪz/; ～ed/-t/; ～ing\n他動詞\nくつろがせる, リラックスさせる\nI just want to sit down and ___.\n座って休みたいだけです。\n\n体をほぐす\n\n体がほぐれる";
         word93.hatuon = @"rɪlǽks";
         word93.reibun = @"I just want to sit down and relax.";
         
@@ -809,7 +809,7 @@
         
         TestWord *word20 = [TestWord new];
         word20.name = @"wise";
-        word20.detail =  @"形容詞～r; ～st\n判断、行為、人が賢い, 賢明な, 分別のある\nTo a ___ person, time is like a diamond.\n賢い人にとって時間はダイアモンドと同じくらい貴重だ。\n\nくわしい, 通じた; 博識な, 学識がある\n\n偉そうぶった, 知ったかぶりの";
+        word20.detail =  @"形容詞～r; ～st\n判断、行為、賢い, 賢明な, 分別のある\nTo a ___ person, time is like a diamond.\n賢い人にとって時間はダイアモンドと同じくらい貴重だ。\n\nくわしい, 通じた; 博識な, 学識がある\n\n偉そうぶった, 知ったかぶりの";
         word20.hatuon = @"waɪz";
         word20.reibun = @"To a wise person, time is like a diamond.";
         
@@ -1057,8 +1057,8 @@
         
         TestWord *word59 = [TestWord new];
         word59.name = @"tear";
-        word59.detail =  @"名詞 複～s/-z/\n涙; 泣くこと\n\n動詞～s/-z/; _ore/tɔːr/; _orn/tɔːrn/;～ing/téərɪŋ/\n他動詞\n~を引き裂く, 破る; ~を引き裂いて~にする; 穴を開ける\n\n~を引き裂いて~にする\n\n~を引きはがす, 破り取る, 引き離す\n\n分裂する, ばらばらになる  ; 心を引き裂かれる, 傷つく\nHer heart was _orn by anxiety.\n彼女の心は不安に引き裂かれた。\n\n自動詞\n~が裂ける, 破れる; 穴が開く\n\n引っぱる, 引き裂こうとする\n\n大急ぎで動く, 疾走する";
-        word59.hatuon = @"tɪər, teər";
+        word59.detail =  @"(1)名詞 複～s/-z/\n涙; 泣くこと\n\n(2)動詞～s/-z/; _ore/tɔːr/; _orn/tɔːrn/;～ing/téərɪŋ/\n他動詞\n~を引き裂く, 破る; ~を引き裂いて~にする; 穴を開ける\n\n~を引き裂いて~にする\n\n~を引きはがす, 破り取る, 引き離す\n\n分裂する, ばらばらになる  ; 心を引き裂かれる, 傷つく\nHer heart was _orn by anxiety.\n彼女の心は不安に引き裂かれた。\n\n自動詞\n~が裂ける, 破れる; 穴が開く\n\n引っぱる, 引き裂こうとする\n\n大急ぎで動く, 疾走する";
+        word59.hatuon = @"(1)tɪər, (2)teər";
         word59.reibun = @"Her heart was torn by anxiety.";
         
         TestWord *word60 = [TestWord new];
@@ -1141,7 +1141,7 @@
         
         TestWord *word72 = [TestWord new];
         word72.name = @"pleasant";
-        word72.detail =  @"形容詞more ～; most ～/\n楽しい;魅力的な, 気持ちのよい, 快い ; ~することは愉快だ\nWe spent many hours in a ___ conversation.\n私達は数時間楽しい会話を交わした。\n\n人が親しみやすい, 快活な, 好感のもてる; 礼儀正しい\n\n天候がよい, 快適な";
+        word72.detail =  @"形容詞more ～; most ～/\n楽しい;魅力的な, 気持ちのよい, 快い ; ~することは愉快だ\nWe spent many hours in a ___ conversation.\n私達は数時間楽しい会話を交わした。\n\n親しみやすい, 快活な, 好感のもてる; 礼儀正しい\n\n天候がよい, 快適な";
         word72.hatuon = @"pléz(ə)nt";
         word72.reibun = @"We spent many hours in a pleasant conversation.";
         

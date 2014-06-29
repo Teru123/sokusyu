@@ -236,7 +236,7 @@
                              @"形容詞more ～; most ～\nきちんと合った, 適切な, ふさわしい\nIt is not easy to choose clothes which are appropriate to your beautiful figure.\nあなたの美しい体型に合う洋服を選ぶのは簡単ではない。\n\n動詞/-èɪt/～s/-ts/; ～d/-ɪd/; -ating\n他動詞\n~を私物化する; 金品を横領[着服]する\n\n金銭を充当する, 使用する",
                              @"動詞～s/-dz/; ～ed/-ɪd/; ～ing\n他動詞\n事故、危険な事態を避ける, 防ぐ\n\n~を避ける, 場所に近寄らないようにする; ~しないようにする\nThey all avoided mentioning that name.\n彼らはその名を口にすることを避けた。",
                              @"動詞～s/-z/; ～d/-d/; behaving\n自動詞\nふるまう, 行動する  ; 行儀よくする\nIf you behave like that, you'll get yourself disliked.\nそのような行為は嫌われるよ。\n\n他動詞\n行動する, ふるまう; 子供が行儀よくする",
-                             @"形容詞～er; ～est\n~が落ち着いた, 冷静な; ~が平穏な\nYou should keep calm even in face of danger.\n危険にあっても冷静でなければならない。\n\n風のない, 平穏な\n\n名詞～s/-z/\n平穏, 静けさ; 無風状態, なぎ\n\n平静, 平穏, 冷静\n\n動詞\n他動詞\n~を静める, 穏やかにする, なだめる",
+                             @"形容詞～er; ～est\n~が落ち着いた, 冷静な; ~が平穏な\nYou should keep calm even in face of danger.\n危険な目にあっても冷静でなければならない。\n\n風のない, 平穏な\n\n名詞～s/-z/\n平穏, 静けさ; 無風状態, なぎ\n\n平静, 平穏, 冷静\n\n動詞\n他動詞\n~を静める, 穏やかにする, なだめる",
                              @"名詞 複～s/-z/\n心配事, 心配の種, 懸念材料\n\n心配, 懸念, 不安\nI am not insensible of your concern.\nあなたが心配しているのに気付かなかった訳ではない。\n\n心遣い, 配慮, 思いやり\n\n思い入れ ; 重要と見なすこと\n\n関心事, 関心の対象\n\n重要な事, 問題\n\n関係, 関連 ; 利害関係, 出資すること\n\n責務, 責任, 任務\n\n動詞～s/-z/; ～ed/-d/; ～ing \n他動詞\n~に関係する, 影響を与える, 重要である; かかわる, 関与[関係]する\n\n~を心配させる; 気にかける\n\n本、話が~にかかわる, ~についてのものである",
                              @"形容詞more ～; most ～\n満足して, 甘んじて\nI am very content with my life at present.\n今の生活にとても満足している。\n\n喜んで~する, 甘んじて~する\n\n動詞\n他動詞\n満足する, 甘んじる",
                              @"動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n~を予想する; ~するつもりである, ~することを予想する\n\n~するだろうと思う\n\n~が来る[起こる]だろうと思う\nThis is what we expect to happen.\nこれは私達が起きると予測したことだ。\n\n~を要求する, 求める ; ~するように要求する, 求める\n\n~を期待する; ~することを期待する, ~してもらいたいと思う",
@@ -245,7 +245,7 @@
                              @"動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n指示を与える;~するよう指示する, 命じる\n; ~と命じる\n\n教える\nPlease instruct me how to do my work.\nどうやって仕事をするのか指導お願いします。\n\n~と知らせる",
                              @"名詞 複～s/-z/\n争点, 論点; 核心\nYou're just avoiding the issue.\nあなたは単に問題を避けているだけだ。\n\n社会的な問題, 気がかり\n\n~号, 版\n\n動詞～s/-z/; ～d/-d/; issuing\n他動詞\n声明を出す, 発する\n\n~を発行する, ~を支給する, 給与する, 渡す\nMay I issue a ticket to you now?\n今あなたにチケットをお渡ししてもいいですか？\n\n~を発布する, 公布する",
                              @"代名詞\n3者以上のうちだれも~ない, ~のうち何も~ない\n\n何も~ない, だれも~ない\nNone of us like to go skate in winter.\n私達は誰も冬にスケートに行こうと思わない。\n\nひとつもない, 全然ない\n\n副詞\nまったく~でない\n\nまったく~でない, ~どころではない",
-                             @"名詞 複～s/-ts/\n患者, 病人\nThe patient is seriously ill and is being kept under continuous observation.\nその病人の病状は深刻で観察を続けている。\n\n形容詞more ～; most ～\n人が忍耐強い, 我慢[根気]強い ; 態度が辛抱強い",
+                             @"名詞 複～s/-ts/\n患者, 病人\nThe patient is seriously ill and is being kept under continuous observation.\nその病人の病状は深刻で観察を続けている。\n\n形容詞more ～; most ～\n忍耐強い, 我慢[根気]強い ; 態度が辛抱強い",
                              @"形容詞more ～; most ～\n積極的な, 建設的な, 前向きの, 楽観的な\n\n事が良い, 好ましい; 見込みのある, 有望な\nThese developments will have a positive effect on the stability of our financial market.\nこの進展は私達の金融市場安定に良い影響を与えるだろう。\n\n有益な, 役立つ, ためになる; 教育的な, 善行を促す\n\n確信して, 自信のある \n\n反応、批評が肯定的な, 好意的な\n\n陽性の",
                              @"動詞～es/-ɪz/; ～ed/-t/; ～ing\n他動詞\n罰する, 懲らしめる; ~で罰する\n\n~に罰を科す\nTheir teacher punished them for their rudeness.\n彼らの失礼な態度から教師は彼らを罰した。",
                              @"動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n~を代表する; 代理をする ; 選出議員である; ~の考えを代弁する\n\n出席[参加]している; 見受けられる\n\n~の一例である, 好例[典型]である\n\n~を表す, 象徴する, ~の印である\n\n~を描く, 表現する; ~しているのを描く\nThese pictures represent Japanese landscapes at all seasons of the year.\nこれらの絵は日本の四季の風景を描いている。",
@@ -289,7 +289,7 @@
                       @"rɪlǽks", @"rɪkwést", @"rɪzáɪd", @"rɪzʌ́lt", @"roʊl", @"sɪns", @"vɪ́zəb(ə)l", @"waɪld", nil];
         
         changeText = [NSArray arrayWithObjects:
-                             @"形容詞more ～; most ～\n~に気づいている, ~を知っている, 認識[意識, 自覚]している \nThen he became aware that they were regarding him with interest.\nその時、彼らが興味深げに彼を見つめているのに気付いた。\n\n人が意識の高い, 知識[認識]のある",
+                             @"形容詞more ～; most ～\n~に気づいている, ~を知っている, 認識[意識, 自覚]している \nThen he became aware that they were regarding him with interest.\nその時、彼らが興味深げに彼を見つめているのに気付いた。\n\n意識の高い, 知識[認識]のある",
                              @"副詞\nまずく, へたに~する; 悪くふるまう\nThe child behaved badly at the party.\nその子はパーティーで行儀が悪かった。\n\nとても, どうしても欲しい、必要だ\n\nかなり, ひどく傷つける、悪くなる\n\n不当に, 不利に扱う",
                              @"動詞～s/-z/; ～ed/-d/; ～ing\n自動詞\n~に属している; ~の所有物である, ~のものである; ~の保護下にある\n\n組織の一員である\nWhat party do you belong to?\nどの党派に所属していますか？\n\nある時代のものである; ~の特徴を持つ\n\n属する, 部類である",
                              @"動詞～s/-z/; ～d/-d/; -uing\n自動詞\n~が続く, 続いている, 継続する\nWet weather may continue for a few more days.\n湿っぽい天気は後数日続くだろう。\n\n続ける; 続行する\n\n~が続く, 続けられる\n\n道が延びている; 動き続ける\n\nとどまる, 引き続きいる\n\n他動詞\n~を続ける; ~し続ける \n\n~を再び続ける, 続行する; 続ける",
@@ -301,7 +301,7 @@
                              @"形容詞more ～; most ～\nありそうな, 起こりそうな; 起こる可能性の高い; ~しそうである; ~する可能性が高い\n\nもっともらしい説明; ありそうな原因、結果; 見込みのある;  適した場所、人\n\nおそらく, たぶん\nI'm likely to be very busy tomorrow.\n多分、明日とても忙しい。",
                              @"形容詞more ～; most ～\n標準の, 平均の, 普通の\n\n正常な, 標準的な\nEverything is absolutely normal.\n全て正常。",
                              @"形容詞～r; ～st\n物がまれな, 珍しい, 希少価値のある; 出来事、状況がまれな, めったに起きない\nIt is rare to find such a genius nowadays.\nそのような天才は今は滅多にいない。",
-                             @"動詞～es/-ɪz/; ～ed/-t/; ～ing\n他動詞\nくつろがせる, リラックスさせる\nI just want to sit down and relax.\n座って休みたいだけです。\n\n人が体をほぐす\n\n体がほぐれる",
+                             @"動詞～es/-ɪz/; ～ed/-t/; ～ing\n他動詞\nくつろがせる, リラックスさせる\nI just want to sit down and relax.\n座って休みたいだけです。\n\n体をほぐす\n\n体がほぐれる",
                              @"名詞 複～s/-ts/\n要請, 依頼 ; 頼むこと ; 頼み[願い]事; 要求[請求]物; 依頼文, 請願書\nHis answer to my request was a negative.\n彼は私の頼みを断った。\n\n動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n~を要請する, 頼む",
                              @"動詞\n自動詞\n居住する; 駐在する\nThis family has resided in this city for 60 years.\nこの家族は60年間この都市で暮らしている。\n\n性質がある, 備わっている",
                              @"名詞 複～s/-ts/\n結果, 成り行き, 結末\nThese problems are the result of years of bad management.\nそれらの問題は何年も適切な管理をしなかった結果だ。\n\n結果; 計算の結果, 答え\n\n業績\n\n動詞～s/-ts/; ～ed/-ɪd/; ～ing\n自動詞\n~という結果に終わる, ~に帰着する\n\n結果として起こる, 起因する",
@@ -370,7 +370,7 @@
                        @"動詞～s/-ts/; ～; ～ting\n他動詞\n動揺させる, うろたえさせる; ~を心配させる; ~ということが~を動揺させる\n\n混乱[転覆]させる\nThe whole plan was upset owing to his absence.\n彼が来なかったので全ての計画が台無しになった。\n\n胃の調子を悪くする\n\n形容詞\n取り乱した, うろたえた; あわてふためいて; 腹を立てた\n\n具合の悪い胃\n\n名詞\n不調",
                        @"名詞 複～s/-ɪz/\n声, 話す声; 声の質[調子]; 口調 \nWe could hear the children's voices in the garden.\n庭で子供達の声が聞こえた。\n\n声を出す能力",
                        @"名詞\n天気, 天候, 気象; 天候の, 気象の\nWhat is the weather like today?\n今日はどんな天気ですか？\n\n天気予報, 気象情報.\n\n暴風雨; 悪天候\n\n動詞\n他動詞\n変色する, 風化する, 傷む; 日焼けする\n\n無事に乗り切る, うまく切り抜ける",
-                       @"形容詞～r; ～st\n判断、行為、人が賢い, 賢明な, 分別のある\nTo a wise person, time is like a diamond.\n賢い人にとって時間はダイアモンドと同じくらい貴重だ。\n\nくわしい, 通じた; 博識な, 学識がある\n\n偉そうぶった, 知ったかぶりの",
+                       @"形容詞～r; ～st\n判断、行為、賢い, 賢明な, 分別のある\nTo a wise person, time is like a diamond.\n賢い人にとって時間はダイアモンドと同じくらい貴重だ。\n\nくわしい, 通じた; 博識な, 学識がある\n\n偉そうぶった, 知ったかぶりの",
                         nil];
         tangoSound = [NSArray arrayWithObjects: @"advantage", @"cause", @"choice", @"community", @"dead", @"distance", @"escape",
                       @"face", @"follow", @"fright", @"ghost", @"individual", @"pet", @"reach", @"return",
@@ -468,7 +468,7 @@
         changeHatuonLabel = [NSArray arrayWithObjects:@"əksépt, æk-", @"əréɪn(d)ʒ", @"əténd",
                       @"bǽləns", @"kɑ́ntræst|kɔ́ntrɑːst", @"ɪnkə́ːrɪdʒ|-kʌ́r-",
                       @"fəmɪ́ljər|-iə", @"ɡræb", @"hæŋ", @"hjuːdʒ", @"nésəsèri, nésəs(ə)ri", @"pǽtərn",
-                      @"prəpóʊz", @"pə́ːrpəs", @"rɪlíːs", @"rɪkwáɪər", @"sɪ́ŋɡ(ə)l", @"səksés", @"tɪər, teər",
+                      @"prəpóʊz", @"pə́ːrpəs", @"rɪlíːs", @"rɪkwáɪər", @"sɪ́ŋɡ(ə)l", @"səksés", @"(1)tɪər, (2)teər",
                       @"θíːəri|θɪ́ə-", nil];
         
         changeText = [NSArray arrayWithObjects:
@@ -490,7 +490,7 @@
                              @"動詞～s/-z/; ～d/-d/; requiring/-wáɪ(ə)rɪŋ/\n他動詞\n~を必要とする; ~を必要とする; ~することが必要である\nThis game requires a minimum of three players.\nこのゲームは最低３人のプレイヤーが必要だ。\n\n~するように要求する, 命令する; ~を要求する",
                              @"形容詞\nたった1つの\n\n個々の, 1つ1つの, 各々の; まさに, 唯一の\nThe letter was written on a single sheet of paper.\nその手紙は一枚の紙に書かれていた。\n\n独身の; ひとり身の\n\nベッドが1人用の; 部屋が1人専用の, シングルの\n\n片方だけの;切符が片道の; 花弁が一重の, ゲームがシングル試合の\n\n名詞\n独身者\n\n片道切符",
                              @"名詞 複～es/-ɪz/\n成功; 出世; 合格\nThe school has only been open for six months, so it's hard to evaluate its success.\nその学校は創設してまだ６ヶ月なので、成功か否かの評価は難しい。\n\nうまくいった事[物]; 大当たり\n\n成功した人",
-                             @"名詞 複～s/-z/\n涙; 泣くこと\n\n動詞～s/-z/; tore/tɔːr/; torn/tɔːrn/;～ing/téərɪŋ/\n他動詞\n~を引き裂く, 破る; ~を引き裂いて~にする; 穴を開ける\n\n~を引き裂いて~にする\n\n~を引きはがす, 破り取る, 引き離す\n\n分裂する, ばらばらになる  ; 心を引き裂かれる, 傷つく\nHer heart was torn by anxiety.\n彼女の心は不安に引き裂かれた。\n\n自動詞\n~が裂ける, 破れる; 穴が開く\n\n引っぱる, 引き裂こうとする\n\n大急ぎで動く, 疾走する",
+                             @"(1)名詞 複～s/-z/\n涙; 泣くこと\n\n(2)動詞～s/-z/; tore/tɔːr/; torn/tɔːrn/;～ing/téərɪŋ/\n他動詞\n~を引き裂く, 破る; ~を引き裂いて~にする; 穴を開ける\n\n~を引き裂いて~にする\n\n~を引きはがす, 破り取る, 引き離す\n\n分裂する, ばらばらになる  ; 心を引き裂かれる, 傷つく\nHer heart was torn by anxiety.\n彼女の心は不安に引き裂かれた。\n\n自動詞\n~が裂ける, 破れる; 穴が開く\n\n引っぱる, 引き裂こうとする\n\n大急ぎで動く, 疾走する",
                              @"名詞 複-ries/-z/\n学説, ~論\n\n原理; 理論, 理屈\nIn theory, anything could happen.\n理論上、どんな事でも起こり得る。\n\n推測, 憶測; 個人的見解", nil];
         tangoSound = [NSArray arrayWithObjects: @"accept", @"arrange", @"attend", @"balance",
                       @"contrast", @"encourage", @"familiar", @"grab", @"hang", @"huge", @"necessary",
@@ -543,7 +543,7 @@
                              @"名詞 複～s/-dz/\n島; ~島;島の\n\n島に似たもの; 趣が周辺と異なる所",
                              @"名詞 複～s/-z/\n海\n\n海洋, 大洋; ~洋, ~海\n\n膨大な量[広がり]",
                              @"副詞\nひょっとすると , おそらく, ~かもしれない\nAs she's been ill perhaps she'll need some help.\n彼女は病気になったので、助けが必要かもしれない。\n\nひょっとすると, たぶん, ~といったところである\n\nたぶん, だいたい, おおよそ\n\n~してはどうでしょう, ~してもらえないでしょうか, ~(して)さし上げましょうか;~した方がいいでしょう \n\nそうでしょうね, ええまあ;そうでしょうけど.",
-                             @"形容詞more ～; most ～/\n楽しい;魅力的な, 気持ちのよい, 快い ; ~することは愉快だ\nWe spent many hours in a pleasant conversation.\n私達は数時間楽しい会話を交わした。\n\n人が親しみやすい, 快活な, 好感のもてる; 礼儀正しい\n\n天候がよい, 快適な",
+                             @"形容詞more ～; most ～/\n楽しい;魅力的な, 気持ちのよい, 快い ; ~することは愉快だ\nWe spent many hours in a pleasant conversation.\n私達は数時間楽しい会話を交わした。\n\n親しみやすい, 快活な, 好感のもてる; 礼儀正しい\n\n天候がよい, 快適な",
                              @"動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n~するのを妨げる\nIt is the job of the police to prevent crime.\n犯罪を防ぐのは警察の職責だ。\n\n~を防ぐ, 中止させる; じゃまする\n\n~を予防する, 防止する",
                              @"名詞 複～s/-s/\n岩, 岩盤, 岩壁, 岩山\n\n岩石, 岩;石, 小石\n\n暗礁, 岩礁",
                              @"動詞～s/-z/; ～d/-d/; saving\n他動詞\n~を救う, 救助する\nThe doctor managed to save his life.\nその医者は彼の命を救った。\n\n金を蓄える, 貯蓄する;~を取っておく\n\n~を節約する ; ~の節約になる \n\n~をしなくて済むようにする, ~のむだを省く; ~の手間を省く;~することを不要にする\n\n~を確保する\n\n自動詞\n貯金する",

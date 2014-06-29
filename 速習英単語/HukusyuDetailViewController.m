@@ -369,7 +369,7 @@
         reibun =  @"If you behave like that, you'll get yourself disliked.";
     }
     if ([wordNameForString isEqualToString:@"calm"]) {
-        ewTextView.text =  @"形容詞～er; ～est\n~が落ち着いた, 冷静な; ~が平穏な\nYou should keep calm even in face of danger.\n危険にあっても冷静でなければならない。\n\n風のない, 平穏な\n\n名詞～s/-z/\n平穏, 静けさ; 無風状態, なぎ\n\n平静, 平穏, 冷静\n\n動詞\n他動詞\n~を静める, 穏やかにする, なだめる";
+        ewTextView.text =  @"形容詞～er; ～est\n~が落ち着いた, 冷静な; ~が平穏な\nYou should keep calm even in face of danger.\n危険な目にあっても冷静でなければならない。\n\n風のない, 平穏な\n\n名詞～s/-z/\n平穏, 静けさ; 無風状態, なぎ\n\n平静, 平穏, 冷静\n\n動詞\n他動詞\n~を静める, 穏やかにする, なだめる";
         [hatuonLabel setText:[NSString stringWithFormat:@"kɑːm"]];
         reibun =  @"You should keep calm even in face of danger.";
     }
@@ -414,7 +414,7 @@
         reibun = @"None of us like to go skate in winter.";
     }
     if ([wordNameForString isEqualToString:@"patient"]) {
-        ewTextView.text =  @"名詞 複～s/-ts/\n患者, 病人\nThe patient is seriously ill and is being kept under continuous observation.\nその病人の病状は深刻で観察を続けている。\n\n形容詞more ～; most ～\n人が忍耐強い, 我慢[根気]強い ; 態度が辛抱強い";
+        ewTextView.text =  @"名詞 複～s/-ts/\n患者, 病人\nThe patient is seriously ill and is being kept under continuous observation.\nその病人の病状は深刻で観察を続けている。\n\n形容詞more ～; most ～\n忍耐強い, 我慢[根気]強い ; 態度が辛抱強い";
         [hatuonLabel setText:[NSString stringWithFormat:@"péɪʃ(ə)nt"]];
         reibun = @"The patient is seriously ill and is being kept under continuous observation.";
     }
@@ -454,7 +454,7 @@
         reibun = @"";
     }
     if ([wordNameForString isEqualToString:@"aware"]) {
-        ewTextView.text =  @"形容詞more ～; most ～\n~に気づいている, ~を知っている, 認識[意識, 自覚]している \nThen he became aware that they were regarding him with interest.\nその時、彼らが興味深げに彼を見つめているのに気付いた。\n\n人が意識の高い, 知識[認識]のある";
+        ewTextView.text =  @"形容詞more ～; most ～\n~に気づいている, ~を知っている, 認識[意識, 自覚]している \nThen he became aware that they were regarding him with interest.\nその時、彼らが興味深げに彼を見つめているのに気付いた。\n\n意識の高い, 知識[認識]のある";
         [hatuonLabel setText:[NSString stringWithFormat:@"əwéər"]];
         reibun = @"Then he became aware that they were regarding him with interest.";
     }
@@ -514,7 +514,7 @@
         reibun = @"It is rare to find such a genius nowadays.";
     }
     if ([wordNameForString isEqualToString:@"relax"]) {
-        ewTextView.text =  @"動詞～es/-ɪz/; ～ed/-t/; ～ing\n他動詞\nくつろがせる, リラックスさせる\nI just want to sit down and relax.\n座って休みたいだけです。\n\n人が体をほぐす\n\n体がほぐれる";
+        ewTextView.text =  @"動詞～es/-ɪz/; ～ed/-t/; ～ing\n他動詞\nくつろがせる, リラックスさせる\nI just want to sit down and relax.\n座って休みたいだけです。\n\n体をほぐす\n\n体がほぐれる";
         [hatuonLabel setText:[NSString stringWithFormat:@"rɪlǽks"]];
         reibun = @"I just want to sit down and relax.";
     }
@@ -649,7 +649,7 @@
         reibun = @"What is the weather like today.";
     }
     if ([wordNameForString isEqualToString:@"wise"]) {
-        ewTextView.text =  @"形容詞～r; ～st\n判断、行為、人が賢い, 賢明な, 分別のある\nTo a wise person, time is like a diamond.\n賢い人にとって時間はダイアモンドと同じくらい貴重だ。\n\nくわしい, 通じた; 博識な, 学識がある\n\n偉そうぶった, 知ったかぶりの";
+        ewTextView.text =  @"形容詞～r; ～st\n判断、行為、賢い, 賢明な, 分別のある\nTo a wise person, time is like a diamond.\n賢い人にとって時間はダイアモンドと同じくらい貴重だ。\n\nくわしい, 通じた; 博識な, 学識がある\n\n偉そうぶった, 知ったかぶりの";
         [hatuonLabel setText:[NSString stringWithFormat:@"waɪz"]];
         reibun = @"To a wise person, time is like a diamond.";
     }
@@ -844,8 +844,8 @@
         reibun = @"The school has only been open for six months, so it's hard to evaluate its success.";
     }
     if ([wordNameForString isEqualToString:@"tear"]) {
-        ewTextView.text =  @"名詞 複～s/-z/\n涙; 泣くこと\n\n動詞～s/-z/; tore/tɔːr/; torn/tɔːrn/;～ing/téərɪŋ/\n他動詞\n~を引き裂く, 破る; ~を引き裂いて~にする; 穴を開ける\n\n~を引き裂いて~にする\n\n~を引きはがす, 破り取る, 引き離す\n\n分裂する, ばらばらになる  ; 心を引き裂かれる, 傷つく\nHer heart was torn by anxiety.\n彼女の心は不安に引き裂かれた。\n\n自動詞\n~が裂ける, 破れる; 穴が開く\n\n引っぱる, 引き裂こうとする\n\n大急ぎで動く, 疾走する";
-        [hatuonLabel setText:[NSString stringWithFormat:@"tɪər, teər"]];
+        ewTextView.text =  @"(1)名詞 複～s/-z/\n涙; 泣くこと\n\n(2)動詞～s/-z/; tore/tɔːr/; torn/tɔːrn/;～ing/téərɪŋ/\n他動詞\n~を引き裂く, 破る; ~を引き裂いて~にする; 穴を開ける\n\n~を引き裂いて~にする\n\n~を引きはがす, 破り取る, 引き離す\n\n分裂する, ばらばらになる  ; 心を引き裂かれる, 傷つく\nHer heart was torn by anxiety.\n彼女の心は不安に引き裂かれた。\n\n自動詞\n~が裂ける, 破れる; 穴が開く\n\n引っぱる, 引き裂こうとする\n\n大急ぎで動く, 疾走する";
+        [hatuonLabel setText:[NSString stringWithFormat:@"(1)tɪər, (2)teər"]];
         reibun = @"Her heart was torn by anxiety.";
     }
     if ([wordNameForString isEqualToString:@"theory"]) {
@@ -909,7 +909,7 @@
         reibun = @"As she's been ill perhaps she'll need some help.";
     }
     if ([wordNameForString isEqualToString:@"pleasant"]) {
-        ewTextView.text =  @"形容詞more ～; most ～/\n楽しい;魅力的な, 気持ちのよい, 快い ; ~することは愉快だ\nWe spent many hours in a pleasant conversation.\n私達は数時間楽しい会話を交わした。\n\n人が親しみやすい, 快活な, 好感のもてる; 礼儀正しい\n\n天候がよい, 快適な";
+        ewTextView.text =  @"形容詞more ～; most ～/\n楽しい;魅力的な, 気持ちのよい, 快い ; ~することは愉快だ\nWe spent many hours in a pleasant conversation.\n私達は数時間楽しい会話を交わした。\n\n親しみやすい, 快活な, 好感のもてる; 礼儀正しい\n\n天候がよい, 快適な";
         [hatuonLabel setText:[NSString stringWithFormat:@"pléz(ə)nt"]];
         reibun = @"We spent many hours in a pleasant conversation.";
     }
