@@ -12,7 +12,7 @@
 //#import "NADView.h"
 //#import "GADBannerView.h"
 
-@interface YosyuFourViewController : UIViewController<UIAlertViewDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate>
+@interface YosyuFourViewController : UIViewController<UITextFieldDelegate, UIAlertViewDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate>
 {
     int currentIndex;
     NSArray *changeLabel;
@@ -29,6 +29,7 @@
     NSString *itsDetail;
     NSString *itsHatuon;
     NSString *itsReibun;
+    __weak IBOutlet UITextField *practiceField;
     //GADBannerView *bannerView_;
     __weak IBOutlet UITextView *ewTextView;
     __weak IBOutlet UIBarButtonItem *nextButton;

@@ -36,10 +36,10 @@ NSString *const kData   = @"Data Source Plot";
     [super viewDidLoad];
     
     // セクション名を設定する
-    sectionList =  [NSArray arrayWithObjects:@"サポート", nil];
+    sectionList =  [NSArray arrayWithObjects:@" ", nil];
     
     // セルの項目を作成する
-    NSArray *share = [NSArray arrayWithObjects:@"Webサイト", @"レビューを書く", nil];
+    NSArray *share = [NSArray arrayWithObjects:@"Webサイト", @"レビューを書く", @"速習英単語２をダウンロード", nil];
     
     // セルの項目をまとめる
     NSArray *datas = [NSArray arrayWithObjects:share, nil];
@@ -559,6 +559,8 @@ NSString *const kData   = @"Data Source Plot";
             [self reviewButton];
         }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"Webサイト"]){
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.sokusyueitango.com"]];
+        }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"速習英単語２をダウンロード"]){
+            [self reviewButton];
         }
     }
 }
@@ -688,6 +690,29 @@ NSString *const kData   = @"Data Source Plot";
     //[self toggleMenu];
 }
 
+- (void)reviewButton2{
+    // AppStoreのレビューURLを開く (引数に AppStoreのアプリIDを指定)
+    // レビュー画面の URL
+    NSString *reviewUrl;
+    
+    // iOSのバージョンを判別
+    NSString *osversion = [UIDevice currentDevice].systemVersion;
+    NSArray *a = [osversion componentsSeparatedByString:@"."];
+    BOOL isIOS7 = [(NSString *)[a objectAtIndex:0] intValue] >= 7;
+    if (isIOS7) {
+        // iOS 7以降
+        reviewUrl = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", @"894481309"];
+    } else {
+        // iOS 7未満
+        reviewUrl = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=%@&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software", @"894481309"];
+    }
+    
+    // レビュー画面へ遷移
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewUrl]];
+    
+    //[self toggleMenu];
+}
+
 #pragma mark -
 #pragma mark Plot Data Source Methods
 
@@ -764,18 +789,18 @@ NSString *const kData   = @"Data Source Plot";
     
     // テキストスタイル
     CPTMutableTextStyle *textStyle = [CPTTextStyle textStyle];
-    textStyle.color                = [CPTColor colorWithComponentRed:0.024f green:0.365f blue:0.71f alpha:0.9f];
+    textStyle.color                = [CPTColor colorWithComponentRed:0.0f green:0.706f blue:0.0f alpha:0.9f];
     textStyle.fontSize             = 13.0f;
     textStyle.textAlignment        = CPTTextAlignmentCenter;
     
     CPTMutableTextStyle *titleStyle = [CPTTextStyle textStyle];
-    titleStyle.color                = [CPTColor colorWithComponentRed:0.024f green:0.365f blue:0.71f alpha:0.7f];
+    titleStyle.color                = [CPTColor colorWithComponentRed:0.0f green:0.706f blue:0.0f alpha:0.7f];
     titleStyle.fontSize             = 13.0f;
     titleStyle.textAlignment        = CPTTextAlignmentCenter;
     
     // ラインスタイル
     CPTMutableLineStyle *lineStyle = [CPTMutableLineStyle lineStyle];
-    lineStyle.lineColor            = [CPTColor colorWithComponentRed:0.024f green:0.365f blue:0.71f alpha:0.2f];
+    lineStyle.lineColor            = [CPTColor colorWithComponentRed:0.0f green:0.706f blue:0.0f alpha:0.2f];
     lineStyle.lineWidth            = 2.0f;
     
     // X軸のメモリ・ラベルなどの設定
@@ -855,7 +880,7 @@ NSString *const kData   = @"Data Source Plot";
     barPlot.dataSource      = self;     // 折れ線グラフのデータソースを設定
     
     // バー表示設定
-    barPlot.fill = [CPTFill fillWithColor:[CPTColor colorWithComponentRed:0.3f green:1.0f blue:0.3f alpha:1.0f]];
+    barPlot.fill = [CPTFill fillWithColor:[CPTColor colorWithComponentRed:0.259f green:0.616f blue:0.976f alpha:1.0f]];
     
     barPlot.lineStyle = lineStyle;
     //barPlot.baseValue  = CPTDecimalFromString(@"0");

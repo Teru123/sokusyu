@@ -33,11 +33,11 @@
     [self drawPercentage];
     
     // セクション名を設定する
-    sectionList =  [NSArray arrayWithObjects:@"サポート", @"正答率", nil];
-    percentageSection =  [NSArray arrayWithObjects:@"サポート", @"正答率", nil];
+    sectionList =  [NSArray arrayWithObjects:@" ", @"正答率", nil];
+    percentageSection =  [NSArray arrayWithObjects:@" ", @"正答率", nil];
     
     // セルの項目を作成する
-    NSArray *share = [NSArray arrayWithObjects:@"Webサイト", @"レビューを書く", nil];
+    NSArray *share = [NSArray arrayWithObjects:@"Webサイト", @"レビューを書く", @"速習英単語２をダウンロード", nil];
     NSArray *percentage = [NSArray arrayWithObjects:
                            @"1    afraid - well", @"2    adventure - worse", @"3    alien - view", @"4    appropriate - village", @"5    aware - wild",
                            @"6    advantage - wise", @"7    allow - therefore", @"8    accept - theory", @"9    against - wave", @"10  benefit - trouble",
@@ -196,6 +196,8 @@
             [self reviewButton];
         }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"Webサイト"]){
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.sokusyueitango.com"]];
+        }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"速習英単語２をダウンロード"]){
+            [self reviewButton2];
         }
     }
 }
@@ -317,6 +319,29 @@
     } else {
         // iOS 7未満
         reviewUrl = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=%@&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software", @"783634975"];
+    }
+    
+    // レビュー画面へ遷移
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewUrl]];
+    
+    //[self toggleMenu];
+}
+
+- (void)reviewButton2{
+    // AppStoreのレビューURLを開く (引数に AppStoreのアプリIDを指定)
+    // レビュー画面の URL
+    NSString *reviewUrl;
+    
+    // iOSのバージョンを判別
+    NSString *osversion = [UIDevice currentDevice].systemVersion;
+    NSArray *a = [osversion componentsSeparatedByString:@"."];
+    BOOL isIOS7 = [(NSString *)[a objectAtIndex:0] intValue] >= 7;
+    if (isIOS7) {
+        // iOS 7以降
+        reviewUrl = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", @"894481309"];
+    } else {
+        // iOS 7未満
+        reviewUrl = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=%@&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software", @"894481309"];
     }
     
     // レビュー画面へ遷移

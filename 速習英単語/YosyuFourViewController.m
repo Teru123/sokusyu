@@ -1201,13 +1201,13 @@
                       @"動詞～s/-z/; ～ed/-d/; ～ing\n他動詞\nおもしろがらせる, 楽しませる\n\nもてなす, 接待する, 歓待する ; 招待してもてなす\nI like to entertain friends with music at home.\n家では音楽で人をもてなすのが好きだ。\n\n~をいだく, 持つ; 提案を考慮する ",
                       @"形容詞\n追加の, 余分の, 特別の, 臨時の\n\n余分に料金がいる\nGuests at this hotel can use the gym at no extra cost.\nこのホテルの宿泊者は追加料金無しでジムを利用する事が出来ます。\n\n特別上等の, 格別の\n\n副詞\n余分に, 追加で, 割り増しで\n\n格別に, いつもより\n\n名詞\nオプション製品[サービス]; 追加料金\n\n余分なもの, 予備\n\nエキストラ\n\n臨時雇いの人\n\n接頭辞\n外側の; 範囲外の; ~を越えた; その上に",
                       @"名詞 複～s/-z/\n目標, 目的\nwe lose sight of the goal\n目標を見失った。\n\nゴール; ゴールに入った得点\n\nレースのフィニッシュライン\n\n目的地, 行き先",
-                      @"動詞～s/-z/; ～d/-d/; lying\n\n自動詞\nうそをつく\nI promise never to lie to you from now on.\n今後あなたに二度と嘘をつかない事を誓う。\n\n欺く, 間違った印象を与える\n\n他動詞\n~をだまして~に陥れる, ~にうそをついて~させる ; だまして金を巻き上げる\n\n名詞 複～s/-z/\nうそ, 虚偽",
+                      @"動詞～s/-z/; ～d/-d/; lying\n自動詞\nうそをつく\nI promise never to lie to you from now on.\n今後あなたに二度と嘘をつかない事を誓う。\n\n欺く, 間違った印象を与える\n\n他動詞\n~をだまして~に陥れる, ~にうそをついて~させる ; だまして金を巻き上げる\n\n名詞 複～s/-z/\nうそ, 虚偽",
                       @"名詞 複～s/-ts/\n食用の肉; 骨の周りの身; 肉付き\n\n木の実、卵、貝カニの身; 果肉\n\n要点, 骨子, 内容",
                       @"名詞 複～s/-z/\n意見, 考え, 見解, 持論\nI can't agree with your opinion in this respect.\nこの点はあなたの意見に賛成出来ない。\n\n~についての~な評価\n\n世論, 世間の考え\n\n専門家の判断, 所見, 鑑定",
                       @"形容詞more ～; most ～\n実在する; 現実の, 実際の\n\n本当の, 真の; 本物の\nChildren believe that these characters are real.\n子供達はそのキャラクターが本物だと信じている。\n\nまったくの, すごい\n\nその名に値する, 真の意味での\n\n最も重要な\n\n心からの, 本気の\n\n実質の賃金、収入\n\n情景、描写が真に迫った, リアルな",
                       @"動詞～s/-ts/; ～ed/-ɪd/; ～ing\n他動詞\n~を反射する; 音を反響する\nThe sunlight was reflected in the water.\n日光は水面で反射した。\n\n~を反映する, 表す, 示す; ~であるかを反映する\n\n~ということを熟考する, よく考える\n\n~が鏡に映る, 映し出される\n\n~を結果としてもたらす, 招く\n\n自動詞\n~が反射する; 音が反響する\n\n熟考する\n\n~が影響を及ぼす, 印象[評判]をもたらす",
                       @"動詞～s/-dz/; ～ed/-ɪd/; ～ing\n他動詞\n~とみなす, 考える\nI regard reading as a form of recreation.\n読書は気晴らしの一つだと考えている。\n\n~を考える, 捉える ; ~を評価する, ~を尊敬する\n\n名詞 複～s/-dz/\n敬意, 尊敬; 好意; 評価\n\n配慮, 思いやり; 考慮, 注意\n\n手紙、伝言のよろしくというあいさつ",
-                      @"動詞～s/-z/; ～d/-d/; serving\n他動詞\n飲食物を出す, 配る\nThe waiter is serving another customer.\nそのウェイターは他の客に対応している。\n料理が~人分である\n\n目的、必要、利益にかなう, 機能を果たす; 役に立つ, 助ける; 満足させる\n\n~のために働く, ~に勤務する; ~に仕える; 使用人として~に奉公する\n\n期間、任期を務める\n\n客の世話をする, ~に応対する; ~を売る\n\n商品、サービスを~に提供する\n\n正式文書を渡す; 召喚状を渡す\n\n自動詞\n役立つ, 用をなす, 間に合う\n\n勤務する, 務める, 働く, 仕事をする\n\n使用人として奉公する\n\n飲食物を出す, 給仕する; ~のままで出す",
+                      @"動詞～s/-z/; ～d/-d/; serving\n他動詞\n飲食物を出す, 配る\nThe waiter is serving another customer.\nそのウェイターは他の客に対応している。\n\n料理が~人分である\n\n目的、必要、利益にかなう, 機能を果たす; 役に立つ, 助ける; 満足させる\n\n~のために働く, ~に勤務する; ~に仕える; 使用人として~に奉公する\n\n期間、任期を務める\n\n客の世話をする, ~に応対する; ~を売る\n\n商品、サービスを~に提供する\n\n正式文書を渡す; 召喚状を渡す\n\n自動詞\n役立つ, 用をなす, 間に合う\n\n勤務する, 務める, 働く, 仕事をする\n\n使用人として奉公する\n\n飲食物を出す, 給仕する; ~のままで出す",
                       @"名詞 複～s/-z/\n野菜; 温野菜\n\n植物, 草木\n\n形容詞\n野菜の; 植物性の",
                       @"名詞 複～s/-z/\n戦争, 紛争; 戦時\nThe army was disbanded when the war came to an end.\nその軍隊は戦争が終わった時に解散した。\n\n長期的な闘い, 争い\n\n権力、支配をめぐる争い, 戦争\n\n形容詞\n戦争の; 戦争に用いる; 戦争で生じた",
                       @"前置詞\nある金額の価値がある, 値打ちがある; 金に換算して~に相当する\nThe movie is definitely worth seeing.\nその映画は本当に見る価値がある。\n\n~の価値がある, ~だけのことはある\n\n~する価値がある\n\n~するのは価値がある, それだけのことがあるから~すべきである\n\n名詞\nある金額相当の物\n\nある期間分の食料, ある期間かかる仕事\n\n価値, 重要性", nil];
@@ -1853,7 +1853,12 @@
         
     }
     
-    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\nロングタップで辞書検索\n左右スワイプで単語切替\nテストはランダム表示\nグラフはテスト終了後に更新\n\n手書き入力\nアプリ使用またはiPhoneの設定から手書き入力が可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-簡体字(繁体字) 手書き を追加\n\nスペルのテスト\n自動修正オフで予測変換がされないので,スペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 一般 > 文字サイズを変更 > スライダをドラッグ     "];
+    [practiceField setDelegate:self];
+    practiceField.returnKeyType = UIReturnKeyDone;
+    [practiceField setEnabled:NO];
+    [practiceField setPlaceholder:[NSString stringWithFormat:@"単語を手書き入力して暗記すると効果的"]];
+    
+    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\nロングタップで辞書検索\n左右スワイプで単語切替\nテストはランダム表示\nグラフはテスト終了後に更新\n\n手書き入力\nアプリ使用またはiPhoneの設定から手書き入力が可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-繁体字(簡体字) 手書き を追加\n\nスペルのテスト\n自動修正オフで予測変換がされないので,スペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 一般 > 文字サイズを変更 > スライダをドラッグ     "];
     
     [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(0, 3)];
     //[attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x0889e6) range:NSMakeRange(3, 87)];
@@ -2148,6 +2153,13 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [practiceField resignFirstResponder];
+    return YES;
+    
+}
+
 - (IBAction)menuButton:(id)sender
 {
     /*
@@ -2385,6 +2397,9 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     menuButtonBlue.hidden = NO;
     textSizeButtonBlue.hidden = NO;
     textSizeButton.hidden = NO;
+    
+    [practiceField setEnabled:YES];
+    [practiceField setPlaceholder:[NSString stringWithFormat:@"単語練習スペース"]];
     
     [backButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                         [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,

@@ -2531,7 +2531,7 @@
         
         TestWord *word91 = [TestWord new];
         word91.name = @"lie";
-        word91.detail =  @"動詞～s/-z/; ～d/-d/; lying\n\n自動詞\nうそをつく\nI promise never to ___ to you from now on.\n今後あなたに二度と嘘をつかない事を誓う。\n\n欺く, 間違った印象を与える\n\n他動詞\n~をだまして~に陥れる, ~にうそをついて~させる ; だまして金を巻き上げる\n\n名詞 複～s/-z/\nうそ, 虚偽";
+        word91.detail =  @"動詞～s/-z/; ～d/-d/; lying\n自動詞\nうそをつく\nI promise never to ___ to you from now on.\n今後あなたに二度と嘘をつかない事を誓う。\n\n欺く, 間違った印象を与える\n\n他動詞\n~をだまして~に陥れる, ~にうそをついて~させる ; だまして金を巻き上げる\n\n名詞 複～s/-z/\nうそ, 虚偽";
         word91.hatuon = @"laɪ";
         word91.reibun = @"I promise never to lie to you from now on.";
         
@@ -2567,7 +2567,7 @@
         
         TestWord *word97 = [TestWord new];
         word97.name = @"serve";
-        word97.detail =  @"動詞～s/-z/; ～d/-d/; ___ing\n他動詞\n飲食物を出す, 配る\nThe waiter is ___ing another customer.\nそのウェイターは他の客に対応している。\n料理が~人分である\n\n目的、必要、利益にかなう, 機能を果たす; 役に立つ, 助ける; 満足させる\n\n~のために働く, ~に勤務する; ~に仕える; 使用人として~に奉公する\n\n期間、任期を務める\n\n客の世話をする, ~に応対する; ~を売る\n\n商品、サービスを~に提供する\n\n正式文書を渡す; 召喚状を渡す\n\n自動詞\n役立つ, 用をなす, 間に合う\n\n勤務する, 務める, 働く, 仕事をする\n\n使用人として奉公する\n\n飲食物を出す, 給仕する; ~のままで出す";
+        word97.detail =  @"動詞～s/-z/; ～d/-d/; ___ing\n他動詞\n飲食物を出す, 配る\nThe waiter is ___ing another customer.\nそのウェイターは他の客に対応している。\n\n料理が~人分である\n\n目的、必要、利益にかなう, 機能を果たす; 役に立つ, 助ける; 満足させる\n\n~のために働く, ~に勤務する; ~に仕える; 使用人として~に奉公する\n\n期間、任期を務める\n\n客の世話をする, ~に応対する; ~を売る\n\n商品、サービスを~に提供する\n\n正式文書を渡す; 召喚状を渡す\n\n自動詞\n役立つ, 用をなす, 間に合う\n\n勤務する, 務める, 働く, 仕事をする\n\n使用人として奉公する\n\n飲食物を出す, 給仕する; ~のままで出す";
         word97.hatuon = @"sə́ːrv";
         word97.reibun = @"The waiter is serving another customer.";
         
@@ -3871,7 +3871,7 @@
     [checkTextField setEnabled:NO];
     [checkTextField setPlaceholder:[NSString stringWithFormat:@"Startタップ"]];
     
-    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\nロングタップで辞書検索\n左右スワイプで単語切替\nテストはランダム表示\nグラフはテスト終了後に更新\n\n手書き入力\nアプリ使用またはiPhoneの設定から手書き入力が可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-簡体字(繁体字) 手書き を追加\n\nスペルのテスト\n自動修正オフで予測変換がされないので,スペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 一般 > 文字サイズを変更 > スライダをドラッグ     "];
+    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\nロングタップで辞書検索\n左右スワイプで単語切替\nテストはランダム表示\nグラフはテスト終了後に更新\n\n手書き入力\nアプリ使用またはiPhoneの設定から手書き入力が可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-繁体字(簡体字) 手書き を追加\n\nスペルのテスト\n自動修正オフで予測変換がされないので,スペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 一般 > 文字サイズを変更 > スライダをドラッグ     "];
     
     [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(0, 3)];
     //[attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x0889e6) range:NSMakeRange(3, 87)];
