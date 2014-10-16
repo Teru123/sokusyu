@@ -10,10 +10,10 @@
 #import <iAd/iAd.h>
 #import <AVFoundation/AVFoundation.h>
 //#import "NADView.h"
-//#import "GADBannerView.h"
+#import "GADBannerView.h"
 
 @interface HukusyuFourDetailViewController : UIViewController
-<UITextFieldDelegate, UIGestureRecognizerDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate, UIActionSheetDelegate>
+<UITextFieldDelegate, UIGestureRecognizerDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate, UIActionSheetDelegate, GADBannerViewDelegate>
 {
     __weak IBOutlet UITextView *ewTextView;
     __weak IBOutlet UILabel *hatuonLabel;
@@ -33,7 +33,7 @@
     __weak IBOutlet UIBarButtonItem *menuButton;
     int _uniqueId;
     NSString *reibun;
-    //GADBannerView *bannerView_;
+    GADBannerView *bannerView_;
 }
 @property(nonatomic, copy) void (^dismissblock)(void);
 @property(nonatomic, getter=isHidden) BOOL hidden;

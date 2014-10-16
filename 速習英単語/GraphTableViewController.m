@@ -39,7 +39,7 @@ NSString *const kData   = @"Data Source Plot";
     sectionList =  [NSArray arrayWithObjects:@" ", nil];
     
     // セルの項目を作成する
-    NSArray *share = [NSArray arrayWithObjects:@"Webサイト", @"レビューを書く", @"速習英単語２をダウンロード", nil];
+    NSArray *share = [NSArray arrayWithObjects:@"Webサイト", @"レビューを書く", @"速習英単語２を無料でDL", nil];
     
     // セルの項目をまとめる
     NSArray *datas = [NSArray arrayWithObjects:share, nil];
@@ -559,8 +559,8 @@ NSString *const kData   = @"Data Source Plot";
             [self reviewButton];
         }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"Webサイト"]){
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.sokusyueitango.com"]];
-        }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"速習英単語２をダウンロード"]){
-            [self reviewButton];
+        }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"速習英単語２を無料でDL"]){
+            [self reviewButton2];
         }
     }
 }

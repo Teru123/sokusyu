@@ -10,9 +10,9 @@
 #import <iAd/iAd.h>
 #import <AVFoundation/AVFoundation.h>
 //#import "NADView.h"
-//#import "GADBannerView.h"
+#import "GADBannerView.h"
 
-@interface YosyusqtViewController : UIViewController<UITextFieldDelegate, UIAlertViewDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate>
+@interface YosyusqtViewController : UIViewController<UITextFieldDelegate, UIAlertViewDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate, GADBannerViewDelegate>
 {
     int currentIndex;
     NSArray *changeLabel;
@@ -30,7 +30,7 @@
     NSString *itsHatuon;
     NSString *itsReibun;
     __weak IBOutlet UITextField *practiceField;
-    //GADBannerView *bannerView_;
+    GADBannerView *bannerView_;
     __weak IBOutlet UITextView *ewTextView;
     __weak IBOutlet UIBarButtonItem *nextButton;
     __weak IBOutlet UINavigationBar *navigationBarForTitle;

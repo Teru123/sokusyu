@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 #import <AVFoundation/AVFoundation.h>
+#import "GADBannerView.h"
 
 
 @interface IchiranViewController : UIViewController
-<UITextFieldDelegate, UIGestureRecognizerDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate>
+<UITextFieldDelegate, UIGestureRecognizerDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate, GADBannerViewDelegate>
 {
     __weak IBOutlet UITextView *ewTextView;
     __weak IBOutlet UILabel *hatuonLabel;
@@ -30,7 +31,7 @@
     __weak IBOutlet UIButton *reibunPause;
     int _uniqueId;
     NSString *reibun;
-    //GADBannerView *bannerView_;
+    GADBannerView *bannerView_;
 }
 @property(nonatomic, copy) void (^dismissblock)(void);
 @property(nonatomic, getter=isHidden) BOOL hidden;

@@ -37,7 +37,7 @@
     percentageSection =  [NSArray arrayWithObjects:@" ", @"正答率", nil];
     
     // セルの項目を作成する
-    NSArray *share = [NSArray arrayWithObjects:@"Webサイト", @"レビューを書く", @"速習英単語２をダウンロード", nil];
+    NSArray *share = [NSArray arrayWithObjects:@"Webサイト", @"レビューを書く", @"速習英単語２を無料でDL", nil];
     NSArray *percentage = [NSArray arrayWithObjects:
                            @"1    afraid - well", @"2    adventure - worse", @"3    alien - view", @"4    appropriate - village", @"5    aware - wild",
                            @"6    advantage - wise", @"7    allow - therefore", @"8    accept - theory", @"9    against - wave", @"10  benefit - trouble",
@@ -196,7 +196,7 @@
             [self reviewButton];
         }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"Webサイト"]){
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.sokusyueitango.com"]];
-        }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"速習英単語２をダウンロード"]){
+        }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"速習英単語２を無料でDL"]){
             [self reviewButton2];
         }
     }

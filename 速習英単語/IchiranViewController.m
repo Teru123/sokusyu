@@ -3081,7 +3081,7 @@
     }
     
     
-    /*
+    
     NSString *MY_BANNER_UNIT_ID = @"ca-app-pub-9302632653080358/4207271822";
     
     // 画面上部に標準サイズのビューを作成する
@@ -3105,10 +3105,10 @@
     //GADRequest *req = [GADRequest request];
     //req.testDevices = @[ GAD_SIMULATOR_ID ];
     //[bannerView_ loadRequest:req];
-     */
+    
 }
 
-/*
+
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
     [UIView beginAnimations:@"ToggleViews" context:nil];
     [UIView setAnimationDuration:0.8];
@@ -3128,7 +3128,7 @@
         [UIView commitAnimations];
     }else{
         bannerView.frame = CGRectMake(0,
-                                      800,
+                                      381,
                                       bannerView.frame.size.width,
                                       bannerView.frame.size.height);
         [UIView commitAnimations];
@@ -3196,6 +3196,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     }
 }
 
+/*
 - (void) dealloc {
     [self.nadView setDelegate:nil]; // delegate に nil をセット
     self.nadView = nil; // プロパティ経由で release、nil をセット
@@ -3327,7 +3328,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         // voiceをAVSpeechUtteranceに指定。
         utterance.voice =  ENVoice;
         utterance.rate = 0.13;
-        utterance.pitchMultiplier = 1.25;
+        utterance.pitchMultiplier = 1.0;
         // AVSpeechSynthesizerにAVSpeechUtteranceを設定して読んでもらう
         [speechSynthesizer speakUtterance:utterance];
     }
@@ -3349,7 +3350,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         // voiceをAVSpeechUtteranceに指定。
         utterance.voice =  ENVoice;
         utterance.rate = 0.13;
-        utterance.pitchMultiplier = 1.25;
+        utterance.pitchMultiplier = 1.0;
         // AVSpeechSynthesizerにAVSpeechUtteranceを設定して読んでもらう
         [speechSynthesizer speakUtterance:utterance];
     }

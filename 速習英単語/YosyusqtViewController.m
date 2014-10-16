@@ -1857,15 +1857,15 @@
     [practiceField setDelegate:self];
     practiceField.returnKeyType = UIReturnKeyDone;
     [practiceField setEnabled:NO];
-    [practiceField setPlaceholder:[NSString stringWithFormat:@"単語を手書き入力して暗記すると効果的"]];
+    [practiceField setPlaceholder:[NSString stringWithFormat:@"Startをタップ"]];
     
-    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\nロングタップで辞書検索\n左右スワイプで単語切替\nテストはランダム表示\nグラフはテスト終了後に更新\n\n手書き入力\nアプリ使用またはiPhoneの設定から手書き入力が可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-繁体字(簡体字) 手書き を追加\n\nスペルのテスト\n自動修正オフで予測変換がされないので,スペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 一般 > 文字サイズを変更 > スライダをドラッグ     "];
+    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\nロングタップで辞書検索\n左右スワイプで単語切替\nテストはランダム表示\nグラフはテスト終了後に更新\n\n手書き入力\nキーボードアプリ使用またはiPhoneの設定から手書き入力が可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-繁体字(簡体字) 手書き を追加\n\nスペルのテスト\n自動修正オフで予測変換せずにスペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 画面表示と明るさ > 文字サイズを変更 > スライダをドラッグ     "];
     
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(0, 3)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x00b400) range:NSMakeRange(0, 3)];
     //[attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x0889e6) range:NSMakeRange(3, 87)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(52, 6)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(168, 8)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x008000) range:NSMakeRange(249, 9)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(52, 6)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(172, 8)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(250, 9)];
     
     [ewTextView setAttributedText:attFont];
     
@@ -1946,7 +1946,7 @@
     
     [self.view addGestureRecognizer:swipeRightGesture];
 
-    /*
+    
     NSString *MY_BANNER_UNIT_ID = @"ca-app-pub-9302632653080358/4207271822";
     
     // 画面上部に標準サイズのビューを作成する
@@ -1970,7 +1970,7 @@
     //GADRequest *req = [GADRequest request];
     //req.testDevices = @[ GAD_SIMULATOR_ID ];
     //[bannerView_ loadRequest:req];
-     */
+    
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -1998,7 +1998,7 @@
     }
 }
 
-/*
+
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
     [UIView beginAnimations:@"ToggleViews" context:nil];
      [UIView setAnimationDuration:0.8];
@@ -2083,7 +2083,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     //[[self presentingViewController] dismissViewControllerAnimated:YES completion:dismissblock];
 }
 
-
+/*
 - (void) dealloc {
     [self.nadView setDelegate:nil]; // delegate に nil をセット
     self.nadView = nil; // プロパティ経由で release、nil をセット
@@ -2470,7 +2470,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         // voiceをAVSpeechUtteranceに指定。
         utterance.voice =  ENVoice;
         utterance.rate = 0.13;
-        utterance.pitchMultiplier = 1.25;
+        utterance.pitchMultiplier = 1.0;
         // AVSpeechSynthesizerにAVSpeechUtteranceを設定して読んでもらう
         [speechSynthesizer speakUtterance:utterance];
         
@@ -2496,7 +2496,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         // voiceをAVSpeechUtteranceに指定。
         utterance.voice =  ENVoice;
         utterance.rate = 0.13;
-        utterance.pitchMultiplier = 1.25;
+        utterance.pitchMultiplier = 1.0;
         // AVSpeechSynthesizerにAVSpeechUtteranceを設定して読んでもらう
         [speechSynthesizer speakUtterance:utterance];
 
