@@ -37,7 +37,7 @@ CAShapeLayer *openMenuShape;
     self.automaticallyAdjustsScrollViewInsets=NO;
     */
     
-    
+    self.tableView.rowHeight = 44;
     
     Data *dataController = [[Data alloc]init];
     [dataController initDatabase];
@@ -55,7 +55,7 @@ CAShapeLayer *openMenuShape;
     self.navigationItem.leftBarButtonItems = actionButtonItems;
     */
     if ([failedWordInfos count] > 0) {
-        textForExplanation.text = [NSString stringWithFormat:@"左にスライドして削除タップで削除\n右にスライドして検索タップで自動検索"];
+        textForExplanation.text = [NSString stringWithFormat:@"表示された単語を左右にスライドすることで単語を検索、削除する事が出来ます。\n\n左にスライドして削除タップで削除\n右にスライドして検索タップで自動検索"];
         textForExplanation.textAlignment = NSTextAlignmentCenter;
         textForExplanation.backgroundColor = Rgb2UIColor(6, 93, 181);
         textForExplanation.textColor = [UIColor whiteColor];
@@ -63,7 +63,7 @@ CAShapeLayer *openMenuShape;
         textForExplanation.font = boldFont;
         textForExplanation.font = [UIFont fontWithName:@"American Typewriter" size:15];
     }else{
-        textForExplanation.text = [NSString stringWithFormat:@"保存した単語を更新実行で表示"];
+        textForExplanation.text = [NSString stringWithFormat:@"保存した単語を表示します。\n保存方法: テストで問題を間違えた際に、Scoreの右側にSaveボタンが表示されますので、それをタップ。その後、復習画面に戻り画面左上のボタンで更新してください。"];
         textForExplanation.textAlignment = NSTextAlignmentCenter;
         textForExplanation.backgroundColor = Rgb2UIColor(6, 93, 181);
         textForExplanation.textColor = [UIColor whiteColor];
@@ -240,7 +240,7 @@ CAShapeLayer *openMenuShape;
     failedWordInfos = words;
     
     if ([failedWordInfos count] > 0) {
-        textForExplanation.text = [NSString stringWithFormat:@"左にスライドして削除タップで削除\n右にスライドして検索タップで自動検索"];
+        textForExplanation.text = [NSString stringWithFormat:@"表示された単語を左右にスライドすることで単語を検索、削除する事が出来ます。\n\n左にスライドして削除タップで削除\n右にスライドして検索タップで自動検索"];
         textForExplanation.textAlignment = NSTextAlignmentCenter;
         textForExplanation.backgroundColor = Rgb2UIColor(6, 93, 181);
         textForExplanation.textColor = [UIColor whiteColor];
@@ -248,7 +248,7 @@ CAShapeLayer *openMenuShape;
         textForExplanation.font = boldFont;
         textForExplanation.font = [UIFont fontWithName:@"American Typewriter" size:15];
     }else{
-        textForExplanation.text = [NSString stringWithFormat:@"保存した単語を更新実行で表示"];
+        textForExplanation.text = [NSString stringWithFormat:@"保存した単語を表示します。\n保存方法: テストで問題を間違えた際に、Scoreの右側にSaveボタンが表示されますので、それをタップ。その後、復習画面に戻り画面左上のボタンで更新してください。"];
         textForExplanation.textAlignment = NSTextAlignmentCenter;
         textForExplanation.backgroundColor = Rgb2UIColor(6, 93, 181);
         textForExplanation.textColor = [UIColor whiteColor];
@@ -271,7 +271,7 @@ CAShapeLayer *openMenuShape;
         failedWordInfos = words;
         
         if ([failedWordInfos count] > 0) {
-            textForExplanation.text = [NSString stringWithFormat:@"左にスライドして削除タップで削除\n右にスライドして検索タップで自動検索"];
+            textForExplanation.text = [NSString stringWithFormat:@"表示された単語を左右にスライドすることで単語を検索、削除する事が出来ます。\n\n左にスライドして削除タップで削除\n右にスライドして検索タップで自動検索"];
             textForExplanation.textAlignment = NSTextAlignmentCenter;
             textForExplanation.backgroundColor = Rgb2UIColor(6, 93, 181);
             textForExplanation.textColor = [UIColor whiteColor];
@@ -279,7 +279,7 @@ CAShapeLayer *openMenuShape;
             textForExplanation.font = boldFont;
             textForExplanation.font = [UIFont fontWithName:@"American Typewriter" size:15];
         }else{
-            textForExplanation.text = [NSString stringWithFormat:@"保存した単語を更新実行で表示"];
+            textForExplanation.text = [NSString stringWithFormat:@"保存した単語を表示します。\n保存方法: テストで問題を間違えた際に、Scoreの右側にSaveボタンが表示されますので、それをタップ。その後、復習画面に戻り画面左上のボタンで更新してください。"];
             textForExplanation.textAlignment = NSTextAlignmentCenter;
             textForExplanation.backgroundColor = Rgb2UIColor(6, 93, 181);
             textForExplanation.textColor = [UIColor whiteColor];
@@ -304,7 +304,7 @@ CAShapeLayer *openMenuShape;
     failedWordInfos = words;
     
     if ([failedWordInfos count] > 0) {
-        textForExplanation.text = [NSString stringWithFormat:@"左にスライドして削除タップで削除\n右にスライドして検索タップで自動検索"];
+        textForExplanation.text = [NSString stringWithFormat:@"表示された単語を左右にスライドすることで単語を検索、削除する事が出来ます。\n\n左にスライドして削除タップで削除\n右にスライドして検索タップで自動検索"];
         textForExplanation.textAlignment = NSTextAlignmentCenter;
         textForExplanation.backgroundColor = Rgb2UIColor(6, 93, 181);
         textForExplanation.textColor = [UIColor whiteColor];
@@ -312,7 +312,7 @@ CAShapeLayer *openMenuShape;
         textForExplanation.font = boldFont;
         textForExplanation.font = [UIFont fontWithName:@"American Typewriter" size:15];
     }else{
-        textForExplanation.text = [NSString stringWithFormat:@"保存した単語を更新実行で表示"];
+        textForExplanation.text = [NSString stringWithFormat:@"保存した単語を表示します。\n保存方法: テストで問題を間違えた際に、Scoreの右側にSaveボタンが表示されますので、それをタップ。その後、復習画面に戻り画面左上のボタンで更新してください。"];
         textForExplanation.textAlignment = NSTextAlignmentCenter;
         textForExplanation.backgroundColor = Rgb2UIColor(6, 93, 181);
         textForExplanation.textColor = [UIColor whiteColor];
@@ -327,7 +327,7 @@ CAShapeLayer *openMenuShape;
 }
 
 - (IBAction)resetButton:(id)sender {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"削除しますか？" message:@"未更新単語を含め全て削除" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"削除しますか？" message:@"未更新の単語を含め全て削除" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
     [alertView show];
 }
 

@@ -73,6 +73,10 @@
 		DD7D53FE1929F810002AD985 /* HukusyuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7D53FD1929F810002AD985 /* HukusyuTableViewCell.m */; };
 		DD7D5402192A249A002AD985 /* HukusyuDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7D5400192A249A002AD985 /* HukusyuDetailViewController.m */; };
 		DD7D5403192A249A002AD985 /* HukusyuDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7D5401192A249A002AD985 /* HukusyuDetailViewController.xib */; };
+		DD7EA13F1A26CD3600EF3B8E /* HelpFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7EA13D1A26CD3600EF3B8E /* HelpFourViewController.m */; };
+		DD7EA1401A26CD3600EF3B8E /* HelpFourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7EA13E1A26CD3600EF3B8E /* HelpFourViewController.xib */; };
+		DD7EA1601A271B8D00EF3B8E /* HelpFourChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7EA15E1A271B8D00EF3B8E /* HelpFourChildViewController.m */; };
+		DD7EA1611A271B8D00EF3B8E /* HelpFourChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7EA15F1A271B8D00EF3B8E /* HelpFourChildViewController.xib */; };
 		DD831F42185956A600017293 /* YosyuFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD831F40185956A600017293 /* YosyuFourViewController.m */; };
 		DD831F43185956A600017293 /* YosyuFourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD831F41185956A600017293 /* YosyuFourViewController.xib */; };
 		DD831F4718595C5000017293 /* TestFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD831F4518595C5000017293 /* TestFourViewController.m */; };
@@ -215,6 +219,12 @@
 		DD7D53FF192A249A002AD985 /* HukusyuDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HukusyuDetailViewController.h; sourceTree = "<group>"; };
 		DD7D5400192A249A002AD985 /* HukusyuDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HukusyuDetailViewController.m; sourceTree = "<group>"; };
 		DD7D5401192A249A002AD985 /* HukusyuDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HukusyuDetailViewController.xib; sourceTree = "<group>"; };
+		DD7EA13C1A26CD3600EF3B8E /* HelpFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpFourViewController.h; sourceTree = "<group>"; };
+		DD7EA13D1A26CD3600EF3B8E /* HelpFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpFourViewController.m; sourceTree = "<group>"; };
+		DD7EA13E1A26CD3600EF3B8E /* HelpFourViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpFourViewController.xib; sourceTree = "<group>"; };
+		DD7EA15D1A271B8D00EF3B8E /* HelpFourChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpFourChildViewController.h; sourceTree = "<group>"; };
+		DD7EA15E1A271B8D00EF3B8E /* HelpFourChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpFourChildViewController.m; sourceTree = "<group>"; };
+		DD7EA15F1A271B8D00EF3B8E /* HelpFourChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpFourChildViewController.xib; sourceTree = "<group>"; };
 		DD831F3F185956A600017293 /* YosyuFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YosyuFourViewController.h; sourceTree = "<group>"; };
 		DD831F40185956A600017293 /* YosyuFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YosyuFourViewController.m; sourceTree = "<group>"; };
 		DD831F41185956A600017293 /* YosyuFourViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YosyuFourViewController.xib; sourceTree = "<group>"; };
@@ -488,6 +498,12 @@
 				DD831F3F185956A600017293 /* YosyuFourViewController.h */,
 				DD831F40185956A600017293 /* YosyuFourViewController.m */,
 				DD831F41185956A600017293 /* YosyuFourViewController.xib */,
+				DD7EA13C1A26CD3600EF3B8E /* HelpFourViewController.h */,
+				DD7EA13D1A26CD3600EF3B8E /* HelpFourViewController.m */,
+				DD7EA13E1A26CD3600EF3B8E /* HelpFourViewController.xib */,
+				DD7EA15D1A271B8D00EF3B8E /* HelpFourChildViewController.h */,
+				DD7EA15E1A271B8D00EF3B8E /* HelpFourChildViewController.m */,
+				DD7EA15F1A271B8D00EF3B8E /* HelpFourChildViewController.xib */,
 				DD5DC69C1831CD0D00E4FE50 /* YosyusqtViewController.h */,
 				DD5DC69D1831CD0D00E4FE50 /* YosyusqtViewController.m */,
 				DD5DC69E1831CD0D00E4FE50 /* YosyusqtViewController.xib */,
@@ -754,10 +770,12 @@
 				DDF3BFDA18BF8B90003CD278 /* button-Blue.png in Resources */,
 				DD5DC6AC1831CDED00E4FE50 /* TestsqtViewController.xib in Resources */,
 				DD831F4818595C5000017293 /* TestFourViewController.xib in Resources */,
+				DD7EA1401A26CD3600EF3B8E /* HelpFourViewController.xib in Resources */,
 				DD50266B191F74830030B55A /* uptrend.png in Resources */,
 				DD690ED018C6C741006F2DF8 /* FB-Logo-white.png in Resources */,
 				DD502667191F71AE0030B55A /* search.png in Resources */,
 				DD502655191F381B0030B55A /* PercentageTableViewCell.xib in Resources */,
+				DD7EA1611A271B8D00EF3B8E /* HelpFourChildViewController.xib in Resources */,
 				DD5DC6D41831D10D00E4FE50 /* yellowtrophy.png in Resources */,
 				DD5409A1192B188B001268FC /* HukusyuFourDetailViewController.xib in Resources */,
 				DDCAD903195ACAFF009777B1 /* bookmark.png in Resources */,
@@ -816,11 +834,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD7EA1601A271B8D00EF3B8E /* HelpFourChildViewController.m in Sources */,
 				DD831F4718595C5000017293 /* TestFourViewController.m in Sources */,
 				DD2796611926449F0075CCAF /* UITableView+Wave.m in Sources */,
 				DD33C3D518F3ABB700322C2F /* GetAndSetScoreOfDayOfTheWeek.m in Sources */,
 				DD50267A191F9BA00030B55A /* GraphTableViewController.m in Sources */,
 				DD5DC6A11831CD0D00E4FE50 /* YosyusqtViewController.m in Sources */,
+				DD7EA13F1A26CD3600EF3B8E /* HelpFourViewController.m in Sources */,
 				DD5DC6C21831D0CE00E4FE50 /* TestWord.m in Sources */,
 				DD5DC6AB1831CDED00E4FE50 /* TestsqtViewController.m in Sources */,
 				DDE5B69019EFA8C20062262E /* SWTableViewCell.m in Sources */,

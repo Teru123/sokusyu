@@ -12,6 +12,9 @@
 #import "YosyuID.h"
 #import "TestWordsData.h"
 #import "TestWords.h"
+#import "HelpFourViewController.h"
+#import "Data.h"
+#import "Word.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface YosyuFourViewController ()
@@ -1858,11 +1861,10 @@
     [practiceField setEnabled:NO];
     [practiceField setPlaceholder:[NSString stringWithFormat:@"Startをタップ"]];
     
-    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\nロングタップで辞書検索\n左右スワイプで単語切替\nテストはランダム表示\nグラフはテスト終了後に更新\n\n手書き入力\nキーボードアプリ使用またはiPhoneの設定から手書き入力が可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-繁体字(簡体字) 手書き を追加\n\nスペルのテスト\n自動修正オフで予測変換せずにスペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 画面表示と明るさ > 文字サイズを変更 > スライダをドラッグ     "];
+    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"手書き入力\nキーボードアプリ使用またはiPhoneの設定から手書き入力が可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-繁体字(簡体字) 手書き を追加\n\nスペルのテスト\n自動修正オフで予測変換せずにスペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 画面表示と明るさ > 文字サイズを変更 > スライダをドラッグ     "];
     
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x00b400) range:NSMakeRange(0, 3)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(0, 5)];
     //[attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x0889e6) range:NSMakeRange(3, 87)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(52, 6)];
     [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(172, 8)];
     [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(250, 9)];
     
@@ -1893,6 +1895,8 @@
     [backgroundColorView addSubview:reibunSaisei];
     [backgroundColorView addSubview:stopButton];
     [backgroundColorView addSubview:bannerForAD];
+    [backgroundColorView addSubview:helpViewButton];
+    [backgroundColorView addSubview:saveButton];
     
     [backButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                         [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
@@ -1986,16 +1990,6 @@
  startButton.enabled = YES;
  }*/
 
-- (void)viewDidDisappear:(BOOL)animated
-{
-    @autoreleasepool {
-        changeLabel = nil;
-        changeHatuonLabel = nil;
-        changeText = nil;
-        ewTextView = nil;
-        hatuonLabel = nil;
-    }
-}
 
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
     [UIView beginAnimations:@"ToggleViews" context:nil];
@@ -2233,6 +2227,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     itsHatuon = [NSString stringWithFormat:@"%@", dataInfo.hatuon];
     itsWord = [NSString stringWithFormat:@"%@", dataInfo.word];
     itsReibun = [NSString stringWithFormat:@"%@", dataInfo.reibun];
+    progressLabel.text = [NSString stringWithFormat:@"%d of 20", currentIndex + 1];
     
     [ewTextView setText:[NSString stringWithFormat:@"%@", itsDetail]];
     [hatuonLabel setText:[NSString stringWithFormat:@"%@", itsHatuon]];
@@ -2304,6 +2299,11 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         reibunSaisei.enabled = NO;
         [reibunSaisei setTitle:@"" forState:UIControlStateDisabled];
     }
+    
+    if (saveButton.hidden) {
+        saveButton.hidden = NO;
+        blueImageSaveButton.hidden = NO;
+    }
 }
 
 - (IBAction)backButton:(id)sender {
@@ -2339,6 +2339,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     itsHatuon = [NSString stringWithFormat:@"%@", dataInfo.hatuon];
     itsWord = [NSString stringWithFormat:@"%@", dataInfo.word];
     itsReibun = [NSString stringWithFormat:@"%@", dataInfo.reibun];
+    progressLabel.text = [NSString stringWithFormat:@"%d of 20", currentIndex + 1];
     
     [ewTextView setText:[NSString stringWithFormat:@"%@", itsDetail]];
     [hatuonLabel setText:[NSString stringWithFormat:@"%@", itsHatuon]];
@@ -2381,6 +2382,11 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     [ewTextView setContentOffset:CGPointMake(0.0f, 0.0f) animated:NO];
     navigationBarForTitle.topItem.title = [NSString stringWithFormat:@"%@", itsWord];
     progressBar.progress -= 0.05;
+    
+    if (saveButton.hidden) {
+        saveButton.hidden = NO;
+        blueImageSaveButton.hidden = NO;
+    }
 }
 
 - (IBAction)startButton:(id)sender {
@@ -2397,6 +2403,12 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     menuButtonBlue.hidden = NO;
     textSizeButtonBlue.hidden = NO;
     textSizeButton.hidden = NO;
+    progressLabel.hidden = NO;
+    progressBar.hidden = NO;
+    helpViewButton.hidden = YES;
+    infoView.hidden = YES;
+    saveButton.hidden = NO;
+    blueImageSaveButton.hidden = NO;
     
     [practiceField setEnabled:YES];
     [practiceField setPlaceholder:[NSString stringWithFormat:@"単語練習スペース"]];
@@ -2423,6 +2435,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     itsHatuon = [NSString stringWithFormat:@"%@", dataInfo.hatuon];
     itsWord = [NSString stringWithFormat:@"%@", dataInfo.word];
     itsReibun = [NSString stringWithFormat:@"%@", dataInfo.reibun];
+    progressLabel.text = [NSString stringWithFormat:@"%d of 20", currentIndex + 1];
     
     [ewTextView setText:[NSString stringWithFormat:@"%@", itsDetail]];
     [hatuonLabel setText:[NSString stringWithFormat:@"%@", itsHatuon]];
@@ -2557,6 +2570,30 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     
 }
 
+- (IBAction)showHelpView:(id)sender {
+    HelpFourViewController *helpView = [[HelpFourViewController alloc] init];
+    [self presentViewController:helpView animated:YES completion:nil];
+}
+
+- (IBAction)saveWord:(id)sender {
+    // Create datacontroller and initialize database
+    Data *dataController = [[Data alloc]init];
+    [dataController initDatabase];
+    sqlite3_stmt *statement = NULL;
+    TestWords *dataInfo = [dataList objectAtIndex:currentIndex];
+    Word *word  = [[Word alloc]
+                   initWithUniqueId:sqlite3_column_int(statement, 0) + 1
+                   andWord:dataInfo.word];
+    
+    // Insert the word
+    [dataController insertWord:word];
+    
+    UIAlertView *alertViewForSaving = [[UIAlertView alloc] initWithTitle:@"保存しました" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertViewForSaving show];
+    saveButton.hidden = YES;
+    blueImageSaveButton.hidden = YES;
+}
+
 - (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didFinishSpeechUtterance:(AVSpeechUtterance *)utterance
 {
     if ([itsReibun isEqual:@""]) {
@@ -2587,86 +2624,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
 
 - (void)view_SwipeLeft:(UISwipeGestureRecognizer *)sender
 {
-    if (startButton.hidden && currentIndex > 0) {
-        currentIndex--;
-        nextButton.enabled = YES;
-        [nextButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                            [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
-                                            [UIColor whiteColor], NSForegroundColorAttributeName,
-                                            nil] forState:UIControlStateNormal];
-        if (0 < currentIndex) {
-            [backButton setEnabled:YES];
-            [backButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
-                                                [UIColor whiteColor], NSForegroundColorAttributeName,
-                                                nil] forState:UIControlStateNormal];
-        }else{
-            [backButton setEnabled:NO];
-            [backButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
-                                                [UIColor lightGrayColor], NSForegroundColorAttributeName,
-                                                nil] forState:UIControlStateNormal];
-        }
-        
-        // Create datacontroller and initialize database
-        TestWordsData *dataController = [[TestWordsData alloc]init];
-        [dataController initDatabase];
-        NSArray *forDataList = [dataController wordInfo];
-        dataList = forDataList;
-        
-        TestWords *dataInfo = [dataList objectAtIndex:currentIndex];
-        itsDetail = [NSString stringWithFormat:@"%@", dataInfo.detail];
-        itsHatuon = [NSString stringWithFormat:@"%@", dataInfo.hatuon];
-        itsWord = [NSString stringWithFormat:@"%@", dataInfo.word];
-        itsReibun = [NSString stringWithFormat:@"%@", dataInfo.reibun];
-        
-        [ewTextView setText:[NSString stringWithFormat:@"%@", itsDetail]];
-        [hatuonLabel setText:[NSString stringWithFormat:@"%@", itsHatuon]];
-        
-        [UIView beginAnimations:@"fadeIn" context:nil];
-        [UIView setAnimationDuration:0.5];
-        
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-        
-        [ewTextView setSelectable:YES];
-        
-        // Make the animatable changes.
-        ewTextView.alpha = 0.0;
-        ewTextView.alpha = 1.0;
-        
-        // Commit the changes and perform the animation.
-        [UIView commitAnimations];
-        
-        /*
-         NSNumber *remaining = [NSNumber numberWithFloat:([changeLabel count] - 1) - currentIndex];
-         [remainingLabel setText:[NSString stringWithFormat:@"残り %@語", remaining]];
-         */
-        
-        [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
-        tangoSaisei.enabled = YES;
-        [tangoSaisei setTitle:@"" forState:UIControlStateNormal];
-        reibunSaisei.enabled = YES;
-        [reibunSaisei setTitle:@"" forState:UIControlStateNormal];
-        tangoPauseButton.hidden = YES;
-        tangoSaisei.hidden = NO;
-        reibunSaisei.hidden = NO;
-        reibunPauseButton.hidden = YES;
-        stopButton.hidden = YES;
-        
-        if ([itsReibun isEqual:@""]) {
-            reibunSaisei.enabled = NO;
-            [reibunSaisei setTitle:@"" forState:UIControlStateDisabled];
-        }
-        
-        [ewTextView setContentOffset:CGPointMake(0.0f, 0.0f) animated:NO];
-        navigationBarForTitle.topItem.title = [NSString stringWithFormat:@"%@", itsWord];
-        progressBar.progress -= 0.05;
-    }
-    
-}
-
-- (void)view_SwipeRight:(UISwipeGestureRecognizer *)sender
-{
+    //右 から 左 に変更
     if (startButton.hidden && currentIndex < 19) {
         currentIndex++;
         progressBar.progress += 0.05;
@@ -2693,6 +2651,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         itsHatuon = [NSString stringWithFormat:@"%@", dataInfo.hatuon];
         itsWord = [NSString stringWithFormat:@"%@", dataInfo.word];
         itsReibun = [NSString stringWithFormat:@"%@", dataInfo.reibun];
+        progressLabel.text = [NSString stringWithFormat:@"%d of 20", currentIndex + 1];
         
         [ewTextView setText:[NSString stringWithFormat:@"%@", itsDetail]];
         [hatuonLabel setText:[NSString stringWithFormat:@"%@", itsHatuon]];
@@ -2764,8 +2723,99 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         
         [ewTextView setContentOffset:CGPointMake(0.0f, 0.0f) animated:NO];
         navigationBarForTitle.topItem.title = [NSString stringWithFormat:@"%@", itsWord];
+        
+        if (saveButton.hidden) {
+            saveButton.hidden = NO;
+            blueImageSaveButton.hidden = NO;
+        }
     }
     
+}
+
+- (void)view_SwipeRight:(UISwipeGestureRecognizer *)sender
+{
+    //左 から 右 に変更
+    if (startButton.hidden && currentIndex > 0) {
+        currentIndex--;
+        nextButton.enabled = YES;
+        [nextButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                            [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
+                                            [UIColor whiteColor], NSForegroundColorAttributeName,
+                                            nil] forState:UIControlStateNormal];
+        if (0 < currentIndex) {
+            [backButton setEnabled:YES];
+            [backButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
+                                                [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                nil] forState:UIControlStateNormal];
+        }else{
+            [backButton setEnabled:NO];
+            [backButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
+                                                [UIColor lightGrayColor], NSForegroundColorAttributeName,
+                                                nil] forState:UIControlStateNormal];
+        }
+        
+        // Create datacontroller and initialize database
+        TestWordsData *dataController = [[TestWordsData alloc]init];
+        [dataController initDatabase];
+        NSArray *forDataList = [dataController wordInfo];
+        dataList = forDataList;
+        
+        TestWords *dataInfo = [dataList objectAtIndex:currentIndex];
+        itsDetail = [NSString stringWithFormat:@"%@", dataInfo.detail];
+        itsHatuon = [NSString stringWithFormat:@"%@", dataInfo.hatuon];
+        itsWord = [NSString stringWithFormat:@"%@", dataInfo.word];
+        itsReibun = [NSString stringWithFormat:@"%@", dataInfo.reibun];
+        progressLabel.text = [NSString stringWithFormat:@"%d of 20", currentIndex + 1];
+        
+        [ewTextView setText:[NSString stringWithFormat:@"%@", itsDetail]];
+        [hatuonLabel setText:[NSString stringWithFormat:@"%@", itsHatuon]];
+        
+        [UIView beginAnimations:@"fadeIn" context:nil];
+        [UIView setAnimationDuration:0.5];
+        
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+        
+        [ewTextView setSelectable:YES];
+        
+        // Make the animatable changes.
+        ewTextView.alpha = 0.0;
+        ewTextView.alpha = 1.0;
+        
+        // Commit the changes and perform the animation.
+        [UIView commitAnimations];
+        
+        /*
+         NSNumber *remaining = [NSNumber numberWithFloat:([changeLabel count] - 1) - currentIndex];
+         [remainingLabel setText:[NSString stringWithFormat:@"残り %@語", remaining]];
+         */
+        
+        [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+        tangoSaisei.enabled = YES;
+        [tangoSaisei setTitle:@"" forState:UIControlStateNormal];
+        reibunSaisei.enabled = YES;
+        [reibunSaisei setTitle:@"" forState:UIControlStateNormal];
+        tangoPauseButton.hidden = YES;
+        tangoSaisei.hidden = NO;
+        reibunSaisei.hidden = NO;
+        reibunPauseButton.hidden = YES;
+        stopButton.hidden = YES;
+        
+        if ([itsReibun isEqual:@""]) {
+            reibunSaisei.enabled = NO;
+            [reibunSaisei setTitle:@"" forState:UIControlStateDisabled];
+        }
+        
+        [ewTextView setContentOffset:CGPointMake(0.0f, 0.0f) animated:NO];
+        navigationBarForTitle.topItem.title = [NSString stringWithFormat:@"%@", itsWord];
+        progressBar.progress -= 0.05;
+        
+        if (saveButton.hidden) {
+            saveButton.hidden = NO;
+            blueImageSaveButton.hidden = NO;
+        }
+    }
 }
 
 @end

@@ -32,6 +32,8 @@
     
     [self drawPercentage];
     
+    self.tableView.rowHeight = 44;
+    
     // セクション名を設定する
     sectionList =  [NSArray arrayWithObjects:@" ", @"正答率", nil];
     percentageSection =  [NSArray arrayWithObjects:@" ", @"正答率", nil];

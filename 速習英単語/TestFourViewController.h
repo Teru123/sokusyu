@@ -63,6 +63,12 @@
     __weak IBOutlet UIImageView *textSizeBlue;
     __weak IBOutlet UIImageView *startBlue;
     __weak IBOutlet UIImageView *saveBlue;
+    __weak IBOutlet UIButton *infoButton;
+    __weak IBOutlet UIButton *showHelpViewButton;
+    __weak IBOutlet UIImageView *blueImageLookStart;
+    __weak IBOutlet UIButton *lookToLearnButton;
+    __weak IBOutlet UIButton *showWordButton;
+    __weak IBOutlet UIImageView *blueImageShowWord;
 }
 - (IBAction)startButton:(id)sender;
 - (IBAction)menuButton:(id)sender;
@@ -73,6 +79,9 @@
 - (IBAction)stopAction:(id)sender;
 - (IBAction)reibunPauseAction:(id)sender;
 - (IBAction)tangoPauseAction:(id)sender;
+- (IBAction)showHelpView:(id)sender;
+- (IBAction)lookToLearnStart:(id)sender;
+- (IBAction)showWord:(id)sender;
 
 @property(nonatomic, copy) void (^dismissblock)(void);
 @property (weak, nonatomic) IBOutlet UITextField *checkTextField;

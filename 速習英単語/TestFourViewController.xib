@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestFourViewController">
             <connections>
                 <outlet property="answerLabel" destination="uex-nU-3fL" id="Wxv-wt-vIy"/>
                 <outlet property="backgroundColorView" destination="vL5-tO-7au" id="pDn-ln-Y0p"/>
+                <outlet property="blueImageLookStart" destination="czS-f8-UJZ" id="O11-CR-Xty"/>
+                <outlet property="blueImageShowWord" destination="MQs-bX-wCr" id="XbG-cZ-q2j"/>
                 <outlet property="checkTextField" destination="O7f-we-YKR" id="zx4-Pl-PJO"/>
                 <outlet property="ewTextView" destination="NjX-Mc-arP" id="Gid-Ax-Zk3"/>
                 <outlet property="hatuonLabel" destination="L2N-g0-jpX" id="gR6-qy-OSB"/>
+                <outlet property="infoButton" destination="sC7-I8-hkx" id="7nS-gX-Ntl"/>
+                <outlet property="lookToLearnButton" destination="svm-tt-Mct" id="JWq-vM-RMA"/>
                 <outlet property="menuButton" destination="c2O-YO-x8Q" id="ZVh-mR-bdU"/>
                 <outlet property="navigationBar" destination="Bg9-N1-tiY" id="Nhq-qN-tnE"/>
                 <outlet property="nextButton" destination="C9y-3f-IOK" id="QBN-1o-7g5"/>
@@ -20,6 +25,8 @@
                 <outlet property="reibunPauseButton" destination="8On-hh-Os0" id="HHO-iA-RH4"/>
                 <outlet property="saveBlue" destination="1au-Yp-B9M" id="g7b-QF-OBE"/>
                 <outlet property="saveButton" destination="kgA-Mg-44Z" id="nc9-1O-rFB"/>
+                <outlet property="showHelpViewButton" destination="Rsc-cu-a6G" id="OrM-r7-fnZ"/>
+                <outlet property="showWordButton" destination="ERJ-RQ-IUr" id="TW9-Du-6GT"/>
                 <outlet property="startBlue" destination="LBo-fx-bM1" id="cvN-jm-1p5"/>
                 <outlet property="startButton" destination="Fp5-IG-TQA" id="aZF-rW-ztu"/>
                 <outlet property="stopButton" destination="AJK-FP-4BD" id="A7R-g8-czp"/>
@@ -41,7 +48,7 @@
                     <items>
                         <navigationItem id="dJ6-V3-3cO">
                             <nil key="title"/>
-                            <barButtonItem key="leftBarButtonItem" title="Menu" id="c2O-YO-x8Q">
+                            <barButtonItem key="leftBarButtonItem" title="メニュー" id="c2O-YO-x8Q">
                                 <connections>
                                     <action selector="menuButton:" destination="-1" id="dzu-1U-fIW"/>
                                 </connections>
@@ -52,7 +59,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <barButtonItem key="rightBarButtonItem" title="Next" id="C9y-3f-IOK">
+                            <barButtonItem key="rightBarButtonItem" title="進む" id="C9y-3f-IOK">
                                 <connections>
                                     <action selector="nextButton:" destination="-1" id="fRS-pX-sjp"/>
                                 </connections>
@@ -69,7 +76,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="4HM-JR-Xe6">
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="スコア 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="4HM-JR-Xe6">
                             <rect key="frame" x="10" y="250" width="77" height="21"/>
                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,8 +96,8 @@
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgA-Mg-44Z">
                             <rect key="frame" x="243" y="250" width="67" height="21"/>
-                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
-                            <state key="normal" title="Save">
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="保存">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -99,9 +106,9 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fp5-IG-TQA">
-                            <rect key="frame" x="110" y="302" width="101" height="34"/>
-                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="21"/>
-                            <state key="normal" title="Start">
+                            <rect key="frame" x="175" y="302" width="115" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="書いて覚える">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -109,13 +116,13 @@
                                 <action selector="startButton:" destination="-1" eventType="touchUpInside" id="tN4-0d-fMz"/>
                             </connections>
                         </button>
-                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11q-Nz-0JK">
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="単語" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11q-Nz-0JK">
                             <rect key="frame" x="10" y="285" width="47" height="29"/>
                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sentence" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uj-sT-10z">
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="例文" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uj-sT-10z">
                             <rect key="frame" x="102" y="285" width="84" height="29"/>
                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -143,10 +150,16 @@
                             <rect key="frame" x="10" y="10" width="300" height="230"/>
                         </imageView>
                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button-Blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="LBo-fx-bM1">
-                            <rect key="frame" x="110" y="302" width="101" height="34"/>
+                            <rect key="frame" x="175" y="302" width="115" height="34"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button-Blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="czS-f8-UJZ">
+                            <rect key="frame" x="15" y="302" width="115" height="34"/>
                         </imageView>
                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button-Blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="1au-Yp-B9M">
                             <rect key="frame" x="243" y="250" width="67" height="21"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button-Blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="MQs-bX-wCr">
+                            <rect key="frame" x="10" y="250" width="70" height="21"/>
                         </imageView>
                         <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7p-16-qPQ">
                             <rect key="frame" x="85" y="260" width="150" height="2"/>
@@ -176,6 +189,45 @@
                             </state>
                             <connections>
                                 <action selector="stopAction:" destination="-1" eventType="touchUpInside" id="Rr9-wZ-bfA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsc-cu-a6G">
+                            <rect key="frame" x="10" y="242" width="139" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="   使い方を見る">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="showHelpView:" destination="-1" eventType="touchUpInside" id="dah-p4-Ddj"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sC7-I8-hkx">
+                            <rect key="frame" x="10" y="248" width="22" height="22"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svm-tt-Mct">
+                            <rect key="frame" x="15" y="302" width="115" height="34"/>
+                            <state key="normal" title="見て覚える">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="lookToLearnStart:" destination="-1" eventType="touchUpInside" id="x7x-cM-xod"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERJ-RQ-IUr">
+                            <rect key="frame" x="10" y="250" width="70" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="単語を見る">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="showWord:" destination="-1" eventType="touchUpInside" id="oIN-4h-NSb"/>
                             </connections>
                         </button>
                     </subviews>

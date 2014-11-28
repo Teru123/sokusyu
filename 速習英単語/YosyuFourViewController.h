@@ -54,6 +54,11 @@
     __weak IBOutlet UIImageView *startButtonBlue;
     __weak IBOutlet UIImageView *menuButtonBlue;
     __weak IBOutlet UIImageView *textSizeButtonBlue;
+    __weak IBOutlet UIButton *helpViewButton;
+    __weak IBOutlet UILabel *progressLabel;
+    __weak IBOutlet UIButton *infoView;
+    __weak IBOutlet UIImageView *blueImageSaveButton;
+    __weak IBOutlet UIButton *saveButton;
 }
 
 @property (nonatomic, copy) void (^dismissblock)(void);
@@ -68,6 +73,8 @@
 - (IBAction)tangoPauseAction:(id)sender;
 - (IBAction)reibunPauseAction:(id)sender;
 - (IBAction)stopAction:(id)sender;
+- (IBAction)showHelpView:(id)sender;
+- (IBAction)saveWord:(id)sender;
 
 @property (nonatomic, strong) NSString *wordNo;
 @property (strong, nonatomic) AVSpeechSynthesizer *speechSynthesizer;
