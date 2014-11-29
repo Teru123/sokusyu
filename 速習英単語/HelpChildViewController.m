@@ -1,30 +1,18 @@
 //
-//  HelpFourChildViewController.m
+//  HelpChildViewController.m
 //  sokusyu-eitango
 //
-//  Created by Teru on 2014/11/27.
+//  Created by Teru on 2014/11/29.
 //  Copyright (c) 2014年 Self. All rights reserved.
 //
 
-#import "HelpFourChildViewController.h"
+#import "HelpChildViewController.h"
 
-@interface HelpFourChildViewController ()
+@interface HelpChildViewController ()
 
 @end
 
-@implementation HelpFourChildViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
-    if (self) {
-        // Custom initialization
-    }
-    
-    return self;
-    
-}
+@implementation HelpChildViewController
 
 - (void)viewDidLoad {
     

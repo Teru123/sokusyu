@@ -39,7 +39,7 @@ NSString *const kData   = @"Data Source Plot";
     sectionList =  [NSArray arrayWithObjects:@" ", nil];
     
     // セルの項目を作成する
-    NSArray *share = [NSArray arrayWithObjects:@"Webサイト", @"レビューを書く", @"速習英単語２を無料でDL", nil];
+    NSArray *share = [NSArray arrayWithObjects:@"ウェブサイト お問い合わせ", @"速習英単語のレビューを書く", @"速習英単語２を無料でダウンロード", nil];
     
     // セルの項目をまとめる
     NSArray *datas = [NSArray arrayWithObjects:share, nil];
@@ -555,11 +555,11 @@ NSString *const kData   = @"Data Source Plot";
     {
         // セクション名をキーにしてそのセクションの項目をすべて取得
         NSArray *items = [dataSource objectForKey:sectionName];
-        if ([[items objectAtIndex:indexPath.row] isEqualToString:@"レビューを書く"]) {
+        if ([[items objectAtIndex:indexPath.row] isEqualToString:@"速習英単語のレビューを書く"]) {
             [self reviewButton];
-        }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"Webサイト"]){
+        }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"ウェブサイト お問い合わせ"]){
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.sokusyueitango.com"]];
-        }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"速習英単語２を無料でDL"]){
+        }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"速習英単語２を無料でダウンロード"]){
             [self reviewButton2];
         }
     }

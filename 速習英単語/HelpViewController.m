@@ -1,19 +1,19 @@
 //
-//  HelpFourViewController.m
+//  HelpViewController.m
 //  sokusyu-eitango
 //
-//  Created by Teru on 2014/11/27.
+//  Created by Teru on 2014/11/29.
 //  Copyright (c) 2014年 Self. All rights reserved.
 //
 
-#import "HelpFourViewController.h"
-#import "HelpFourChildViewController.h"
+#import "HelpViewController.h"
+#import "HelpChildViewController.h"
 
-@interface HelpFourViewController ()
+@interface HelpViewController ()
 
 @end
 
-@implementation HelpFourViewController
+@implementation HelpViewController
 
 - (void)viewDidLoad {
     
@@ -24,7 +24,7 @@
     self.pageController.dataSource = self;
     [[self.pageController view] setFrame:[[self view] bounds]];
     
-    HelpFourChildViewController *initialViewController = [self viewControllerAtIndex:0];
+    HelpChildViewController *initialViewController = [self viewControllerAtIndex:0];
     
     NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
     
@@ -46,9 +46,9 @@
     
 }
 
-- (HelpFourChildViewController *)viewControllerAtIndex:(NSUInteger)index {
+- (HelpChildViewController *)viewControllerAtIndex:(NSUInteger)index {
     
-    HelpFourChildViewController *childViewController = [[HelpFourChildViewController alloc] initWithNibName:@"HelpFourChildViewController" bundle:nil];
+    HelpChildViewController *childViewController = [[HelpChildViewController alloc] initWithNibName:@"HelpFourChildViewController" bundle:nil];
     childViewController.index = index;
     
     return childViewController;
@@ -57,7 +57,7 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     
-    NSUInteger index = [(HelpFourChildViewController *)viewController index];
+    NSUInteger index = [(HelpChildViewController *)viewController index];
     
     if (index == 0) {
         return nil;
@@ -72,7 +72,7 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     
-    NSUInteger index = [(HelpFourChildViewController *)viewController index];
+    NSUInteger index = [(HelpChildViewController *)viewController index];
     
     index++;
     
@@ -97,4 +97,5 @@
 - (IBAction)backToStartMenu:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 @end

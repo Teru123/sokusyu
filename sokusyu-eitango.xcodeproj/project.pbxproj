@@ -31,6 +31,10 @@
 		DD50267E191FAF390030B55A /* arrow-big-12.png in Resources */ = {isa = PBXBuildFile; fileRef = DD50267D191FAF390030B55A /* arrow-big-12.png */; };
 		DD5409A0192B188B001268FC /* HukusyuFourDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54099E192B188B001268FC /* HukusyuFourDetailViewController.m */; };
 		DD5409A1192B188B001268FC /* HukusyuFourDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD54099F192B188B001268FC /* HukusyuFourDetailViewController.xib */; };
+		DD5A7C511A299CCD00711BC3 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5A7C4F1A299CCD00711BC3 /* HelpViewController.m */; };
+		DD5A7C521A299CCD00711BC3 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD5A7C501A299CCD00711BC3 /* HelpViewController.xib */; };
+		DD5A7C561A299CF000711BC3 /* HelpChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5A7C541A299CF000711BC3 /* HelpChildViewController.m */; };
+		DD5A7C571A299CF000711BC3 /* HelpChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD5A7C551A299CF000711BC3 /* HelpChildViewController.xib */; };
 		DD5C98B618DDC40D003BC4ED /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5C98B518DDC40D003BC4ED /* CoreTelephony.framework */; };
 		DD5D20FD18DDB3E10048E17C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5D20FC18DDB3E10048E17C /* AudioToolbox.framework */; };
 		DD5D20FF18DDB4000048E17C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5D20FE18DDB4000048E17C /* MessageUI.framework */; };
@@ -157,6 +161,12 @@
 		DD54099D192B188B001268FC /* HukusyuFourDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HukusyuFourDetailViewController.h; sourceTree = "<group>"; };
 		DD54099E192B188B001268FC /* HukusyuFourDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HukusyuFourDetailViewController.m; sourceTree = "<group>"; };
 		DD54099F192B188B001268FC /* HukusyuFourDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HukusyuFourDetailViewController.xib; sourceTree = "<group>"; };
+		DD5A7C4E1A299CCD00711BC3 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		DD5A7C4F1A299CCD00711BC3 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		DD5A7C501A299CCD00711BC3 /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
+		DD5A7C531A299CF000711BC3 /* HelpChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpChildViewController.h; sourceTree = "<group>"; };
+		DD5A7C541A299CF000711BC3 /* HelpChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpChildViewController.m; sourceTree = "<group>"; };
+		DD5A7C551A299CF000711BC3 /* HelpChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpChildViewController.xib; sourceTree = "<group>"; };
 		DD5C98B518DDC40D003BC4ED /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		DD5D20FC18DDB3E10048E17C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DD5D20FE18DDB4000048E17C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -498,15 +508,21 @@
 				DD831F3F185956A600017293 /* YosyuFourViewController.h */,
 				DD831F40185956A600017293 /* YosyuFourViewController.m */,
 				DD831F41185956A600017293 /* YosyuFourViewController.xib */,
+				DD5DC69C1831CD0D00E4FE50 /* YosyusqtViewController.h */,
+				DD5DC69D1831CD0D00E4FE50 /* YosyusqtViewController.m */,
+				DD5DC69E1831CD0D00E4FE50 /* YosyusqtViewController.xib */,
 				DD7EA13C1A26CD3600EF3B8E /* HelpFourViewController.h */,
 				DD7EA13D1A26CD3600EF3B8E /* HelpFourViewController.m */,
 				DD7EA13E1A26CD3600EF3B8E /* HelpFourViewController.xib */,
 				DD7EA15D1A271B8D00EF3B8E /* HelpFourChildViewController.h */,
 				DD7EA15E1A271B8D00EF3B8E /* HelpFourChildViewController.m */,
 				DD7EA15F1A271B8D00EF3B8E /* HelpFourChildViewController.xib */,
-				DD5DC69C1831CD0D00E4FE50 /* YosyusqtViewController.h */,
-				DD5DC69D1831CD0D00E4FE50 /* YosyusqtViewController.m */,
-				DD5DC69E1831CD0D00E4FE50 /* YosyusqtViewController.xib */,
+				DD5A7C4E1A299CCD00711BC3 /* HelpViewController.h */,
+				DD5A7C4F1A299CCD00711BC3 /* HelpViewController.m */,
+				DD5A7C501A299CCD00711BC3 /* HelpViewController.xib */,
+				DD5A7C531A299CF000711BC3 /* HelpChildViewController.h */,
+				DD5A7C541A299CF000711BC3 /* HelpChildViewController.m */,
+				DD5A7C551A299CF000711BC3 /* HelpChildViewController.xib */,
 			);
 			name = Yosyu;
 			sourceTree = "<group>";
@@ -761,6 +777,7 @@
 				DD50267E191FAF390030B55A /* arrow-big-12.png in Resources */,
 				DDE5B6BA19EFA9D20062262E /* README.txt in Resources */,
 				DDCAD90D195ACDB3009777B1 /* multiple.png in Resources */,
+				DD5A7C521A299CCD00711BC3 /* HelpViewController.xib in Resources */,
 				DD7D5403192A249A002AD985 /* HukusyuDetailViewController.xib in Resources */,
 				DD070DC718BEEE0C00E843AF /* ios7-play-white.png in Resources */,
 				DDAD0DE218FE9C5A00B431DE /* linebutton_88x20.png in Resources */,
@@ -778,6 +795,7 @@
 				DD7EA1611A271B8D00EF3B8E /* HelpFourChildViewController.xib in Resources */,
 				DD5DC6D41831D10D00E4FE50 /* yellowtrophy.png in Resources */,
 				DD5409A1192B188B001268FC /* HukusyuFourDetailViewController.xib in Resources */,
+				DD5A7C571A299CF000711BC3 /* HelpChildViewController.xib in Resources */,
 				DDCAD903195ACAFF009777B1 /* bookmark.png in Resources */,
 				DD5DC6D31831D10D00E4FE50 /* yellowstar.png in Resources */,
 				DDCAD907195ACB3C009777B1 /* document.png in Resources */,
@@ -836,6 +854,7 @@
 			files = (
 				DD7EA1601A271B8D00EF3B8E /* HelpFourChildViewController.m in Sources */,
 				DD831F4718595C5000017293 /* TestFourViewController.m in Sources */,
+				DD5A7C561A299CF000711BC3 /* HelpChildViewController.m in Sources */,
 				DD2796611926449F0075CCAF /* UITableView+Wave.m in Sources */,
 				DD33C3D518F3ABB700322C2F /* GetAndSetScoreOfDayOfTheWeek.m in Sources */,
 				DD50267A191F9BA00030B55A /* GraphTableViewController.m in Sources */,
@@ -859,6 +878,7 @@
 				DD5DC6B01831CEF200E4FE50 /* hukusyuViewController.m in Sources */,
 				DDE5B68E19EFA8C20062262E /* SWCellScrollView.m in Sources */,
 				DD5DC6BF1831D02100E4FE50 /* SETAppDelegate.m in Sources */,
+				DD5A7C511A299CCD00711BC3 /* HelpViewController.m in Sources */,
 				DD5DC65C1831CAF200E4FE50 /* main.m in Sources */,
 				DD5DC68D1831CCA400E4FE50 /* Word.m in Sources */,
 				DD7D5402192A249A002AD985 /* HukusyuDetailViewController.m in Sources */,

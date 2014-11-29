@@ -63,7 +63,7 @@ CAShapeLayer *openMenuShape;
         textForExplanation.font = boldFont;
         textForExplanation.font = [UIFont fontWithName:@"American Typewriter" size:15];
     }else{
-        textForExplanation.text = [NSString stringWithFormat:@"保存した単語を表示します。\n保存方法: テストで問題を間違えた際に、Scoreの右側にSaveボタンが表示されますので、それをタップ。その後、復習画面に戻り画面左上のボタンで更新してください。"];
+        textForExplanation.text = [NSString stringWithFormat:@"\n保存した単語を表示します。\n\n詳しくは復習の使い方をご覧下さい。"];
         textForExplanation.textAlignment = NSTextAlignmentCenter;
         textForExplanation.backgroundColor = Rgb2UIColor(6, 93, 181);
         textForExplanation.textColor = [UIColor whiteColor];
@@ -248,7 +248,7 @@ CAShapeLayer *openMenuShape;
         textForExplanation.font = boldFont;
         textForExplanation.font = [UIFont fontWithName:@"American Typewriter" size:15];
     }else{
-        textForExplanation.text = [NSString stringWithFormat:@"保存した単語を表示します。\n保存方法: テストで問題を間違えた際に、Scoreの右側にSaveボタンが表示されますので、それをタップ。その後、復習画面に戻り画面左上のボタンで更新してください。"];
+        textForExplanation.text = [NSString stringWithFormat:@"\n保存した単語を表示します。\n\n詳しくは復習の使い方をご覧下さい。"];
         textForExplanation.textAlignment = NSTextAlignmentCenter;
         textForExplanation.backgroundColor = Rgb2UIColor(6, 93, 181);
         textForExplanation.textColor = [UIColor whiteColor];
@@ -279,7 +279,7 @@ CAShapeLayer *openMenuShape;
             textForExplanation.font = boldFont;
             textForExplanation.font = [UIFont fontWithName:@"American Typewriter" size:15];
         }else{
-            textForExplanation.text = [NSString stringWithFormat:@"保存した単語を表示します。\n保存方法: テストで問題を間違えた際に、Scoreの右側にSaveボタンが表示されますので、それをタップ。その後、復習画面に戻り画面左上のボタンで更新してください。"];
+            textForExplanation.text = [NSString stringWithFormat:@"\n保存した単語を表示します。\n\n詳しくは復習の使い方をご覧下さい。"];
             textForExplanation.textAlignment = NSTextAlignmentCenter;
             textForExplanation.backgroundColor = Rgb2UIColor(6, 93, 181);
             textForExplanation.textColor = [UIColor whiteColor];
@@ -312,7 +312,7 @@ CAShapeLayer *openMenuShape;
         textForExplanation.font = boldFont;
         textForExplanation.font = [UIFont fontWithName:@"American Typewriter" size:15];
     }else{
-        textForExplanation.text = [NSString stringWithFormat:@"保存した単語を表示します。\n保存方法: テストで問題を間違えた際に、Scoreの右側にSaveボタンが表示されますので、それをタップ。その後、復習画面に戻り画面左上のボタンで更新してください。"];
+        textForExplanation.text = [NSString stringWithFormat:@"\n保存した単語を表示します。\n\n詳しくは復習の使い方をご覧下さい。"];
         textForExplanation.textAlignment = NSTextAlignmentCenter;
         textForExplanation.backgroundColor = Rgb2UIColor(6, 93, 181);
         textForExplanation.textColor = [UIColor whiteColor];

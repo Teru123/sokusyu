@@ -49,11 +49,11 @@
     __weak IBOutlet UIButton *tangoPauseButton;
     __weak IBOutlet UIButton *reibunPauseButton;
     __weak IBOutlet UILabel *sentenceLabel;
-    __weak IBOutlet UIButton *textSizeButton;
+    //__weak IBOutlet UIButton *textSizeButton;
     __weak IBOutlet UIProgressView *progressBar;
     __weak IBOutlet UIImageView *startButtonBlue;
     __weak IBOutlet UIImageView *menuButtonBlue;
-    __weak IBOutlet UIImageView *textSizeButtonBlue;
+    //__weak IBOutlet UIImageView *textSizeButtonBlue;
     __weak IBOutlet UIButton *helpViewButton;
     __weak IBOutlet UILabel *progressLabel;
     __weak IBOutlet UIButton *infoView;

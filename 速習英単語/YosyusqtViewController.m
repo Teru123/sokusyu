@@ -1882,8 +1882,8 @@
     backgroundColorView.backgroundColor = UIColorAlphaFromRGB(0x065db5);
     [backgroundColorView addSubview:textViewWhite];
     [backgroundColorView addSubview:ewTextView];
-    [backgroundColorView addSubview:textSizeButtonBlue];
-    [backgroundColorView addSubview:textSizeButton];
+    //[backgroundColorView addSubview:textSizeButtonBlue];
+    //[backgroundColorView addSubview:textSizeButton];
     [backgroundColorView addSubview:menuButtonBlue];
     [backgroundColorView addSubview:menuButton];
     [backgroundColorView addSubview:startButtonBlue];
@@ -2396,8 +2396,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     reibunSaisei.hidden = NO;
     sentenceLabel.hidden = NO;
     menuButtonBlue.hidden = NO;
-    textSizeButtonBlue.hidden = NO;
-    textSizeButton.hidden = NO;
+    //textSizeButtonBlue.hidden = NO;
+    //textSizeButton.hidden = NO;
     
     [practiceField setEnabled:YES];
     [practiceField setPlaceholder:[NSString stringWithFormat:@"単語練習スペース"]];
