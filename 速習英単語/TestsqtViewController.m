@@ -16,9 +16,12 @@
 #import "CorrectAnswerData.h"
 #import "TestWords.h"
 #import "TestWordsData.h"
+#import "HelpViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface TestsqtViewController ()
+
+@property (nonatomic, assign) int lookOrWrite;
 
 @end
 
@@ -3869,15 +3872,12 @@
     [checkTextField setDelegate:self];
     checkTextField.returnKeyType = UIReturnKeyDone;
     [checkTextField setEnabled:NO];
-    [checkTextField setPlaceholder:[NSString stringWithFormat:@"Startをタップ"]];
+    [checkTextField setPlaceholder:[NSString stringWithFormat:@"見て(書いて)覚えるをタップ"]];
     
-    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\nロングタップで辞書検索\n左右スワイプで単語切替\nテストはランダム表示\nグラフはテスト終了後に更新\n\n手書き入力\nキーボードアプリ使用またはiPhoneの設定から手書き入力が可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-繁体字(簡体字) 手書き を追加\n\nスペルのテスト\n自動修正オフで予測変換せずにスペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 画面表示と明るさ > 文字サイズを変更 > スライダをドラッグ     "];
+    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"アプリの使い方は使い方を見るをタップしてください。各種設定方法は下記をご覧下さい。\n手書き入力\n予測変換オフ\n文字サイズ変更\n\n手書き入力\nキーボードアプリを使用、またはiPhoneの設定から手書き入力を追加します。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-繁体字(簡体字) 手書き を追加\n\n予測変換オフ\n自動修正をオフにします。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後、メニューに戻るかアプリを再起動して下さい。文字サイズが変更されます。\n設定方法: iPhoneの設定 > 画面表示と明るさ > 文字サイズを変更 > スライダをドラッグ     "];
     
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x00b400) range:NSMakeRange(0, 3)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(41, 21)];
     //[attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x0889e6) range:NSMakeRange(3, 87)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(52, 6)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(172, 8)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(250, 9)];
     
     [ewTextView setAttributedText:attFont];
     
@@ -3904,11 +3904,11 @@
         hatuonData = randomWord.hatuon;
         reibunData = randomWord.reibun;
         TestWords *randomTestWord  = [[TestWords alloc]
-                            initWithUniqueId:sqlite3_column_int(statement, 0) + 1
-                            andWord:wordName
-                            andDetail:detailData
-                            andHatuon:hatuonData
-                            andReibun:reibunData];
+                                      initWithUniqueId:sqlite3_column_int(statement, 0) + 1
+                                      andWord:wordName
+                                      andDetail:detailData
+                                      andHatuon:hatuonData
+                                      andReibun:reibunData];
         // Insert the word
         [dataController insertWord:randomTestWord];
     }
@@ -3923,6 +3923,8 @@
     self.speechSynthesizer.delegate = self;
     bannerForAD.delegate = self;
     startBlue.hidden = NO;
+    blueImageLookStart.hidden = NO;
+    progressLabel.hidden = YES;
     
     backgroundColorView.backgroundColor = UIColorAlphaFromRGB(0x065db5);
     [backgroundColorView addSubview:tableViewWhite];
@@ -3941,6 +3943,9 @@
     [backgroundColorView addSubview:reibunPauseButton];
     [backgroundColorView addSubview:stopButton];
     [backgroundColorView addSubview:textSizeButton];
+    [backgroundColorView addSubview:showHelpViewButton];
+    [backgroundColorView addSubview:lookToLearnButton];
+    [backgroundColorView addSubview:showWordButton];
     
     ewTextView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     
@@ -3953,13 +3958,13 @@
                                         [UIColor whiteColor], NSForegroundColorAttributeName,
                                         nil] forState:UIControlStateNormal];
     
-    /* 右スワイプ */
-    UISwipeGestureRecognizer* swipeRightGesture =
-    [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(view_SwipeRight:)];
-    swipeRightGesture.direction = UISwipeGestureRecognizerDirectionRight;
+    /* 右 から 左スワイプ に変更*/
+    UISwipeGestureRecognizer* swipeLeftGesture =
+    [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(view_SwipeLeft:)];
+    swipeLeftGesture.direction = UISwipeGestureRecognizerDirectionLeft;
     
-    [self.view addGestureRecognizer:swipeRightGesture];
-
+    [self.view addGestureRecognizer:swipeLeftGesture];
+    
     
     NSString *MY_BANNER_UNIT_ID = @"ca-app-pub-9302632653080358/4207271822";
     
@@ -3978,12 +3983,12 @@
     [bannerView_ setDelegate:self];
     
     // 一般的なリクエストを行って広告を読み込む
-    [bannerView_ loadRequest:[GADRequest request]];
+    //[bannerView_ loadRequest:[GADRequest request]];
     
     //テスト
-    //GADRequest *req = [GADRequest request];
-    //req.testDevices = @[ GAD_SIMULATOR_ID ];
-    //[bannerView_ loadRequest:req];
+    GADRequest *req = [GADRequest request];
+    req.testDevices = @[ GAD_SIMULATOR_ID ];
+    [bannerView_ loadRequest:req];
     
 }
 
@@ -4072,82 +4077,69 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
 }
 
 /*
-- (void) dealloc {
-    [self.nadView setDelegate:nil]; // delegate に nil をセット
-    self.nadView = nil; // プロパティ経由で release、nil をセット
-    // [super dealloc]; // MRC(非 ARC 時には必要)
-    
-    bannerView_.delegate = nil;
-    
-    // プロジェクトで ARC を使用している場合は bannerView_ を解放しない
-    //[bannerView_ release];
-    //[super dealloc];
-}
-*/
+ - (void) dealloc {
+ [self.nadView setDelegate:nil]; // delegate に nil をセット
+ self.nadView = nil; // プロパティ経由で release、nil をセット
+ // [super dealloc]; // MRC(非 ARC 時には必要)
+ 
+ bannerView_.delegate = nil;
+ 
+ // プロジェクトで ARC を使用している場合は bannerView_ を解放しない
+ //[bannerView_ release];
+ //[super dealloc];
+ }
+ */
 
 /*
-//iAd取得成功
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
-    NSLog(@"iAd取得成功");
-    bannerForAD.hidden = NO;
-    
-    self.nadView.hidden = YES;
-}
-
-//iAd取得失敗
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
-    NSLog(@"iAd取得失敗");
-    bannerForAD.hidden = YES;
-    
-    self.nadView = [[NADView alloc] initWithFrame:CGRectMake(0, 518, 320, 50)];
-    // (3) ログ出力の指定
-    [self.nadView setIsOutputLog:NO];
-    // (4) set apiKey, spotId.
-    [self.nadView setNendID:@"c0a9042c6429ca6d09484fae97e5904c38bdf00e"
-                     spotID:@"150950"];
-    [self.nadView setDelegate:self]; //(5)
-    [self.nadView load]; //(6)
-    [self.view addSubview:self.nadView]; // 最初から表示する場合
-}
-
--(void)nadViewDidFailToReceiveAd:(NADView *)adView {
-    self.nadView.hidden = YES;
-}
-
-- (void)bannerViewActionDidFinish:(ADBannerView *)banner
-{
-    [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
-    
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:dismissblock];
-}
-
-- (void)nadViewDidClickAd:(NADView *)adView {
-    [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
-    
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:dismissblock];
-}
-
-- (void) dealloc {
-    [self.nadView setDelegate:nil]; // delegate に nil をセット
-    self.nadView = nil; // プロパティ経由で release、nil をセット
-    // [super dealloc]; // MRC(非 ARC 時には必要)
-}
-*/
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    @autoreleasepool {
-        ewTextView = nil;
-        yourScoreOnLabel = nil;
-        hatuonLabel = nil;
-        changeLabel = nil;
-        changeHatuonLabel = nil;
-        changeText = nil;
-        answerLabel = nil;
-    }
-}
+ //iAd取得成功
+ - (void)bannerViewDidLoadAd:(ADBannerView *)banner
+ {
+ NSLog(@"iAd取得成功");
+ bannerForAD.hidden = NO;
+ 
+ self.nadView.hidden = YES;
+ }
+ 
+ //iAd取得失敗
+ - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+ {
+ NSLog(@"iAd取得失敗");
+ bannerForAD.hidden = YES;
+ 
+ self.nadView = [[NADView alloc] initWithFrame:CGRectMake(0, 518, 320, 50)];
+ // (3) ログ出力の指定
+ [self.nadView setIsOutputLog:NO];
+ // (4) set apiKey, spotId.
+ [self.nadView setNendID:@"c0a9042c6429ca6d09484fae97e5904c38bdf00e"
+ spotID:@"150950"];
+ [self.nadView setDelegate:self]; //(5)
+ [self.nadView load]; //(6)
+ [self.view addSubview:self.nadView]; // 最初から表示する場合
+ }
+ 
+ -(void)nadViewDidFailToReceiveAd:(NADView *)adView {
+ self.nadView.hidden = YES;
+ }
+ 
+ - (void)bannerViewActionDidFinish:(ADBannerView *)banner
+ {
+ [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+ 
+ [[self presentingViewController] dismissViewControllerAnimated:YES completion:dismissblock];
+ }
+ 
+ - (void)nadViewDidClickAd:(NADView *)adView {
+ [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+ 
+ [[self presentingViewController] dismissViewControllerAnimated:YES completion:dismissblock];
+ }
+ 
+ - (void) dealloc {
+ [self.nadView setDelegate:nil]; // delegate に nil をセット
+ self.nadView = nil; // プロパティ経由で release、nil をセット
+ // [super dealloc]; // MRC(非 ARC 時には必要)
+ }
+ */
 
 - (void)didReceiveMemoryWarning
 {
@@ -4157,6 +4149,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
 
 - (IBAction)startButton:(id)sender {
     ewTextView.textAlignment = NSTextAlignmentLeft;
+    
+    _lookOrWrite = 1;
     
     [checkTextField setEnabled:YES];
     [ewTextView setEditable:NO];
@@ -4215,118 +4209,132 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     reibunButton.enabled = NO;
     [tangoButton setTitle:@"" forState:UIControlStateDisabled];
     [reibunPauseButton setTitle:@"" forState:UIControlStateDisabled];
-    
+    saveBlue.hidden = NO;
+    saveButton.hidden = NO;
+    infoButton.hidden = YES;
+    showHelpViewButton.hidden = YES;
+    lookToLearnButton.hidden = YES;
+    blueImageLookStart.hidden = YES;
+    showWordButton.hidden = YES;
+    blueImageShowWord.hidden = YES;
+    progressLabel.hidden = NO;
 }
 
 - (IBAction)menuButton:(id)sender
 {
     [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
     
-    if (currentIndex == (words.count - 1)) {
-        
-        // Create datacontroller and initialize database
-        ScoreData *dataController = [[ScoreData alloc]init];
-        [dataController initDatabaseForScores];
-        NSArray *highScore = [dataController scoreInfos];
-        scoreForTest = highScore;
-        
-        if (scoreForTest.count == 0) {
-            for (int p = 1; p <= 30; p++) {
-                NSString *newWordNo = [NSString stringWithFormat:@"%d", p];
-                if ([wordNo isEqualToString:newWordNo] && ![dataController Scores:p]){
-                    Score *score  = [[Score alloc] initWithUniqueId:p andScore:yourScore];
-                    // Insert the score
-                    [dataController insertScore:score];
-                }
-            }
-        }else{
-            for (int i = 0; i < scoreForTest.count; i++) {
-                Score *info = [scoreForTest objectAtIndex:i];
+    if (_lookOrWrite == 1) {
+        if (currentIndex == (words.count - 1)) {
             
+            // Create datacontroller and initialize database
+            ScoreData *dataController = [[ScoreData alloc]init];
+            [dataController initDatabaseForScores];
+            NSArray *highScore = [dataController scoreInfos];
+            scoreForTest = highScore;
+            
+            if (scoreForTest.count == 0) {
                 for (int p = 1; p <= 30; p++) {
                     NSString *newWordNo = [NSString stringWithFormat:@"%d", p];
-                    //info.score < yourScore
-                    if ([wordNo isEqualToString:newWordNo] && info.uniqueId == p) {
-                        Score *score  = [[Score alloc] initWithUniqueId:p andScore:yourScore];
-                        [dataController updateScore:score];
-                    }else if ([wordNo isEqualToString:newWordNo] && ![dataController Scores:p]){
+                    if ([wordNo isEqualToString:newWordNo] && ![dataController Scores:p]){
                         Score *score  = [[Score alloc] initWithUniqueId:p andScore:yourScore];
                         // Insert the score
                         [dataController insertScore:score];
                     }
                 }
-            /*
-            if ([wordNo isEqualToString:@"1"] && info.uniqueId == 1 && info.score < yourScore) {
-                Score *score  = [[Score alloc] initWithUniqueId:1 andScore:yourScore];
-                [dataController updateScore:score];
-            }else if ([wordNo isEqualToString:@"1"] && ![dataController Scores:1]){
-                Score *score  = [[Score alloc] initWithUniqueId:1 andScore:yourScore];
-                // Insert the score
-                [dataController insertScore:score];
+            }else{
+                for (int i = 0; i < scoreForTest.count; i++) {
+                    Score *info = [scoreForTest objectAtIndex:i];
+                    
+                    for (int p = 1; p <= 30; p++) {
+                        NSString *newWordNo = [NSString stringWithFormat:@"%d", p];
+                        //info.score < yourScore
+                        if ([wordNo isEqualToString:newWordNo] && info.uniqueId == p) {
+                            Score *score  = [[Score alloc] initWithUniqueId:p andScore:yourScore];
+                            [dataController updateScore:score];
+                        }else if ([wordNo isEqualToString:newWordNo] && ![dataController Scores:p]){
+                            Score *score  = [[Score alloc] initWithUniqueId:p andScore:yourScore];
+                            // Insert the score
+                            [dataController insertScore:score];
+                        }
+                    }
+                    /*
+                     if ([wordNo isEqualToString:@"1"] && info.uniqueId == 1 && info.score < yourScore) {
+                     Score *score  = [[Score alloc] initWithUniqueId:1 andScore:yourScore];
+                     [dataController updateScore:score];
+                     }else if ([wordNo isEqualToString:@"1"] && ![dataController Scores:1]){
+                     Score *score  = [[Score alloc] initWithUniqueId:1 andScore:yourScore];
+                     // Insert the score
+                     [dataController insertScore:score];
+                     }
+                     */
+                }
             }
-             */
-            }
+            
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"メニューに戻りますか？" message:@"" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
+            [alertView show];
+            
+        }else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"メニューに戻りますか？" message:@"" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
+            [alertView show];
         }
         
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Menuに戻りますか？" message:@"" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
-        [alertView show];
+        CorrectAnswerData *correct = [[CorrectAnswerData alloc] init];
+        [correct initDatabaseForAnswers];
         
-    }else{
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Menuに戻りますか？" message:@"" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
-        [alertView show];
-    }
-
-    CorrectAnswerData *correct = [[CorrectAnswerData alloc] init];
-    [correct initDatabaseForAnswers];
-    
-    //単元番号を取得
-    int wordNoInt = [wordNo intValue];
-    //NSLog(@"%d", wordNoInt);
-    NSArray* answer = [correct AnswersInfo];
-    correctAnswerList = answer;
-    //NSLog(@"%d", correctAnswerList.count);
-    
-    //該当番号のデータの有無
-    if (correctAnswerList.count == 0 && 0 < currentIndex) {
-        for (int p = 1; p <= 30; p++) {
-            NSString *newWordNo = [NSString stringWithFormat:@"%d", p];
-            if ([wordNo isEqualToString:newWordNo] && ![correct CorrectData:p]){
-                GetAndSetCorrectAnswerData *corrects = [[GetAndSetCorrectAnswerData alloc] initWithUniqueId:wordNoInt andcorrect:correctNumber andincorrect:inCorrectNumber];
-                [correct insertAnswers:corrects];
-                //NSLog(@"Insert!");
-            }
-        }
-    }else if (0 < currentIndex){
-        for (int i = 0; i < correctAnswerList.count; i++) {
-            infoCorrectIncorrect = [correctAnswerList objectAtIndex:i];
+        //単元番号を取得
+        int wordNoInt = [wordNo intValue];
+        //NSLog(@"%d", wordNoInt);
+        NSArray* answer = [correct AnswersInfo];
+        correctAnswerList = answer;
+        //NSLog(@"%d", correctAnswerList.count);
+        
+        //該当番号のデータの有無
+        if (correctAnswerList.count == 0 && 0 < currentIndex) {
             for (int p = 1; p <= 30; p++) {
                 NSString *newWordNo = [NSString stringWithFormat:@"%d", p];
-                //info.score < yourScore
-                if ([wordNo isEqualToString:newWordNo] && infoCorrectIncorrect.uniqueId == p) {
-                    //スコア総計
-                    int correctInDB = infoCorrectIncorrect.correct;
-                    int allCorrect = 0;
-                    allCorrect += correctInDB;
-                    allCorrect += correctNumber;
-                    int inCorrectInDB = infoCorrectIncorrect.incorrect;
-                    int allInCorrect = 0;
-                    allInCorrect += inCorrectInDB;
-                    allInCorrect += inCorrectNumber;
-                    
-                    //総計したデータをアップデート
-                    GetAndSetCorrectAnswerData *ScoreOfToday  =
-                    [[GetAndSetCorrectAnswerData alloc] initWithUniqueId:wordNoInt andcorrect:allCorrect andincorrect:allInCorrect];
-                    [correct updateCorrectAnswers:ScoreOfToday];
-                    
-                    //NSLog(@"Update!");
-                }else if ([wordNo isEqualToString:newWordNo] && ![correct CorrectData:p]){
+                if ([wordNo isEqualToString:newWordNo] && ![correct CorrectData:p]){
                     GetAndSetCorrectAnswerData *corrects = [[GetAndSetCorrectAnswerData alloc] initWithUniqueId:wordNoInt andcorrect:correctNumber andincorrect:inCorrectNumber];
                     [correct insertAnswers:corrects];
                     //NSLog(@"Insert!");
                 }
             }
+        }else if (0 < currentIndex){
+            for (int i = 0; i < correctAnswerList.count; i++) {
+                infoCorrectIncorrect = [correctAnswerList objectAtIndex:i];
+                for (int p = 1; p <= 30; p++) {
+                    NSString *newWordNo = [NSString stringWithFormat:@"%d", p];
+                    //info.score < yourScore
+                    if ([wordNo isEqualToString:newWordNo] && infoCorrectIncorrect.uniqueId == p) {
+                        //スコア総計
+                        int correctInDB = infoCorrectIncorrect.correct;
+                        int allCorrect = 0;
+                        allCorrect += correctInDB;
+                        allCorrect += correctNumber;
+                        int inCorrectInDB = infoCorrectIncorrect.incorrect;
+                        int allInCorrect = 0;
+                        allInCorrect += inCorrectInDB;
+                        allInCorrect += inCorrectNumber;
+                        
+                        //総計したデータをアップデート
+                        GetAndSetCorrectAnswerData *ScoreOfToday  =
+                        [[GetAndSetCorrectAnswerData alloc] initWithUniqueId:wordNoInt andcorrect:allCorrect andincorrect:allInCorrect];
+                        [correct updateCorrectAnswers:ScoreOfToday];
+                        
+                        //NSLog(@"Update!");
+                    }else if ([wordNo isEqualToString:newWordNo] && ![correct CorrectData:p]){
+                        GetAndSetCorrectAnswerData *corrects = [[GetAndSetCorrectAnswerData alloc] initWithUniqueId:wordNoInt andcorrect:correctNumber andincorrect:inCorrectNumber];
+                        [correct insertAnswers:corrects];
+                        //NSLog(@"Insert!");
+                    }
+                }
+            }
         }
+    }else{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"メニューに戻りますか？" message:@"" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
+        [alertView show];
     }
+    
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -4348,7 +4356,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
             tangoPauseButton.hidden = YES;
             tangoButton.hidden = NO;
             stopButton.hidden = YES;
-
+            
         }else if (!hatuonLabel.hidden){
             tangoButton.enabled = YES;
             [tangoButton setTitle:@"" forState:UIControlStateNormal];
@@ -4359,7 +4367,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
             reibunButton.hidden = NO;
             reibunPauseButton.hidden = YES;
             stopButton.hidden = YES;
-
+            
         }else if (!tangoLabel.hidden && !reibunLabel.hidden){
             tangoPauseButton.hidden = YES;
             tangoButton.hidden = NO;
@@ -4381,80 +4389,178 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
 {
     currentIndex++;
     
-    // Create datacontroller and initialize database
-    TestWordsData *dataController = [[TestWordsData alloc]init];
-    [dataController initDatabase];
-    NSArray *forDataList = [dataController wordInfo];
-    dataList = forDataList;
-    
-    TestWords *dataInfo = [dataList objectAtIndex:currentIndex];
-    detailText = [NSString stringWithFormat:@"%@", dataInfo.detail];
-    correctHatuon = [NSString stringWithFormat:@"%@", dataInfo.hatuon];
-    correctWord = [NSString stringWithFormat:@"%@", dataInfo.word];
-    reibunString = [NSString stringWithFormat:@"%@", dataInfo.reibun];
-    tangoString = [NSString stringWithFormat:@"%@", dataInfo.word];
-    
-   /* NSLog(@"%d", currentIndex);*/
-    
-    //TestWord *wordData = [words objectAtIndex:currentIndex];
-    //correctName = [wordData name];
-    //correctHatuon = [wordData hatuon];
-    
-   /* NSLog(@"%@ %@", wordData.name, wordData.hatuon);*/
-
-    [checkTextField setEnabled:YES];
-    [ewTextView setEditable:NO];
-    [ewTextView setSelectable:NO];
-
-    [checkTextField setText:[NSString stringWithFormat:@""]];
-    [checkTextField setPlaceholder:[NSString stringWithFormat:@"単語入力"]];
-    [answerLabel setText:@""];
-    
-    hatuonLabel.hidden = YES;
-    saveButton.hidden = YES;
-    
-    [hatuonLabel setText:correctHatuon];
-    [ewTextView setText:detailText];
-    
-    [UIView beginAnimations:@"fadeIn" context:nil];
-    [UIView setAnimationDuration:0.5];
-    
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-    
-    [ewTextView setSelectable:YES];
-    
-    // Make the animatable changes.
-    ewTextView.alpha = 0.0;
-    ewTextView.alpha = 1.0;
-    
-    // Commit the changes and perform the animation.
-    [UIView commitAnimations];
-    
-    if (currentIndex == (words.count - 1)) {
-        nextButton.enabled = NO;
-        [nextButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                            [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
-                                            [UIColor lightGrayColor], NSForegroundColorAttributeName,
-                                            nil] forState:UIControlStateDisabled];
+    if (_lookOrWrite == 1) {
+        // Create datacontroller and initialize database
+        TestWordsData *dataController = [[TestWordsData alloc]init];
+        [dataController initDatabase];
+        NSArray *forDataList = [dataController wordInfo];
+        dataList = forDataList;
         
-        UIAlertView *finishAlertView = [[UIAlertView alloc] initWithTitle:@"最後の単語" message:@"解答後にMenuをタップして下さい" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [finishAlertView show];
+        TestWords *dataInfo = [dataList objectAtIndex:currentIndex];
+        detailText = [NSString stringWithFormat:@"%@", dataInfo.detail];
+        correctHatuon = [NSString stringWithFormat:@"%@", dataInfo.hatuon];
+        correctWord = [NSString stringWithFormat:@"%@", dataInfo.word];
+        reibunString = [NSString stringWithFormat:@"%@", dataInfo.reibun];
+        tangoString = [NSString stringWithFormat:@"%@", dataInfo.word];
+        
+        /* NSLog(@"%d", currentIndex);*/
+        
+        //TestWord *wordData = [words objectAtIndex:currentIndex];
+        //correctName = [wordData name];
+        //correctHatuon = [wordData hatuon];
+        
+        /* NSLog(@"%@ %@", wordData.name, wordData.hatuon);*/
+        
+        [checkTextField setEnabled:YES];
+        [ewTextView setEditable:NO];
+        [ewTextView setSelectable:NO];
+        
+        [checkTextField setText:[NSString stringWithFormat:@""]];
+        [checkTextField setPlaceholder:[NSString stringWithFormat:@"単語入力"]];
+        [answerLabel setText:@""];
+        
+        hatuonLabel.hidden = YES;
+        //saveButton.hidden = YES;
+        
+        [hatuonLabel setText:correctHatuon];
+        [ewTextView setText:detailText];
+        
+        [UIView beginAnimations:@"fadeIn" context:nil];
+        [UIView setAnimationDuration:0.5];
+        
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+        
+        [ewTextView setSelectable:YES];
+        
+        // Make the animatable changes.
+        ewTextView.alpha = 0.0;
+        ewTextView.alpha = 1.0;
+        
+        // Commit the changes and perform the animation.
+        [UIView commitAnimations];
+        
+        /*
+         if (currentIndex == (words.count - 1)) {
+         nextButton.enabled = NO;
+         [nextButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+         [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
+         [UIColor lightGrayColor], NSForegroundColorAttributeName,
+         nil] forState:UIControlStateDisabled];
+         
+         UIAlertView *finishAlertView = [[UIAlertView alloc] initWithTitle:@"最後の単語です" message:@"解答後にメニューをタップして下さい" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+         [finishAlertView show];
+         }*/
+        
+        yourScoreOnLabel.textColor = [UIColor whiteColor];
+        progressBar.progressTintColor = [UIColor whiteColor];
+        
+        [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+        tangoPauseButton.hidden = YES;
+        tangoButton.hidden = NO;
+        reibunButton.hidden = NO;
+        reibunPauseButton.hidden = YES;
+        stopButton.hidden = YES;
+        nextButton.enabled = NO;
+        //saveBlue.hidden = YES;
+        tangoButton.enabled = NO;
+        reibunButton.enabled = NO;
+        [tangoButton setTitle:@"" forState:UIControlStateDisabled];
+        [reibunPauseButton setTitle:@"" forState:UIControlStateDisabled];
+        showWordButton.hidden = YES;
+        blueImageShowWord.hidden = YES;
+    }else{
+        // Create datacontroller and initialize database
+        TestWordsData *dataController = [[TestWordsData alloc]init];
+        [dataController initDatabase];
+        NSArray *forDataList = [dataController wordInfo];
+        dataList = forDataList;
+        
+        TestWords *dataInfo = [dataList objectAtIndex:currentIndex];
+        detailText = [NSString stringWithFormat:@"%@", dataInfo.detail];
+        correctHatuon = [NSString stringWithFormat:@"%@", dataInfo.hatuon];
+        correctWord = [NSString stringWithFormat:@"%@", dataInfo.word];
+        reibunString = [NSString stringWithFormat:@"%@", dataInfo.reibun];
+        tangoString = [NSString stringWithFormat:@"%@", dataInfo.word];
+        
+        /* NSLog(@"%d", currentIndex);*/
+        
+        //TestWord *wordData = [words objectAtIndex:currentIndex];
+        //correctName = [wordData name];
+        //correctHatuon = [wordData hatuon];
+        
+        /* NSLog(@"%@ %@", wordData.name, wordData.hatuon);*/
+        
+        [ewTextView setEditable:NO];
+        [ewTextView setSelectable:NO];
+        
+        [checkTextField setText:[NSString stringWithFormat:@""]];
+        [checkTextField setPlaceholder:[NSString stringWithFormat:@""]];
+        checkTextField.enabled = NO;
+        
+        [answerLabel setText:@""];
+        
+        yourScoreOnLabel.hidden = YES;
+        hatuonLabel.hidden = YES;
+        //showWordButton.hidden = NO;
+        //blueImageShowWord.hidden = NO;
+        //saveButton.hidden = YES;
+        
+        [hatuonLabel setText:correctHatuon];
+        [ewTextView setText:detailText];
+        
+        [UIView beginAnimations:@"fadeIn" context:nil];
+        [UIView setAnimationDuration:0.5];
+        
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+        
+        [ewTextView setSelectable:YES];
+        
+        // Make the animatable changes.
+        ewTextView.alpha = 0.0;
+        ewTextView.alpha = 1.0;
+        
+        // Commit the changes and perform the animation.
+        [UIView commitAnimations];
+        /*
+         if (currentIndex == (words.count - 1)) {
+         nextButton.enabled = NO;
+         [nextButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+         [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
+         [UIColor lightGrayColor], NSForegroundColorAttributeName,
+         nil] forState:UIControlStateDisabled];
+         
+         UIAlertView *finishAlertView = [[UIAlertView alloc] initWithTitle:@"最後の単語です" message:@"解答後にメニューをタップして下さい" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+         [finishAlertView show];
+         }*/
+        
+        yourScoreOnLabel.textColor = [UIColor whiteColor];
+        progressBar.progressTintColor = [UIColor whiteColor];
+        
+        [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+        tangoPauseButton.hidden = YES;
+        tangoButton.hidden = NO;
+        reibunButton.hidden = NO;
+        reibunPauseButton.hidden = YES;
+        stopButton.hidden = YES;
+        nextButton.enabled = NO;
+        //saveBlue.hidden = YES;
+        tangoButton.enabled = NO;
+        reibunButton.enabled = NO;
+        [tangoButton setTitle:@"" forState:UIControlStateDisabled];
+        [reibunPauseButton setTitle:@"" forState:UIControlStateDisabled];
+        
+        if (showWordButton.hidden) {
+            showWordButton.hidden = NO;
+            blueImageShowWord.hidden = NO;
+        }
     }
-    yourScoreOnLabel.textColor = [UIColor whiteColor];
-    progressBar.progressTintColor = [UIColor whiteColor];
     
-    [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
-    tangoPauseButton.hidden = YES;
-    tangoButton.hidden = NO;
-    reibunButton.hidden = NO;
-    reibunPauseButton.hidden = YES;
-    stopButton.hidden = YES;
-    nextButton.enabled = NO;
-    saveBlue.hidden = YES;
-    tangoButton.enabled = NO;
-    reibunButton.enabled = NO;
-    [tangoButton setTitle:@"" forState:UIControlStateDisabled];
-    [reibunPauseButton setTitle:@"" forState:UIControlStateDisabled];
+    if (saveButton.hidden) {
+        saveButton.hidden = NO;
+        saveBlue.hidden = NO;
+    }
+    
+    progressLabel.text =[[NSString alloc] initWithFormat:@"%d of 20", currentIndex + 1];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -4474,9 +4580,9 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     {
         hatuonLabel.hidden = NO;
         /*[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(hiddenSeikaiImage:)
-                                       userInfo:nil repeats:NO];*/
+         userInfo:nil repeats:NO];*/
         yourScore++;
-        [yourScoreOnLabel setText:[NSString stringWithFormat:@"Score %d", yourScore]];
+        [yourScoreOnLabel setText:[NSString stringWithFormat:@"スコア %d", yourScore]];
         [hatuonLabel setText:correctHatuon];
         progressBar.progress += 0.05;
         yourScoreOnLabel.textColor = Rgb2UIColor(102, 255, 102);
@@ -4485,16 +4591,16 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         [tangoButton setTitle:@"" forState:UIControlStateNormal];
         reibunButton.enabled = YES;
         [reibunButton setTitle:@"" forState:UIControlStateNormal];
-        saveBlue.hidden = YES;
+        //saveBlue.hidden = YES;
         
         correctNumber += 1;
         //NSLog(@"%d", correctNumber);
     }else{
         hatuonLabel.hidden = NO;
-        saveButton.hidden = NO;
+        //saveButton.hidden = NO;
         answerLabel.hidden = NO;
         /*[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(hiddenHuseikaiImage:)
-                                       userInfo:nil repeats:NO];*/
+         userInfo:nil repeats:NO];*/
         [answerLabel setText:correctWord];
         [hatuonLabel setText:correctHatuon];
         [checkTextField setEnabled:NO];
@@ -4504,7 +4610,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         [tangoButton setTitle:@"" forState:UIControlStateNormal];
         reibunButton.enabled = YES;
         [reibunButton setTitle:@"" forState:UIControlStateNormal];
-        saveBlue.hidden = NO;
+        //saveBlue.hidden = NO;
         
         inCorrectNumber += 1;
         //NSLog(@"%d", inCorrectNumber);
@@ -4516,7 +4622,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
                                             [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
                                             [UIColor lightGrayColor], NSForegroundColorAttributeName,
                                             nil] forState:UIControlStateDisabled];
-
+        
     }else{
         nextButton.enabled = YES;
     }
@@ -4547,28 +4653,29 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     saveButton.hidden = YES;
     saveBlue.hidden = YES;
     
-    if ([reibunString isEqual:@""]) {
-        [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
-        reibunButton.enabled = NO;
-        [reibunButton setTitle:@"" forState:UIControlStateDisabled];
-        tangoButton.enabled = YES;
-        [tangoButton setTitle:@"" forState:UIControlStateNormal];
-        tangoPauseButton.hidden = YES;
-        tangoButton.hidden = NO;
-        stopButton.hidden = YES;
-    }else{
-        [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
-        tangoButton.enabled = YES;
-        [tangoButton setTitle:@"" forState:UIControlStateNormal];
-        reibunButton.enabled = YES;
-        [reibunButton setTitle:@"" forState:UIControlStateNormal];
-        tangoPauseButton.hidden = YES;
-        tangoButton.hidden = NO;
-        reibunButton.hidden = NO;
-        reibunPauseButton.hidden = YES;
-        stopButton.hidden = YES;
+    if (!hatuonLabel.hidden) {
+        if ([reibunString isEqual:@""]) {
+            [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+            reibunButton.enabled = NO;
+            [reibunButton setTitle:@"" forState:UIControlStateDisabled];
+            tangoButton.enabled = YES;
+            [tangoButton setTitle:@"" forState:UIControlStateNormal];
+            tangoPauseButton.hidden = YES;
+            tangoButton.hidden = NO;
+            stopButton.hidden = YES;
+        }else{
+            [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+            tangoButton.enabled = YES;
+            [tangoButton setTitle:@"" forState:UIControlStateNormal];
+            reibunButton.enabled = YES;
+            [reibunButton setTitle:@"" forState:UIControlStateNormal];
+            tangoPauseButton.hidden = YES;
+            tangoButton.hidden = NO;
+            reibunButton.hidden = NO;
+            reibunPauseButton.hidden = YES;
+            stopButton.hidden = YES;
+        }
     }
-
 }
 
 - (IBAction)tangoSaisei:(id)sender {
@@ -4576,8 +4683,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     //tangoString = [wordData name];
     
     if( self.speechSynthesizer.paused){
-		[self.speechSynthesizer continueSpeaking];
-	}else{
+        [self.speechSynthesizer continueSpeaking];
+    }else{
         AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:tangoString];
         
         AVSpeechSynthesisVoice* ENVoice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-US"];
@@ -4589,7 +4696,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         // AVSpeechSynthesizerにAVSpeechUtteranceを設定して読んでもらう
         [speechSynthesizer speakUtterance:utterance];
     }
-	
+    
     tangoButton.hidden = YES;
     tangoPauseButton.hidden = NO;
     stopButton.hidden = NO;
@@ -4602,8 +4709,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     //reibunString = [wordData reibun];
     
     if( self.speechSynthesizer.paused){
-		[self.speechSynthesizer continueSpeaking];
-	}else{
+        [self.speechSynthesizer continueSpeaking];
+    }else{
         AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:reibunString];
         
         AVSpeechSynthesisVoice* ENVoice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-US"];
@@ -4615,7 +4722,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         // AVSpeechSynthesizerにAVSpeechUtteranceを設定して読んでもらう
         [speechSynthesizer speakUtterance:utterance];
     }
-
+    
     reibunButton.hidden = YES;
     reibunPauseButton.hidden = NO;
     stopButton.hidden = NO;
@@ -4657,6 +4764,128 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     tangoButton.hidden = NO;
     reibunButton.enabled = NO;
     [reibunButton setTitle:@"" forState:UIControlStateDisabled];
+}
+
+- (IBAction)showHelpView:(id)sender {
+    HelpViewController *helpView = [[HelpViewController alloc] init];
+    [self presentViewController:helpView animated:YES completion:nil];
+    
+    progressBar.progress += 0.05;
+    yourScoreOnLabel.textColor = Rgb2UIColor(102, 255, 102);
+    progressBar.progressTintColor = Rgb2UIColor(102, 255, 102);
+    tangoButton.enabled = YES;
+    [tangoButton setTitle:@"" forState:UIControlStateNormal];
+    reibunButton.enabled = YES;
+    [reibunButton setTitle:@"" forState:UIControlStateNormal];
+}
+
+- (IBAction)lookToLearnStart:(id)sender {
+    ewTextView.textAlignment = NSTextAlignmentLeft;
+    
+    _lookOrWrite = 2;
+    
+    [checkTextField setEnabled:YES];
+    [ewTextView setEditable:NO];
+    [ewTextView setSelectable:NO];
+    
+    [checkTextField setText:[NSString stringWithFormat:@""]];
+    [checkTextField setPlaceholder:[NSString stringWithFormat:@"単語を見るをタップ"]];
+    checkTextField.enabled = NO;
+    
+    // Create datacontroller and initialize database
+    TestWordsData *dataController = [[TestWordsData alloc]init];
+    [dataController initDatabase];
+    NSArray *forDataList = [dataController wordInfo];
+    dataList = forDataList;
+    
+    TestWords *dataInfo = [dataList objectAtIndex:currentIndex];
+    detailText = [NSString stringWithFormat:@"%@", dataInfo.detail];
+    correctHatuon = [NSString stringWithFormat:@"%@", dataInfo.hatuon];
+    correctWord = [NSString stringWithFormat:@"%@", dataInfo.word];
+    reibunString = [NSString stringWithFormat:@"%@", dataInfo.reibun];
+    tangoString = [NSString stringWithFormat:@"%@", dataInfo.word];
+    
+    [ewTextView setText:detailText];
+    
+    [UIView beginAnimations:@"fadeIn" context:nil];
+    [UIView setAnimationDuration:0.5];
+    
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+    
+    [ewTextView setSelectable:YES];
+    [ewTextView setTextColor:[UIColor blackColor]];
+    // Make the animatable changes.
+    ewTextView.alpha = 0.0;
+    ewTextView.alpha = 1.0;
+    
+    // Commit the changes and perform the animation.
+    [UIView commitAnimations];
+    
+    //TestWord *wordToStart = [words objectAtIndex:currentIndex];
+    //correctName = wordToStart.name;
+    //correctHatuon = wordToStart.hatuon;
+    //[ewTextView setText:[NSString stringWithFormat:@"%@", wordToStart.detail]];
+    
+    startButton.hidden = YES;
+    startButton.enabled = NO;
+    /*NSLog(@"%d", currentIndex);*/
+    reibunLabel.hidden = NO;
+    reibunButton.hidden = NO;
+    tangoLabel.hidden = NO;
+    tangoButton.hidden = NO;
+    yourScoreOnLabel.hidden = YES;
+    progressBar.hidden = NO;
+    textSizeButton.hidden = NO;
+    textSizeBlue.hidden = NO;
+    startBlue.hidden = YES;
+    tangoButton.enabled = NO;
+    reibunButton.enabled = NO;
+    [tangoButton setTitle:@"" forState:UIControlStateDisabled];
+    [reibunPauseButton setTitle:@"" forState:UIControlStateDisabled];
+    saveBlue.hidden = NO;
+    saveButton.hidden = NO;
+    infoButton.hidden = YES;
+    showHelpViewButton.hidden = YES;
+    lookToLearnButton.hidden = YES;
+    blueImageLookStart.hidden = YES;
+    showWordButton.hidden = NO;
+    blueImageShowWord.hidden = NO;
+    progressLabel.hidden = NO;
+}
+
+- (IBAction)showWord:(id)sender {
+    hatuonLabel.hidden = NO;
+    //saveButton.hidden = NO;
+    answerLabel.hidden = NO;
+    /*[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(hiddenHuseikaiImage:)
+     userInfo:nil repeats:NO];*/
+    [answerLabel setText:correctWord];
+    [hatuonLabel setText:correctHatuon];
+    tangoButton.enabled = YES;
+    reibunButton.enabled = YES;
+    progressBar.progress += 0.05;
+    progressBar.progressTintColor = Rgb2UIColor(102, 255, 102);
+    
+    if (currentIndex == (words.count - 1)) {
+        nextButton.enabled = NO;
+        [nextButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                            [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
+                                            [UIColor lightGrayColor], NSForegroundColorAttributeName,
+                                            nil] forState:UIControlStateDisabled];
+        
+    }else{
+        nextButton.enabled = YES;
+    }
+    
+    //TestWord *wordData = [words objectAtIndex:currentIndex];
+    //reibunString = [wordData reibun];
+    if ([reibunString isEqual:@""]) {
+        reibunButton.enabled = NO;
+        [reibunButton setTitle:@"" forState:UIControlStateDisabled];
+    }
+    
+    showWordButton.hidden = YES;
+    blueImageShowWord.hidden = YES;
 }
 
 - (IBAction)reibunPauseAction:(id)sender {
@@ -4708,8 +4937,9 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     }
 }
 
-- (void)view_SwipeRight:(UISwipeGestureRecognizer *)sender
+- (void)view_SwipeLeft:(UISwipeGestureRecognizer *)sender
 {
+    //右 から 左に変更
     if (startButton.hidden && !hatuonLabel.hidden && currentIndex < 19) {
         currentIndex++;
         /* NSLog(@"%d", currentIndex);*/
@@ -4720,75 +4950,180 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         
         /* NSLog(@"%@ %@", wordData.name, wordData.hatuon);*/
         
-        // Create datacontroller and initialize database
-        TestWordsData *dataController = [[TestWordsData alloc]init];
-        [dataController initDatabase];
-        NSArray *forDataList = [dataController wordInfo];
-        dataList = forDataList;
-        
-        TestWords *dataInfo = [dataList objectAtIndex:currentIndex];
-        detailText = [NSString stringWithFormat:@"%@", dataInfo.detail];
-        correctHatuon = [NSString stringWithFormat:@"%@", dataInfo.hatuon];
-        correctWord = [NSString stringWithFormat:@"%@", dataInfo.word];
-        reibunString = [NSString stringWithFormat:@"%@", dataInfo.reibun];
-        tangoString = [NSString stringWithFormat:@"%@", dataInfo.word];
-        
-        [checkTextField setEnabled:YES];
-        [ewTextView setEditable:NO];
-        [ewTextView setSelectable:NO];
-        
-        [checkTextField setText:[NSString stringWithFormat:@""]];
-        [checkTextField setPlaceholder:[NSString stringWithFormat:@"単語入力"]];
-        [answerLabel setText:@" "];
-        
-        hatuonLabel.hidden = YES;
-        saveButton.hidden = YES;
-        
-        [hatuonLabel setText:correctHatuon];
-        [ewTextView setText:detailText];
-        
-        [UIView beginAnimations:@"fadeIn" context:nil];
-        [UIView setAnimationDuration:0.5];
-        
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-        
-        [ewTextView setSelectable:YES];
-        
-        // Make the animatable changes.
-        ewTextView.alpha = 0.0;
-        ewTextView.alpha = 1.0;
-        
-        // Commit the changes and perform the animation.
-        [UIView commitAnimations];
-        
-        if (currentIndex == (words.count - 1)) {
+        if (_lookOrWrite == 1) {
+            // Create datacontroller and initialize database
+            TestWordsData *dataController = [[TestWordsData alloc]init];
+            [dataController initDatabase];
+            NSArray *forDataList = [dataController wordInfo];
+            dataList = forDataList;
+            
+            TestWords *dataInfo = [dataList objectAtIndex:currentIndex];
+            detailText = [NSString stringWithFormat:@"%@", dataInfo.detail];
+            correctHatuon = [NSString stringWithFormat:@"%@", dataInfo.hatuon];
+            correctWord = [NSString stringWithFormat:@"%@", dataInfo.word];
+            reibunString = [NSString stringWithFormat:@"%@", dataInfo.reibun];
+            tangoString = [NSString stringWithFormat:@"%@", dataInfo.word];
+            
+            /* NSLog(@"%d", currentIndex);*/
+            
+            //TestWord *wordData = [words objectAtIndex:currentIndex];
+            //correctName = [wordData name];
+            //correctHatuon = [wordData hatuon];
+            
+            /* NSLog(@"%@ %@", wordData.name, wordData.hatuon);*/
+            
+            [checkTextField setEnabled:YES];
+            [ewTextView setEditable:NO];
+            [ewTextView setSelectable:NO];
+            
+            [checkTextField setText:[NSString stringWithFormat:@""]];
+            [checkTextField setPlaceholder:[NSString stringWithFormat:@"単語入力"]];
+            [answerLabel setText:@""];
+            
+            hatuonLabel.hidden = YES;
+            //saveButton.hidden = YES;
+            
+            [hatuonLabel setText:correctHatuon];
+            [ewTextView setText:detailText];
+            
+            [UIView beginAnimations:@"fadeIn" context:nil];
+            [UIView setAnimationDuration:0.5];
+            
+            [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+            
+            [ewTextView setSelectable:YES];
+            
+            // Make the animatable changes.
+            ewTextView.alpha = 0.0;
+            ewTextView.alpha = 1.0;
+            
+            // Commit the changes and perform the animation.
+            [UIView commitAnimations];
+            
+            /*
+             if (currentIndex == (words.count - 1)) {
+             nextButton.enabled = NO;
+             [nextButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+             [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
+             [UIColor lightGrayColor], NSForegroundColorAttributeName,
+             nil] forState:UIControlStateDisabled];
+             
+             UIAlertView *finishAlertView = [[UIAlertView alloc] initWithTitle:@"最後の単語です" message:@"解答後にメニューをタップして下さい" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+             [finishAlertView show];
+             }*/
+            
+            yourScoreOnLabel.textColor = [UIColor whiteColor];
+            progressBar.progressTintColor = [UIColor whiteColor];
+            
+            [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+            tangoPauseButton.hidden = YES;
+            tangoButton.hidden = NO;
+            reibunButton.hidden = NO;
+            reibunPauseButton.hidden = YES;
+            stopButton.hidden = YES;
             nextButton.enabled = NO;
-            [nextButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
-                                                [UIColor lightGrayColor], NSForegroundColorAttributeName,
-                                                nil] forState:UIControlStateNormal];
-
-            UIAlertView *finishAlertView = [[UIAlertView alloc] initWithTitle:@"最後の単語" message:@"解答後にMenuをタップして下さい" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [finishAlertView show];
+            //saveBlue.hidden = YES;
+            tangoButton.enabled = NO;
+            reibunButton.enabled = NO;
+            [tangoButton setTitle:@"" forState:UIControlStateDisabled];
+            [reibunPauseButton setTitle:@"" forState:UIControlStateDisabled];
+            showWordButton.hidden = YES;
+            blueImageShowWord.hidden = YES;
+        }else{
+            // Create datacontroller and initialize database
+            TestWordsData *dataController = [[TestWordsData alloc]init];
+            [dataController initDatabase];
+            NSArray *forDataList = [dataController wordInfo];
+            dataList = forDataList;
+            
+            TestWords *dataInfo = [dataList objectAtIndex:currentIndex];
+            detailText = [NSString stringWithFormat:@"%@", dataInfo.detail];
+            correctHatuon = [NSString stringWithFormat:@"%@", dataInfo.hatuon];
+            correctWord = [NSString stringWithFormat:@"%@", dataInfo.word];
+            reibunString = [NSString stringWithFormat:@"%@", dataInfo.reibun];
+            tangoString = [NSString stringWithFormat:@"%@", dataInfo.word];
+            
+            /* NSLog(@"%d", currentIndex);*/
+            
+            //TestWord *wordData = [words objectAtIndex:currentIndex];
+            //correctName = [wordData name];
+            //correctHatuon = [wordData hatuon];
+            
+            /* NSLog(@"%@ %@", wordData.name, wordData.hatuon);*/
+            
+            [ewTextView setEditable:NO];
+            [ewTextView setSelectable:NO];
+            
+            [checkTextField setText:[NSString stringWithFormat:@""]];
+            [checkTextField setPlaceholder:[NSString stringWithFormat:@"単語を見るをタップ"]];
+            checkTextField.enabled = NO;
+            
+            [answerLabel setText:@""];
+            
+            yourScoreOnLabel.hidden = YES;
+            hatuonLabel.hidden = YES;
+            //showWordButton.hidden = NO;
+            //blueImageShowWord.hidden = NO;
+            //saveButton.hidden = YES;
+            
+            [hatuonLabel setText:correctHatuon];
+            [ewTextView setText:detailText];
+            
+            [UIView beginAnimations:@"fadeIn" context:nil];
+            [UIView setAnimationDuration:0.5];
+            
+            [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+            
+            [ewTextView setSelectable:YES];
+            
+            // Make the animatable changes.
+            ewTextView.alpha = 0.0;
+            ewTextView.alpha = 1.0;
+            
+            // Commit the changes and perform the animation.
+            [UIView commitAnimations];
+            
+            /*
+             if (currentIndex == (words.count - 1)) {
+             nextButton.enabled = NO;
+             [nextButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+             [UIFont fontWithName:@"American Typewriter" size:15], NSFontAttributeName,
+             [UIColor lightGrayColor], NSForegroundColorAttributeName,
+             nil] forState:UIControlStateDisabled];
+             
+             UIAlertView *finishAlertView = [[UIAlertView alloc] initWithTitle:@"最後の単語です" message:@"解答後にメニューをタップして下さい" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+             [finishAlertView show];
+             }*/
+            
+            yourScoreOnLabel.textColor = [UIColor whiteColor];
+            progressBar.progressTintColor = [UIColor whiteColor];
+            
+            [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+            tangoPauseButton.hidden = YES;
+            tangoButton.hidden = NO;
+            reibunButton.hidden = NO;
+            reibunPauseButton.hidden = YES;
+            stopButton.hidden = YES;
+            nextButton.enabled = NO;
+            //saveBlue.hidden = YES;
+            tangoButton.enabled = NO;
+            reibunButton.enabled = NO;
+            [tangoButton setTitle:@"" forState:UIControlStateDisabled];
+            [reibunPauseButton setTitle:@"" forState:UIControlStateDisabled];
+            
+            if (showWordButton.hidden) {
+                showWordButton.hidden = NO;
+                blueImageShowWord.hidden = NO;
+            }
         }
-        yourScoreOnLabel.textColor = [UIColor whiteColor];
-        progressBar.progressTintColor = [UIColor whiteColor];
         
-        [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
-        tangoButton.enabled = NO;
-        [tangoButton setTitle:@"" forState:UIControlStateDisabled];
-        reibunButton.enabled = NO;
-        [reibunButton setTitle:@"" forState:UIControlStateDisabled];
-        tangoPauseButton.hidden = YES;
-        tangoButton.hidden = NO;
-        reibunButton.hidden = NO;
-        reibunPauseButton.hidden = YES;
-        stopButton.hidden = YES;
-        saveBlue.hidden = YES;
-        nextButton.enabled = NO;
+        if (saveButton.hidden) {
+            saveButton.hidden = NO;
+            saveBlue.hidden = NO;
+        }
+        
+        progressLabel.text =[[NSString alloc] initWithFormat:@"%d of 20", currentIndex + 1];
     }
-    
-
 }
 
 @end

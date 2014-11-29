@@ -14,6 +14,18 @@
 
 @implementation HelpChildViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    
+    self = [super initWithNibName:@"HelpChildViewController" bundle:nibBundleOrNil];
+    
+    if (self) {
+        // Custom initialization
+    }
+    
+    return self;
+    
+}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];

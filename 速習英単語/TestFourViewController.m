@@ -3945,6 +3945,7 @@
     [backgroundColorView addSubview:textSizeButton];
     [backgroundColorView addSubview:showHelpViewButton];
     [backgroundColorView addSubview:lookToLearnButton];
+    [backgroundColorView addSubview:showWordButton];
     
     ewTextView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     
