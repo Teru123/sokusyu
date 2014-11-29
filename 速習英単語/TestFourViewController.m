@@ -3872,15 +3872,12 @@
     [checkTextField setDelegate:self];
     checkTextField.returnKeyType = UIReturnKeyDone;
     [checkTextField setEnabled:NO];
-    [checkTextField setPlaceholder:[NSString stringWithFormat:@"Startをタップ"]];
+    [checkTextField setPlaceholder:[NSString stringWithFormat:@"見て(書いて)覚えるをタップ"]];
     
-    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"説明\nロングタップで辞書検索\n左右スワイプで単語切替\nテストはランダム表示\nグラフはテスト終了後に更新\n\n手書き入力\nキーボードアプリ使用またはiPhoneの設定から手書き入力が可能になります。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-繁体字(簡体字) 手書き を追加\n\nスペルのテスト\n自動修正オフで予測変換せずにスペルテストが可能となります。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後はメニューに戻るかアプリを再起動して下さい。\n設定方法: iPhoneの設定 > 画面表示と明るさ > 文字サイズを変更 > スライダをドラッグ     "];
+    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"アプリの使い方は使い方を見るをタップしてください。各種設定方法は下記をご覧下さい。\n手書き入力\n予測変換オフ\n文字サイズ変更\n\n手書き入力\nキーボードアプリを使用、またはiPhoneの設定から手書き入力を追加します。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-繁体字(簡体字) 手書き を追加\n\n予測変換オフ\n自動修正をオフにします。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後、メニューに戻るかアプリを再起動して下さい。文字サイズが変更されます。\n設定方法: iPhoneの設定 > 画面表示と明るさ > 文字サイズを変更 > スライダをドラッグ     "];
     
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x00b400) range:NSMakeRange(0, 3)];
+    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(41, 21)];
     //[attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x0889e6) range:NSMakeRange(3, 87)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(52, 6)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(172, 8)];
-    [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(250, 9)];
     
     [ewTextView setAttributedText:attFont];
     
@@ -3927,6 +3924,7 @@
     bannerForAD.delegate = self;
     startBlue.hidden = NO;
     blueImageLookStart.hidden = NO;
+    progressLabel.hidden = YES;
     
     backgroundColorView.backgroundColor = UIColorAlphaFromRGB(0x065db5);
     [backgroundColorView addSubview:tableViewWhite];
@@ -3984,12 +3982,12 @@
      [bannerView_ setDelegate:self];
      
      // 一般的なリクエストを行って広告を読み込む
-     [bannerView_ loadRequest:[GADRequest request]];
+     //[bannerView_ loadRequest:[GADRequest request]];
      
      //テスト
-     //GADRequest *req = [GADRequest request];
-     //req.testDevices = @[ GAD_SIMULATOR_ID ];
-     //[bannerView_ loadRequest:req];
+     GADRequest *req = [GADRequest request];
+     req.testDevices = @[ GAD_SIMULATOR_ID ];
+     [bannerView_ loadRequest:req];
     
 }
 
@@ -4216,6 +4214,9 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     showHelpViewButton.hidden = YES;
     lookToLearnButton.hidden = YES;
     blueImageLookStart.hidden = YES;
+    showWordButton.hidden = YES;
+    blueImageShowWord.hidden = YES;
+    progressLabel.hidden = NO;
 }
 
 - (IBAction)menuButton:(id)sender
@@ -4269,11 +4270,11 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
                 }
             }
             
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Menuに戻りますか？" message:@"" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"メニューに戻りますか？" message:@"" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
             [alertView show];
             
         }else{
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Menuに戻りますか？" message:@"" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"メニューに戻りますか？" message:@"" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
             [alertView show];
         }
         
@@ -4329,7 +4330,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
             }
         }
     }else{
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Menuに戻りますか？" message:@"" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"メニューに戻りますか？" message:@"" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
         [alertView show];
     }
     
@@ -4437,6 +4438,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         // Commit the changes and perform the animation.
         [UIView commitAnimations];
         
+        /*
         if (currentIndex == (words.count - 1)) {
             nextButton.enabled = NO;
             [nextButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -4446,7 +4448,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
             
             UIAlertView *finishAlertView = [[UIAlertView alloc] initWithTitle:@"最後の単語です" message:@"解答後にメニューをタップして下さい" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [finishAlertView show];
-        }
+        }*/
+        
         yourScoreOnLabel.textColor = [UIColor whiteColor];
         progressBar.progressTintColor = [UIColor whiteColor];
         
@@ -4462,6 +4465,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         reibunButton.enabled = NO;
         [tangoButton setTitle:@"" forState:UIControlStateDisabled];
         [reibunPauseButton setTitle:@"" forState:UIControlStateDisabled];
+        showWordButton.hidden = YES;
+        blueImageShowWord.hidden = YES;
     }else{
         // Create datacontroller and initialize database
         TestWordsData *dataController = [[TestWordsData alloc]init];
@@ -4495,8 +4500,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         
         yourScoreOnLabel.hidden = YES;
         hatuonLabel.hidden = YES;
-        showWordButton.hidden = NO;
-        blueImageShowWord.hidden = NO;
+        //showWordButton.hidden = NO;
+        //blueImageShowWord.hidden = NO;
         //saveButton.hidden = YES;
         
         [hatuonLabel setText:correctHatuon];
@@ -4515,7 +4520,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         
         // Commit the changes and perform the animation.
         [UIView commitAnimations];
-        
+        /*
         if (currentIndex == (words.count - 1)) {
             nextButton.enabled = NO;
             [nextButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -4525,7 +4530,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
             
             UIAlertView *finishAlertView = [[UIAlertView alloc] initWithTitle:@"最後の単語です" message:@"解答後にメニューをタップして下さい" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [finishAlertView show];
-        }
+        }*/
+        
         yourScoreOnLabel.textColor = [UIColor whiteColor];
         progressBar.progressTintColor = [UIColor whiteColor];
         
@@ -4541,13 +4547,19 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         reibunButton.enabled = NO;
         [tangoButton setTitle:@"" forState:UIControlStateDisabled];
         [reibunPauseButton setTitle:@"" forState:UIControlStateDisabled];
+        
+        if (showWordButton.hidden) {
+            showWordButton.hidden = NO;
+            blueImageShowWord.hidden = NO;
+        }
     }
-    
     
     if (saveButton.hidden) {
         saveButton.hidden = NO;
         saveBlue.hidden = NO;
     }
+    
+    progressLabel.text =[[NSString alloc] initWithFormat:@"%d of 20", currentIndex + 1];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -4776,7 +4788,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     [ewTextView setSelectable:NO];
     
     [checkTextField setText:[NSString stringWithFormat:@""]];
-    [checkTextField setPlaceholder:[NSString stringWithFormat:@""]];
+    [checkTextField setPlaceholder:[NSString stringWithFormat:@"単語を見るをタップ"]];
     checkTextField.enabled = NO;
     
     // Create datacontroller and initialize database
@@ -4837,7 +4849,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     blueImageLookStart.hidden = YES;
     showWordButton.hidden = NO;
     blueImageShowWord.hidden = NO;
-    
+    progressLabel.hidden = NO;
 }
 
 - (IBAction)showWord:(id)sender {
@@ -4870,6 +4882,9 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         reibunButton.enabled = NO;
         [reibunButton setTitle:@"" forState:UIControlStateDisabled];
     }
+    
+    showWordButton.hidden = YES;
+    blueImageShowWord.hidden = YES;
 }
 
 - (IBAction)reibunPauseAction:(id)sender {
@@ -4984,6 +4999,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
             // Commit the changes and perform the animation.
             [UIView commitAnimations];
             
+            /*
             if (currentIndex == (words.count - 1)) {
                 nextButton.enabled = NO;
                 [nextButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -4993,7 +5009,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
                 
                 UIAlertView *finishAlertView = [[UIAlertView alloc] initWithTitle:@"最後の単語です" message:@"解答後にメニューをタップして下さい" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [finishAlertView show];
-            }
+            }*/
+            
             yourScoreOnLabel.textColor = [UIColor whiteColor];
             progressBar.progressTintColor = [UIColor whiteColor];
             
@@ -5009,6 +5026,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
             reibunButton.enabled = NO;
             [tangoButton setTitle:@"" forState:UIControlStateDisabled];
             [reibunPauseButton setTitle:@"" forState:UIControlStateDisabled];
+            showWordButton.hidden = YES;
+            blueImageShowWord.hidden = YES;
         }else{
             // Create datacontroller and initialize database
             TestWordsData *dataController = [[TestWordsData alloc]init];
@@ -5035,15 +5054,15 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
             [ewTextView setSelectable:NO];
             
             [checkTextField setText:[NSString stringWithFormat:@""]];
-            [checkTextField setPlaceholder:[NSString stringWithFormat:@""]];
+            [checkTextField setPlaceholder:[NSString stringWithFormat:@"単語を見るをタップ"]];
             checkTextField.enabled = NO;
             
             [answerLabel setText:@""];
             
             yourScoreOnLabel.hidden = YES;
             hatuonLabel.hidden = YES;
-            showWordButton.hidden = NO;
-            blueImageShowWord.hidden = NO;
+            //showWordButton.hidden = NO;
+            //blueImageShowWord.hidden = NO;
             //saveButton.hidden = YES;
             
             [hatuonLabel setText:correctHatuon];
@@ -5062,7 +5081,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
             
             // Commit the changes and perform the animation.
             [UIView commitAnimations];
-            
+           
+            /*
             if (currentIndex == (words.count - 1)) {
                 nextButton.enabled = NO;
                 [nextButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -5072,7 +5092,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
                 
                 UIAlertView *finishAlertView = [[UIAlertView alloc] initWithTitle:@"最後の単語です" message:@"解答後にメニューをタップして下さい" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [finishAlertView show];
-            }
+            }*/
+            
             yourScoreOnLabel.textColor = [UIColor whiteColor];
             progressBar.progressTintColor = [UIColor whiteColor];
             
@@ -5088,16 +5109,20 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
             reibunButton.enabled = NO;
             [tangoButton setTitle:@"" forState:UIControlStateDisabled];
             [reibunPauseButton setTitle:@"" forState:UIControlStateDisabled];
+            
+            if (showWordButton.hidden) {
+                showWordButton.hidden = NO;
+                blueImageShowWord.hidden = NO;
+            }
         }
-        
         
         if (saveButton.hidden) {
             saveButton.hidden = NO;
             saveBlue.hidden = NO;
         }
+        
+        progressLabel.text =[[NSString alloc] initWithFormat:@"%d of 20", currentIndex + 1];
     }
-    
-    
 }
 
 @end

@@ -11,11 +11,7 @@
 @interface HelpFourChildViewController : UIViewController
 
 @property (strong, nonatomic) NSArray *explanationText;
-@property (strong, nonatomic) NSArray *explanationImage_1;
-@property (strong, nonatomic) NSArray *explanationImage_2;
 @property (assign, nonatomic) NSInteger index;
 @property (weak, nonatomic) IBOutlet UITextView *explanationTextView;
-@property (weak, nonatomic) IBOutlet UIImageView *explanationImageView_1;
-@property (weak, nonatomic) IBOutlet UIImageView *explanationTextView_2;
 
 @end

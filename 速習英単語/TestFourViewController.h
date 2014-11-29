@@ -69,6 +69,7 @@
     __weak IBOutlet UIButton *lookToLearnButton;
     __weak IBOutlet UIButton *showWordButton;
     __weak IBOutlet UIImageView *blueImageShowWord;
+    __weak IBOutlet UILabel *progressLabel;
 }
 - (IBAction)startButton:(id)sender;
 - (IBAction)menuButton:(id)sender;
