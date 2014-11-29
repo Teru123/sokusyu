@@ -46,12 +46,12 @@
                     <items>
                         <navigationItem id="haD-2e-VG7">
                             <nil key="title"/>
-                            <barButtonItem key="leftBarButtonItem" title="Back" id="ScS-g5-11L">
+                            <barButtonItem key="leftBarButtonItem" title="戻る" id="ScS-g5-11L">
                                 <connections>
                                     <action selector="backButton:" destination="-1" id="CLA-gb-CcY"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" title="Next" id="LQO-Re-au1">
+                            <barButtonItem key="rightBarButtonItem" title="進む" id="LQO-Re-au1">
                                 <connections>
                                     <action selector="nextButton:" destination="-1" id="YJZ-Li-ibx"/>
                                 </connections>

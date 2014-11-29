@@ -60,7 +60,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <barButtonItem key="rightBarButtonItem" title="Next" id="nTh-1e-KvN">
+                            <barButtonItem key="rightBarButtonItem" title="進む" id="nTh-1e-KvN">
                                 <connections>
                                     <action selector="nextButton:" destination="-1" id="iGX-CK-Gac"/>
                                 </connections>

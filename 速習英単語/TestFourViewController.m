@@ -3983,12 +3983,12 @@
      [bannerView_ setDelegate:self];
      
      // 一般的なリクエストを行って広告を読み込む
-     //[bannerView_ loadRequest:[GADRequest request]];
+     [bannerView_ loadRequest:[GADRequest request]];
      
      //テスト
-     GADRequest *req = [GADRequest request];
-     req.testDevices = @[ GAD_SIMULATOR_ID ];
-     [bannerView_ loadRequest:req];
+     //GADRequest *req = [GADRequest request];
+     //req.testDevices = @[ GAD_SIMULATOR_ID ];
+     //[bannerView_ loadRequest:req];
     
 }
 
@@ -4494,7 +4494,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         [ewTextView setSelectable:NO];
         
         [checkTextField setText:[NSString stringWithFormat:@""]];
-        [checkTextField setPlaceholder:[NSString stringWithFormat:@""]];
+        [checkTextField setPlaceholder:[NSString stringWithFormat:@"単語を見るをタップ"]];
         checkTextField.enabled = NO;
         
         [answerLabel setText:@""];
