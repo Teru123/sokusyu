@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "IchiranViewController.h"
+#import "Reachability.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface IchiranTableViewController : UITableViewController
@@ -20,6 +21,8 @@
     NSArray *searchResultsForWord;
     NSArray *searchResultsForImi;
     NSArray *searchResultsForHatuon;
+    Reachability* internetReachable;
+    Reachability* hostReachable;
 }
 @property (nonatomic, retain) NSArray *WordInfos;
 @property (nonatomic, retain) IchiranViewController *ichiran;

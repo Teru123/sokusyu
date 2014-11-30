@@ -17,7 +17,9 @@
     NSArray *testNo;
     NSArray *detail;
     NSArray *listOfScores;
-    Reachability *internetReachableFoo;
+    //Reachability *internetReachableFoo;
+    Reachability* internetReachable;
+    Reachability* hostReachable;
     
     //NSArray *scoreListOfDayOfTheWeek;
     //double allScore;
@@ -97,6 +99,8 @@
 @property (nonatomic, strong) NSArray *detail30;
 //- (IBAction)shareAction:(id)sender;
 - (IBAction)refreshButton:(id)sender;
+-(void) checkNetworkStatus:(NSNotification *)notice;
+
 /*
 - (void)twitterButton:(UIButton *)sender;
 - (void)facebookButton:(UIButton *)sender;

@@ -17,11 +17,15 @@
 #import "TestWords.h"
 #import "TestWordsData.h"
 #import "HelpViewController.h"
+#import "Reachability.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface TestsqtViewController ()
 
 @property (nonatomic, assign) int lookOrWrite;
+@property (assign, nonatomic) BOOL internetActive;
+@property (assign, nonatomic) BOOL hostActive;
+@property (strong, nonatomic) UIAlertView *wifiAlert;
 
 @end
 
@@ -315,7 +319,7 @@
     if ([wordNo isEqualToString:@"3"]){
         TestWord *word41 = [TestWord new];
         word41.name = @"alien";
-        word41.detail =  @"形容詞more ～; most ～\n外国の; 異人種の\n\n慣れない, 経験のない~\n\n相容れない, 異質である\nWhen I first went to New York, it all felt very ___ to me.\n私が初めてニューヨークに来た時は、見たことのないものばかりだった。\n\n地球外生命体の\n\n名詞\n地球外生命体, 宇宙人, エイリアン";
+        word41.detail =  @"形容詞more ～; most ～\n外国の; 異人種の\n\n慣れない, 経験のない~\n\n相容れない, 異質である\nWhen I first went to New York, it all felt very ___ to me.\n私が初めてニューヨークに行った時は、見たことのないものばかりだった。\n\n地球外生命体の\n\n名詞\n地球外生命体, 宇宙人, エイリアン";
         word41.hatuon = @"éɪliən, -jən";
         word41.reibun = @"When I first went to New York, it all felt very alien to me.";
         
@@ -3874,7 +3878,7 @@
     [checkTextField setEnabled:NO];
     [checkTextField setPlaceholder:[NSString stringWithFormat:@"見て(書いて)覚えるをタップ"]];
     
-    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"アプリの使い方は使い方を見るをタップしてください。各種設定方法は下記をご覧下さい。\n手書き入力\n予測変換オフ\n文字サイズ変更\n\n手書き入力\nキーボードアプリを使用、またはiPhoneの設定から手書き入力を追加します。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-繁体字(簡体字) 手書き を追加\n\n予測変換オフ\n自動修正をオフにします。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正オフ\n\n文字サイズの変更\n設定後、メニューに戻るかアプリを再起動して下さい。文字サイズが変更されます。\n設定方法: iPhoneの設定 > 画面表示と明るさ > 文字サイズを変更 > スライダをドラッグ     "];
+    NSMutableAttributedString *attFont = [[NSMutableAttributedString alloc] initWithString:@"アプリの使い方は使い方を見るをタップしてください。各種設定方法は下記をご覧下さい。\n手書き入力\n予測変換オフ\n文字サイズ変更\n\n手書き入力\nキーボードアプリを使用、またはiPhoneの設定から手書き入力を追加します。\n設定方法: iPhoneの設定 > 一般 > キーボード > キーボード > 新しいキーボードを追加 > 中国語-繁体字(簡体字) 手書き を追加\n\n予測変換オフ\n自動修正と予測をオフにします。\n設定方法: iPhoneの設定 > 一般 > キーボード > 自動修正、予測オフ\n\n文字サイズの変更\n設定後、メニューに戻るかアプリを再起動して下さい。文字サイズが変更されます。\n設定方法: iPhoneの設定 > 画面表示と明るさ > 文字サイズを変更 > スライダをドラッグ     "];
     
     [attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x065db5) range:NSMakeRange(41, 21)];
     //[attFont addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x0889e6) range:NSMakeRange(3, 87)];
@@ -3992,9 +3996,96 @@
     
 }
 
-
 - (BOOL)prefersStatusBarHidden {
     return YES;
+}
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    // check for internet connection
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkNetworkStatus:) name:kReachabilityChangedNotification object:nil];
+    
+    internetReachable = [Reachability reachabilityForInternetConnection];
+    [internetReachable startNotifier];
+    
+    // check if a pathway to a random host exists
+    hostReachable = [Reachability reachabilityWithHostName:@"www.apple.com"];
+    [hostReachable startNotifier];
+    
+    // now patiently wait for the notification
+}
+
+-(void) checkNetworkStatus:(NSNotification *)notice
+{
+    // called after network status changes
+    NetworkStatus internetStatus = [internetReachable currentReachabilityStatus];
+    switch (internetStatus)
+    {
+        case NotReachable:
+        {
+
+            self.internetActive = NO;
+            
+            self.wifiAlert = [[UIAlertView alloc] initWithTitle:@"アプリを使用するには、機内モードをオフにするか、Wi-Fiを使用してからアプリを再起動してください" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
+            [self.wifiAlert show];
+            break;
+        }
+        case ReachableViaWiFi:
+        {
+            self.internetActive = YES;
+            
+            break;
+        }
+        case ReachableViaWWAN:
+        {
+            self.internetActive = YES;
+            
+            break;
+        }
+    }
+    
+    /*
+     NetworkStatus hostStatus = [hostReachable currentReachabilityStatus];
+     switch (hostStatus)
+     {
+     case NotReachable:
+     {
+     NSLog(@"A gateway to the host server is down.");
+     self.hostActive = NO;
+     self.wifiAlert = [[UIAlertView alloc] initWithTitle:@"WiFi未接続"
+     message:@"WiFi接続時にご利用可能です。"
+     delegate:self
+     cancelButtonTitle:@"接続を確認する"
+     otherButtonTitles:nil];
+     self.wifiAlert.delegate       = self;
+     [self.wifiAlert show];
+     self.showAlert = 1;
+     break;
+     }
+     case ReachableViaWiFi:
+     {
+     NSLog(@"A gateway to the host server is working via WIFI.");
+     self.hostActive = YES;
+     if (self.showAlert == 1) {
+     [self.wifiAlert dismissWithClickedButtonIndex:0 animated:YES];
+     }
+     self.showAlert = 0;
+     break;
+     }
+     case ReachableViaWWAN:
+     {
+     NSLog(@"A gateway to the host server is working via WWAN.");
+     self.hostActive = YES;
+     
+     break;
+     }
+     }*/
+    
+}
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView {

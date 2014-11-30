@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SWTableViewCell.h"
+#import "Reachability.h"
 
 @class HukusyusqtViewController;
 
@@ -15,6 +16,9 @@
 <UITableViewDataSource, UITableViewDelegate, UITabBarDelegate, SWTableViewCellDelegate>
 {
      NSMutableArray *patterns;
+    Reachability* internetReachable;
+    Reachability* hostReachable;
+    
     __weak IBOutlet UITableView *tableViewOutlet;
     __weak IBOutlet UITextView *textForExplanation;
     __weak IBOutlet UIView *menu;

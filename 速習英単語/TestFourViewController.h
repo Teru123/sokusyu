@@ -12,6 +12,7 @@
 //#import "NADView.h"
 #import "GADBannerView.h"
 #import "CorrectAnswerData.h"
+#import "Reachability.h"
 
 @interface TestFourViewController : UIViewController
 <NSCoding, UITextFieldDelegate, UIGestureRecognizerDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate, GADBannerViewDelegate>
@@ -39,6 +40,9 @@
     NSString *detailText;
     NSString *correctWord;
     NSString *correctHatuon;
+    Reachability* internetReachable;
+    Reachability* hostReachable;
+    
     __weak IBOutlet UILabel *yourScoreOnLabel;
     __weak IBOutlet UILabel *answerLabel;
     __weak IBOutlet UINavigationBar *navigationBar;

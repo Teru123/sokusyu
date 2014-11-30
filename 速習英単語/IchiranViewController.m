@@ -253,7 +253,7 @@
         reibun = @"The weather is getting worse and worse.     She has been taken worse recently.";
     }
     if ([wordNameForString isEqualToString:@"alien"]) {
-        ewTextView.text =  @"形容詞more ～; most ～\n外国の; 異人種の\n\n慣れない, 経験のない~\n\n相容れない, 異質である\nWhen I first went to New York, it all felt very alien to me.\n私が初めてニューヨークに来た時は、見たことのないものばかりだった。\n\n地球外生命体の\n\n名詞\n地球外生命体, 宇宙人, エイリアン";
+        ewTextView.text =  @"形容詞more ～; most ～\n外国の; 異人種の\n\n慣れない, 経験のない~\n\n相容れない, 異質である\nWhen I first went to New York, it all felt very alien to me.\n私が初めてニューヨークに行った時は、見たことのないものばかりだった。\n\n地球外生命体の\n\n名詞\n地球外生命体, 宇宙人, エイリアン";
         [hatuonLabel setText:[NSString stringWithFormat:@"éɪliən, -jən"]];
         reibun = @"When I first went to New York, it all felt very alien to me.";
     }

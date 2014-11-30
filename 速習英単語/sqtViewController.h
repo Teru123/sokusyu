@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 
 @interface sqtViewController : UITableViewController
 <UITableViewDataSource, UITableViewDelegate, UITabBarDelegate, UITabBarControllerDelegate>
@@ -46,6 +47,8 @@
     NSArray *listOfScores;
     NSArray *correctAnswerList;
     UITextView *hostingView;
+    Reachability* internetReachable;
+    Reachability* hostReachable;
     /*
     UITextView *percentageView1;
     UITextView *percentageView2;

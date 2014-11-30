@@ -11,6 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 //#import "NADView.h"
 #import "GADBannerView.h"
+#import "Reachability.h"
 
 @interface YosyuFourViewController : UIViewController<UITextFieldDelegate, UIAlertViewDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate, GADBannerViewDelegate>
 {
@@ -29,6 +30,9 @@
     NSString *itsDetail;
     NSString *itsHatuon;
     NSString *itsReibun;
+    Reachability* internetReachable;
+    Reachability* hostReachable;
+    
     __weak IBOutlet UITextField *practiceField;
     GADBannerView *bannerView_;
     __weak IBOutlet UITextView *ewTextView;

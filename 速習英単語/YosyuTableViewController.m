@@ -17,12 +17,17 @@
 #import "TestWordsData.h"
 #import "TestWords.h"
 #import "UITableView+Wave.h"
+#import "Reachability.h"
 #import <Social/Social.h>
 
 // 折れ線グラフの識別子
 //NSString *const kData   = @"Data Source Plot";
 
 @interface YosyuTableViewController ()
+
+@property (assign, nonatomic) BOOL internetActive;
+@property (assign, nonatomic) BOOL hostActive;
+@property (strong, nonatomic) UIAlertView *wifiAlert;
 
 @end
 
@@ -32,29 +37,131 @@
 CAShapeLayer *openMenuShape;
 #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
 
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    // ハイライト解除
+    [super viewWillAppear:animated];
+    //[self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+    
+    // check for internet connection
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkNetworkStatus:) name:kReachabilityChangedNotification object:nil];
+    
+    internetReachable = [Reachability reachabilityForInternetConnection];
+    [internetReachable startNotifier];
+    
+    // check if a pathway to a random host exists
+    hostReachable = [Reachability reachabilityWithHostName:@"www.apple.com"];
+    [hostReachable startNotifier];
+    
+    // now patiently wait for the notification
+}
+
+-(void) checkNetworkStatus:(NSNotification *)notice
+{
+    // called after network status changes
+    NetworkStatus internetStatus = [internetReachable currentReachabilityStatus];
+    switch (internetStatus)
+    {
+        case NotReachable:
+        {
+           
+            self.internetActive = NO;
+            
+            self.wifiAlert = [[UIAlertView alloc] initWithTitle:@"アプリを使用するには、機内モードをオフにするか、Wi-Fiを使用してからアプリを再起動してください" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
+            [self.wifiAlert show];
+            break;
+        }
+        case ReachableViaWiFi:
+        {
+            self.internetActive = YES;
+        
+            break;
+        }
+        case ReachableViaWWAN:
+        {
+            self.internetActive = YES;
+            
+            break;
+        }
+    }
+    
+    /*
+    NetworkStatus hostStatus = [hostReachable currentReachabilityStatus];
+    switch (hostStatus)
+    {
+        case NotReachable:
+        {
+            NSLog(@"A gateway to the host server is down.");
+            self.hostActive = NO;
+            self.wifiAlert = [[UIAlertView alloc] initWithTitle:@"WiFi未接続"
+                                                        message:@"WiFi接続時にご利用可能です。"
+                                                       delegate:self
+                                              cancelButtonTitle:@"接続を確認する"
+                                              otherButtonTitles:nil];
+            self.wifiAlert.delegate       = self;
+            [self.wifiAlert show];
+            self.showAlert = 1;
+            break;
+        }
+        case ReachableViaWiFi:
+        {
+            NSLog(@"A gateway to the host server is working via WIFI.");
+            self.hostActive = YES;
+            if (self.showAlert == 1) {
+                [self.wifiAlert dismissWithClickedButtonIndex:0 animated:YES];
+            }
+            self.showAlert = 0;
+            break;
+        }
+        case ReachableViaWWAN:
+        {
+            NSLog(@"A gateway to the host server is working via WWAN.");
+            self.hostActive = YES;
+            
+            break;
+        }
+    }*/
+    
+}
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 /*
+-(void) viewWillAppear:(BOOL)animated
+{
+    [self testInternetConnection];
+}
+
 // Checks if we have an internet connection or not
 - (void)testInternetConnection
 {
     internetReachableFoo = [Reachability reachabilityWithHostname:@"www.google.com"];
     
-    __weak YosyuTableViewController *yosyuView = self;
-    
-    UIAlertView *wifiAlert = [[UIAlertView alloc] initWithTitle:@"インターネット未接続"
-                                                        message:@"ネット接続時にご利用可能です。\nホームボタンを2回押下してからアプリを完全に終了して下さい。"
-                                                       delegate:self
-                                              cancelButtonTitle:nil
-                                              otherButtonTitles:nil];
+    UIAlertView *wifiAlert = [[UIAlertView alloc] initWithTitle:@"WiFi未接続"
+                                                message:@"WiFi接続時にご利用可能です。"
+                                               delegate:self
+                                      cancelButtonTitle:@"接続を確認する"
+                                      otherButtonTitles:nil];
     wifiAlert.delegate       = self;
     
-    __weak UITabBarController *hiddenTab = self.tabBarController;
-
+    //retain cycleを避ける為に__blockと__weakで再度宣言する
+    __block int showAlertOrNot = self.showAlert;
+    
     // Internet is reachable
     internetReachableFoo.reachableBlock = ^(Reachability*reach)
     {
         // Update the UI on the main thread
         dispatch_async(dispatch_get_main_queue(), ^{
-            //NSLog(@"Yayyy, we have the interwebs!");
+            NSLog(@"Yayyy, we have the interwebs!");
+            if (showAlertOrNot == 1) {
+                [wifiAlert dismissWithClickedButtonIndex:0 animated:YES];
+            }
+            showAlertOrNot = 0;
+            NSLog(@"%d", showAlertOrNot);
         });
     };
     
@@ -64,38 +171,16 @@ CAShapeLayer *openMenuShape;
         
         // Update the UI on the main thread
         dispatch_async(dispatch_get_main_queue(), ^{
-            //NSLog(@"Someone broke the internet :(");
+            NSLog(@"Someone broke the internet :(");
+            
             [wifiAlert show];
-            yosyuView.view.hidden = YES;
-            [yosyuView hideTabBar:hiddenTab];
+            showAlertOrNot = 1;
+            NSLog(@"%d", showAlertOrNot);
         });
     };
     
     [internetReachableFoo startNotifier];
-}
- 
-
-// Method implementations
-- (void)hideTabBar:(UITabBarController *) tabbarcontroller
-{
-    [UIView beginAnimations:nil context:NULL];
-    //[UIView setAnimationDuration:0];
-    
-    for(UIView *view in tabbarcontroller.view.subviews)
-    {
-        if([view isKindOfClass:[UITabBar class]])
-        {
-            [view setFrame:CGRectMake(0, 800, view.frame.size.width, view.frame.size.height)];
-        }
-        else
-        {
-            [view setFrame:CGRectMake(0, 800, view.frame.size.width, view.frame.size.height)];
-        }
-    }
-    
-    [UIView commitAnimations];
-}
- */
+}*/
 
 - (void)viewDidLoad
 {
