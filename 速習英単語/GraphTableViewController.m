@@ -39,7 +39,7 @@ NSString *const kData   = @"Data Source Plot";
     sectionList =  [NSArray arrayWithObjects:@" ", nil];
     
     // セルの項目を作成する
-    NSArray *share = [NSArray arrayWithObjects:@"ウェブサイト お問い合わせ", @"速習英単語のレビューを書く", @"速習英単語２を無料でダウンロード", nil];
+    NSArray *share = [NSArray arrayWithObjects:@"ウェブサイト お問い合わせ", @"速習英単語のレビューを書く", @"速習英単語２を無料でダウンロード", @"簡単単語帳を無料でダウンロード", nil];
     
     // セルの項目をまとめる
     NSArray *datas = [NSArray arrayWithObjects:share, nil];
@@ -561,6 +561,8 @@ NSString *const kData   = @"Data Source Plot";
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.sokusyueitango.com"]];
         }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"速習英単語２を無料でダウンロード"]){
             [self reviewButton2];
+        }else if ([[items objectAtIndex:indexPath.row] isEqualToString:@"簡単単語帳を無料でダウンロード"]){
+            [self simpleFlashcards];
         }
     }
 }
@@ -713,6 +715,29 @@ NSString *const kData   = @"Data Source Plot";
     //[self toggleMenu];
 }
 
+- (void)simpleFlashcards{
+    // AppStoreのレビューURLを開く (引数に AppStoreのアプリIDを指定)
+    // レビュー画面の URL
+    NSString *reviewUrl;
+    
+    // iOSのバージョンを判別
+    NSString *osversion = [UIDevice currentDevice].systemVersion;
+    NSArray *a = [osversion componentsSeparatedByString:@"."];
+    BOOL isIOS7 = [(NSString *)[a objectAtIndex:0] intValue] >= 7;
+    if (isIOS7) {
+        // iOS 7以降
+        reviewUrl = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", @"960626526"];
+    } else {
+        // iOS 7未満
+        reviewUrl = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=%@&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software", @"960626526"];
+    }
+    
+    // レビュー画面へ遷移
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewUrl]];
+    
+    //[self toggleMenu];
+}
+
 #pragma mark -
 #pragma mark Plot Data Source Methods
 
@@ -811,7 +836,7 @@ NSString *const kData   = @"Data Source Plot";
     x.minorTickLineStyle          = lineStyle;      // X軸の小さいメモリにラインスタイルを適用
     x.majorIntervalLength         = CPTDecimalFromString(@"2"); // X軸ラベルの表示間隔
     x.orthogonalCoordinateDecimal = CPTDecimalFromString(@"0"); // X軸のY位置
-    x.title                       = @"今週の進捗状況";
+    x.title                       = @"進捗状況";
     x.titleTextStyle = titleStyle;
     x.titleLocation               = CPTDecimalFromFloat(4.0f);
     x.titleOffset                 = 30.0f;

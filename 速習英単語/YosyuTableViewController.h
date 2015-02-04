@@ -99,7 +99,7 @@
 @property (nonatomic, strong) NSArray *detail30;
 //- (IBAction)shareAction:(id)sender;
 - (IBAction)refreshButton:(id)sender;
--(void) checkNetworkStatus:(NSNotification *)notice;
+//-(void) checkNetworkStatus:(NSNotification *)notice;
 
 /*
 - (void)twitterButton:(UIButton *)sender;

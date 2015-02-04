@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -2042,7 +2042,7 @@
             </objects>
             <point key="canvasLocation" x="780" y="930"/>
         </scene>
-        <!--単語一覧-->
+        <!--索引-->
         <scene sceneID="OkG-W5-88b">
             <objects>
                 <tableViewController id="Gpq-ak-RVx" customClass="IchiranTableViewController" sceneMemberID="viewController">
@@ -2077,7 +2077,7 @@
                             <outlet property="delegate" destination="Gpq-ak-RVx" id="4AT-QH-jft"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="単語一覧" id="6Y8-5o-GGA"/>
+                    <navigationItem key="navigationItem" title="索引" id="6Y8-5o-GGA"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="UB4-Lt-1w4" id="Bw1-na-0LF"/>
                         <outlet property="tableViewOutlet" destination="gSS-tv-euE" id="AGP-YV-JPD"/>
@@ -2207,11 +2207,11 @@
             </objects>
             <point key="canvasLocation" x="1289" y="1630"/>
         </scene>
-        <!--単語一覧-->
+        <!--索引-->
         <scene sceneID="wgi-De-Y6x">
             <objects>
                 <navigationController definesPresentationContext="YES" id="vYo-19-AAZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="単語一覧" image="document.png" id="efd-QW-o4T"/>
+                    <tabBarItem key="tabBarItem" title="索引" image="document.png" id="efd-QW-o4T"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="3Ey-mT-kyY">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
