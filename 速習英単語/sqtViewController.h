@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Reachability.h"
+#import "TestFourViewController.h"
+#import "TestsqtViewController.h"
 
 @interface sqtViewController : UITableViewController
-<UITableViewDataSource, UITableViewDelegate, UITabBarDelegate, UITabBarControllerDelegate>
+<UITableViewDataSource, UITableViewDelegate, UITabBarDelegate, UITabBarControllerDelegate, TestFourViewControllerDelegate, TestsqtViewControllerDelegate>
 {
     int percentage1;
     int percentage2;
@@ -175,7 +177,7 @@
     __weak IBOutlet UIView *menu;
     BOOL _isFadeIn;
 }
-- (IBAction)refreshScore:(id)sender;
+
 - (IBAction)shareAction:(id)sender;
 //- (void)drawPercentage;
 @property (nonatomic, strong) NSArray *countScoreLabel;

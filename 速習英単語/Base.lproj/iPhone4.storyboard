@@ -67,12 +67,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="復習" id="har-kO-Ako">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="SGE-HY-ZL8">
-                            <connections>
-                                <action selector="refreshButton:" destination="BSW-HL-QXd" id="TEx-1m-59s"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="recycle-bin.png" id="LI7-Ak-iXy">
+                            <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                             <connections>
                                 <action selector="resetButton:" destination="BSW-HL-QXd" id="Cvm-qb-gXR"/>
                             </connections>
@@ -1023,12 +1019,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="テスト" id="oQV-DL-2K6">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="JcJ-7x-d1b">
-                            <connections>
-                                <action selector="refreshScore:" destination="rcK-jQ-G2x" id="P4R-co-nA8"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="presentation.png" id="C0I-5c-12K">
+                            <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
                             <connections>
                                 <action selector="shareAction:" destination="rcK-jQ-G2x" id="wNm-7z-Dcr"/>
                                 <segue destination="BCU-03-9PS" kind="push" id="iAR-Fn-taG"/>
@@ -1908,12 +1900,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="予習" id="aOm-2P-GsU">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="6mc-5q-OdE">
-                            <connections>
-                                <action selector="refreshButton:" destination="BQz-Nr-M3J" id="B5w-4H-6NI"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="uptrend.png" id="K5N-Ke-Fkz">
+                            <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
                             <connections>
                                 <segue destination="l9r-eQ-vRV" kind="push" id="JXS-LA-xAr"/>
                             </connections>

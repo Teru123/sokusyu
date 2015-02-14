@@ -9,10 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 #import <AVFoundation/AVFoundation.h>
-//#import "NADView.h"
 #import "GADBannerView.h"
 #import "CorrectAnswerData.h"
 #import "Reachability.h"
+
+@protocol TestFourViewControllerDelegate
+
+-(void)editingInfoWasFinishedonFour;
+
+@end
 
 @interface TestFourViewController : UIViewController
 <NSCoding, UITextFieldDelegate, UIGestureRecognizerDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate, GADBannerViewDelegate>
@@ -88,12 +93,12 @@
 - (IBAction)lookToLearnStart:(id)sender;
 - (IBAction)showWord:(id)sender;
 
+@property (nonatomic, strong) id<TestFourViewControllerDelegate> delegate;
 @property(nonatomic, copy) void (^dismissblock)(void);
 @property (weak, nonatomic) IBOutlet UITextField *checkTextField;
 @property (nonatomic, strong) NSString *wordNo;
 @property (nonatomic, strong) NSString *correctName;
 @property (nonatomic, strong) NSString *correctHatuon;
 @property (strong, nonatomic) AVSpeechSynthesizer *speechSynthesizer;
-//@property (nonatomic, retain) NADView * nadView;
 
 @end

@@ -4044,43 +4044,6 @@
         }
     }
     
-    /*
-     NetworkStatus hostStatus = [hostReachable currentReachabilityStatus];
-     switch (hostStatus)
-     {
-     case NotReachable:
-     {
-     NSLog(@"A gateway to the host server is down.");
-     self.hostActive = NO;
-     self.wifiAlert = [[UIAlertView alloc] initWithTitle:@"WiFi未接続"
-     message:@"WiFi接続時にご利用可能です。"
-     delegate:self
-     cancelButtonTitle:@"接続を確認する"
-     otherButtonTitles:nil];
-     self.wifiAlert.delegate       = self;
-     [self.wifiAlert show];
-     self.showAlert = 1;
-     break;
-     }
-     case ReachableViaWiFi:
-     {
-     NSLog(@"A gateway to the host server is working via WIFI.");
-     self.hostActive = YES;
-     if (self.showAlert == 1) {
-     [self.wifiAlert dismissWithClickedButtonIndex:0 animated:YES];
-     }
-     self.showAlert = 0;
-     break;
-     }
-     case ReachableViaWWAN:
-     {
-     NSLog(@"A gateway to the host server is working via WWAN.");
-     self.hostActive = YES;
-     
-     break;
-     }
-     }*/
-    
 }
 
 -(void) viewWillDisappear:(BOOL)animated
@@ -4166,71 +4129,6 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     }
     //[[self presentingViewController] dismissViewControllerAnimated:YES completion:dismissblock];
 }
-
-/*
- - (void) dealloc {
- [self.nadView setDelegate:nil]; // delegate に nil をセット
- self.nadView = nil; // プロパティ経由で release、nil をセット
- // [super dealloc]; // MRC(非 ARC 時には必要)
- 
- bannerView_.delegate = nil;
- 
- // プロジェクトで ARC を使用している場合は bannerView_ を解放しない
- //[bannerView_ release];
- //[super dealloc];
- }
- */
-
-/*
- //iAd取得成功
- - (void)bannerViewDidLoadAd:(ADBannerView *)banner
- {
- NSLog(@"iAd取得成功");
- bannerForAD.hidden = NO;
- 
- self.nadView.hidden = YES;
- }
- 
- //iAd取得失敗
- - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
- {
- NSLog(@"iAd取得失敗");
- bannerForAD.hidden = YES;
- 
- self.nadView = [[NADView alloc] initWithFrame:CGRectMake(0, 518, 320, 50)];
- // (3) ログ出力の指定
- [self.nadView setIsOutputLog:NO];
- // (4) set apiKey, spotId.
- [self.nadView setNendID:@"c0a9042c6429ca6d09484fae97e5904c38bdf00e"
- spotID:@"150950"];
- [self.nadView setDelegate:self]; //(5)
- [self.nadView load]; //(6)
- [self.view addSubview:self.nadView]; // 最初から表示する場合
- }
- 
- -(void)nadViewDidFailToReceiveAd:(NADView *)adView {
- self.nadView.hidden = YES;
- }
- 
- - (void)bannerViewActionDidFinish:(ADBannerView *)banner
- {
- [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
- 
- [[self presentingViewController] dismissViewControllerAnimated:YES completion:dismissblock];
- }
- 
- - (void)nadViewDidClickAd:(NADView *)adView {
- [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
- 
- [[self presentingViewController] dismissViewControllerAnimated:YES completion:dismissblock];
- }
- 
- - (void) dealloc {
- [self.nadView setDelegate:nil]; // delegate に nil をセット
- self.nadView = nil; // プロパティ経由で release、nil をセット
- // [super dealloc]; // MRC(非 ARC 時には必要)
- }
- */
 
 - (void)didReceiveMemoryWarning
 {
@@ -4436,6 +4334,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         TestWordsData *testWordDataController = [[TestWordsData alloc]init];
         [testWordDataController initDatabase];
         [testWordDataController deleteData];
+        [self.delegate editingInfoWasFinishedonFour];
     }else{
         //TestWord *wordData = [words objectAtIndex:currentIndex];
         //reibunString = [wordData reibun];
@@ -4466,7 +4365,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
             reibunPauseButton.hidden = YES;
             stopButton.hidden = YES;
             nextButton.enabled = NO;
-            saveBlue.hidden = YES;
+            //saveBlue.hidden = YES;
             tangoButton.enabled = NO;
             reibunButton.enabled = NO;
             [tangoButton setTitle:@"" forState:UIControlStateDisabled];
@@ -5020,7 +4919,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         reibunPauseButton.hidden = YES;
         stopButton.hidden = YES;
         nextButton.enabled = NO;
-        saveBlue.hidden = YES;
+        //saveBlue.hidden = YES;
         tangoButton.enabled = NO;
         reibunButton.enabled = NO;
         [tangoButton setTitle:@"" forState:UIControlStateDisabled];

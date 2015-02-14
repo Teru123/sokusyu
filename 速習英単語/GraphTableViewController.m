@@ -31,9 +31,9 @@ NSString *const kData   = @"Data Source Plot";
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    //[super viewDidLoad];
     
     // セクション名を設定する
     sectionList =  [NSArray arrayWithObjects:@" ", nil];

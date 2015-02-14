@@ -9,21 +9,19 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 #import "Reachability.h"
+#import "YosyuFourViewController.h"
+#import "YosyusqtViewController.h"
 
-@interface YosyuTableViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
+@interface YosyuTableViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate, YosyuFourViewControllerDelegate, YosyusqtViewControllerDelegate>
 {
     NSMutableArray *listOfWords;
     NSArray *wordNameForDetail;
     NSArray *testNo;
     NSArray *detail;
     NSArray *listOfScores;
-    //Reachability *internetReachableFoo;
     Reachability* internetReachable;
     Reachability* hostReachable;
     
-    //NSArray *scoreListOfDayOfTheWeek;
-    //double allScore;
-    //CPTGraphHostingView *hostingView;
     __weak IBOutlet UITableView *tableViewOutlet;
     __weak IBOutlet UILabel *yosyuDetail1;
     __weak IBOutlet UILabel *yosyuDetail2;
@@ -85,33 +83,10 @@
     __weak IBOutlet UIImageView *star28;
     __weak IBOutlet UIImageView *star29;
     __weak IBOutlet UIImageView *star30;
-    /*
-    __weak IBOutlet UIView *menu;
-    BOOL _isFadeIn;
     
-    @private
-    // グラフ表示領域（この領域に円グラフを追加する）
-    CPTGraph *graph;
-    NSArray *plotData;
-     */
 }
 @property (nonatomic, strong) NSArray *stars;
 @property (nonatomic, strong) NSArray *detail30;
-//- (IBAction)shareAction:(id)sender;
-- (IBAction)refreshButton:(id)sender;
-//-(void) checkNetworkStatus:(NSNotification *)notice;
 
-/*
-- (void)twitterButton:(UIButton *)sender;
-- (void)facebookButton:(UIButton *)sender;
-- (void)lineButton:(UIButton *)sender;
-- (void) toggleMenu;
-- (void) showMenu;
-- (void) hideMenu;
-- (void) drawGraph;
-
-// 円グラフで表示するデータを保持する配列
-@property (readwrite, nonatomic) NSMutableArray *scatterPlotData;
-*/
  
 @end

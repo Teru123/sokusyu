@@ -14,6 +14,12 @@
 #import "CorrectAnswerData.h"
 #import "Reachability.h"
 
+@protocol TestsqtViewControllerDelegate
+
+-(void)editingInfoWasFinished;
+
+@end
+
 @interface TestsqtViewController : UIViewController
 <NSCoding, UITextFieldDelegate, UIGestureRecognizerDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate, GADBannerViewDelegate>
 {
@@ -88,6 +94,7 @@
 - (IBAction)lookToLearnStart:(id)sender;
 - (IBAction)showWord:(id)sender;
 
+@property (nonatomic, strong) id<TestsqtViewControllerDelegate> delegate;
 @property(nonatomic, copy) void (^dismissblock)(void);
 @property (weak, nonatomic) IBOutlet UITextField *checkTextField;
 @property (nonatomic, strong) NSString *wordNo;

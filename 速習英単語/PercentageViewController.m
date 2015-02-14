@@ -26,9 +26,9 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    //[super viewDidLoad];
     
     [self drawPercentage];
     
@@ -56,7 +56,6 @@
     
     NSArray *datas2 = [NSArray arrayWithObjects:share, percentageList, nil];
     dataPercentageSource = [NSDictionary dictionaryWithObjects:datas2 forKeys:percentageSection];
-    
     
 }
 

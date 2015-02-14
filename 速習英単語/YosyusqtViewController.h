@@ -9,9 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 #import <AVFoundation/AVFoundation.h>
-//#import "NADView.h"
 #import "GADBannerView.h"
 #import "Reachability.h"
+
+@protocol YosyusqtViewControllerDelegate
+
+-(void)editingInfoWasFinished;
+
+@end
 
 @interface YosyusqtViewController : UIViewController<UITextFieldDelegate, UIAlertViewDelegate, ADBannerViewDelegate, AVSpeechSynthesizerDelegate, GADBannerViewDelegate>
 {
@@ -53,11 +58,9 @@
     __weak IBOutlet UIButton *tangoPauseButton;
     __weak IBOutlet UIButton *reibunPauseButton;
     __weak IBOutlet UILabel *sentenceLabel;
-    //__weak IBOutlet UIButton *textSizeButton;
     __weak IBOutlet UIProgressView *progressBar;
     __weak IBOutlet UIImageView *startButtonBlue;
     __weak IBOutlet UIImageView *menuButtonBlue;
-    //__weak IBOutlet UIImageView *textSizeButtonBlue;
     __weak IBOutlet UIButton *helpViewButton;
     __weak IBOutlet UILabel *progressLabel;
     __weak IBOutlet UIButton *infoView;
@@ -65,6 +68,7 @@
     __weak IBOutlet UIButton *saveButton;
 }
 
+@property (nonatomic, strong) id<YosyusqtViewControllerDelegate> delegate;
 @property (nonatomic, copy) void (^dismissblock)(void);
 - (IBAction)menuButton:(id)sender;
 - (IBAction)nextButton:(id)sender;
@@ -72,8 +76,6 @@
 - (IBAction)startButton:(id)sender;
 - (IBAction)tangoSaiseiButton:(id)sender;
 - (IBAction)reibunSaiseiButton:(id)sender;
-/*- (void)disabledStartButton:(NSTimer *)timer;
-- (void)enabledStartButton:(NSTimer *)timer;*/
 - (IBAction)tangoPauseAction:(id)sender;
 - (IBAction)reibunPauseAction:(id)sender;
 - (IBAction)stopAction:(id)sender;
@@ -82,6 +84,5 @@
 
 @property (nonatomic, strong) NSString *wordNo;
 @property (strong, nonatomic) AVSpeechSynthesizer *speechSynthesizer;
-//@property (nonatomic, retain) NADView * nadView;
 
 @end

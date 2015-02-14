@@ -29,9 +29,5 @@
 @property (nonatomic, retain) NSString *checkMenu;
 
 - (IBAction)resetButton:(id)sender;
-- (IBAction)refreshButton:(id)sender;
-
-//- (IBAction)shareAction:(id)sender;
-
 
 @end
