@@ -31,9 +31,16 @@ NSString *const kData   = @"Data Source Plot";
     return self;
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.navigationController popViewControllerAnimated:NO];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     //[super viewDidLoad];
+    
+    // ハイライト解除
+    [super viewWillAppear:animated];
     
     // セクション名を設定する
     sectionList =  [NSArray arrayWithObjects:@" ", nil];

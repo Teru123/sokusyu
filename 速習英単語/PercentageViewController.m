@@ -26,9 +26,16 @@
     return self;
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.navigationController popViewControllerAnimated:NO];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     //[super viewDidLoad];
+    
+    // ハイライト解除
+    [super viewWillAppear:animated];
     
     [self drawPercentage];
     

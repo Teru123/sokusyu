@@ -44,6 +44,8 @@ CAShapeLayer *openMenuShape;
     [super viewWillAppear:animated];
     //[self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
     
+    //NSLog(@"%@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory  inDomains:NSUserDomainMask] lastObject]);
+    
 }
 
 -(void) viewWillDisappear:(BOOL)animated
