@@ -4002,48 +4002,9 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
-    // check for internet connection
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkNetworkStatus:) name:kReachabilityChangedNotification object:nil];
-    
-    internetReachable = [Reachability reachabilityForInternetConnection];
-    [internetReachable startNotifier];
-    
-    // check if a pathway to a random host exists
-    hostReachable = [Reachability reachabilityWithHostName:@"www.apple.com"];
-    [hostReachable startNotifier];
-    
-    // now patiently wait for the notification
-}
-
--(void) checkNetworkStatus:(NSNotification *)notice
-{
-    // called after network status changes
-    NetworkStatus internetStatus = [internetReachable currentReachabilityStatus];
-    switch (internetStatus)
-    {
-        case NotReachable:
-        {
-
-            self.internetActive = NO;
-            
-            self.wifiAlert = [[UIAlertView alloc] initWithTitle:@"アプリを使用するには、機内モードをオフにするか、Wi-Fiを使用してからアプリを再起動してください" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
-            [self.wifiAlert show];
-            break;
-        }
-        case ReachableViaWiFi:
-        {
-            self.internetActive = YES;
-            
-            break;
-        }
-        case ReachableViaWWAN:
-        {
-            self.internetActive = YES;
-            
-            break;
-        }
-    }
-    
+    // ハイライト解除
+    [super viewWillAppear:animated];
+    //[self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
 
 -(void) viewWillDisappear:(BOOL)animated
@@ -4760,13 +4721,15 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
     HelpViewController *helpView = [[HelpViewController alloc] init];
     [self presentViewController:helpView animated:YES completion:nil];
     
-    progressBar.progress += 0.05;
-    yourScoreOnLabel.textColor = Rgb2UIColor(102, 255, 102);
-    progressBar.progressTintColor = Rgb2UIColor(102, 255, 102);
+    //progressBar.progress += 0.05;
+    //yourScoreOnLabel.textColor = Rgb2UIColor(102, 255, 102);
+    //progressBar.progressTintColor = Rgb2UIColor(102, 255, 102);
+    /*
     tangoButton.enabled = YES;
     [tangoButton setTitle:@"" forState:UIControlStateNormal];
     reibunButton.enabled = YES;
     [reibunButton setTitle:@"" forState:UIControlStateNormal];
+     */
 }
 
 - (IBAction)lookToLearnStart:(id)sender {
