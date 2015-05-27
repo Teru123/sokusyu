@@ -22,6 +22,7 @@
 
 // 折れ線グラフの識別子
 //NSString *const kData   = @"Data Source Plot";
+//test
 
 @interface YosyuTableViewController ()
 
