@@ -3328,8 +3328,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         
         // voiceをAVSpeechUtteranceに指定。
         utterance.voice =  ENVoice;
-        utterance.rate = 0.10;
-        utterance.pitchMultiplier = 1.0;
+//        utterance.rate = 0.10;
+//        utterance.pitchMultiplier = 1.0;
         // AVSpeechSynthesizerにAVSpeechUtteranceを設定して読んでもらう
         [speechSynthesizer speakUtterance:utterance];
     }
@@ -3351,8 +3351,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
         
         // voiceをAVSpeechUtteranceに指定。
         utterance.voice =  ENVoice;
-        utterance.rate = 0.10;
-        utterance.pitchMultiplier = 1.0;
+//        utterance.rate = 0.10;
+//        utterance.pitchMultiplier = 1.0;
         // AVSpeechSynthesizerにAVSpeechUtteranceを設定して読んでもらう
         [speechSynthesizer speakUtterance:utterance];
     }
